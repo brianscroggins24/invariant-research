@@ -10,11 +10,11 @@ sources:
     retrieved_at: 2026-06-22
     original_location: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     local_path: raw/sources/SRC-0001-karpathy-llm-wiki.md
-    content_hash:
+    content_hash: 1462b9203176c46fdf01e95a1ce2037ec139f91a97b07429d2876abd021d1aa8
     version: 1
     language: en
     authority: primary
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes:

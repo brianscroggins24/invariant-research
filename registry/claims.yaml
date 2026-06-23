@@ -1,2 +1,44 @@
 schema_version: 1
-claims: []
+claims:
+  - claim_id: CLM-0001
+    statement: Conventional RAG workflows retrieve relevant source fragments at query time but do not maintain a persistent, incrementally synthesized knowledge artifact.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0001
+        locator: "The core idea"
+    related_pages:
+      - SOURCE-SUMMARY-0001
+    notes:
+  - claim_id: CLM-0002
+    statement: An LLM Wiki consists of three primary layers: immutable raw sources, an LLM-maintained wiki, and a schema that governs the agent's behavior.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0001
+        locator: "Architecture"
+    related_pages:
+      - SOURCE-SUMMARY-0001
+      - PROCESS-0001
+    notes:
+  - claim_id: CLM-0003
+    statement: Ingest, query, and lint are the core recurring operations of an LLM-maintained wiki.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0001
+        locator: "Operations"
+    related_pages:
+      - SOURCE-SUMMARY-0001
+      - PROCESS-0001
+    notes:
+  - claim_id: CLM-0004
+    statement: The wiki index should be content-oriented, while the log should provide a chronological record of wiki activity.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0001
+        locator: "Indexing and logging"
+    related_pages:
+      - SOURCE-SUMMARY-0001
+    notes:

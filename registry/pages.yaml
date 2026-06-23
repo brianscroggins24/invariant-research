@@ -5,3 +5,8 @@ pages:
     title: Source Ingestion Process
     page_type: process
     status: reviewed
+  - page_id: SOURCE-SUMMARY-0001
+    path: wiki/source-summaries/SRC-0001-karpathy-llm-wiki.md
+    title: LLM Wiki
+    page_type: source-summary
+    status: reviewed

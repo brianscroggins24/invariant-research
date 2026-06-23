@@ -4,11 +4,11 @@ Minimal landing page for the research wiki.
 
 ## Sources
 
-- `registry/sources.yaml`
+- `SRC-0001` — [LLM Wiki](raw/sources/SRC-0001-karpathy-llm-wiki.md)
 
 ## Knowledge Pages
 
-- `wiki/` content will appear here as it is ingested and reviewed.
+- [LLM Wiki source summary](wiki/source-summaries/SRC-0001-karpathy-llm-wiki.md) — `reviewed`
 
 ## Processes
 
