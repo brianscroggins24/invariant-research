@@ -1,2 +1,20 @@
 schema_version: 1
-sources: []
+sources:
+  - source_id: SRC-0001
+    title: LLM Wiki
+    source_type: technical-proposal
+    authors:
+      - Andrej Karpathy
+    organization:
+    publication_date: 2026-04-04
+    retrieved_at: 2026-06-22
+    original_location: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    local_path: raw/sources/SRC-0001-karpathy-llm-wiki.md
+    content_hash:
+    version: 1
+    language: en
+    authority: primary
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes:

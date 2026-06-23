@@ -1,2 +1,7 @@
 schema_version: 1
-pages: []
+pages:
+  - page_id: PROCESS-0001
+    path: wiki/source-ingestion.md
+    title: Source Ingestion Process
+    page_type: process
+    status: reviewed

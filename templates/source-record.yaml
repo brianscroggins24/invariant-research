@@ -1,0 +1,20 @@
+# Source record template for immutable ingested sources.
+source_id: # Stable repository source identifier.
+title: # Human-readable source title.
+source_type: # Allowed: research-paper, technical-proposal, official-documentation, market-rules, regulatory-document, article, commentary, social-thread, dataset, internal-experiment, other.
+authors: [] # Ordered list of authors or creators.
+organization: # Publishing organization, if any.
+publication_date: # Original publication date of the source.
+retrieved_at: # When the repository captured the source.
+original_location: # Original URL, citation, archive reference, or other origin.
+local_path: # Immutable file path under raw/sources.
+content_hash: # SHA-256 hash of the captured content.
+version: # Repository version for this source record.
+language: # Source language, preferably ISO 639-1 or ISO 639-3.
+authority: # Allowed: primary, primary-research, official, regulatory, secondary, commentary, unknown.
+status: # Allowed: pending-ingestion, active, superseded, withdrawn, inaccessible, archived.
+supersedes: # Source IDs replaced by this version, if any.
+superseded_by: # Source ID that replaces this one, if any.
+notes: # Freeform provenance or ingestion notes.
+
+# Corrected or updated sources must be stored as new versions rather than overwriting existing files.

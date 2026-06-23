@@ -10,6 +10,10 @@ Minimal landing page for the research wiki.
 
 - `wiki/` content will appear here as it is ingested and reviewed.
 
+## Processes
+
+- [Source Ingestion Process](wiki/source-ingestion.md)
+
 ## Context Packs
 
 - `context/` content will appear here when reviewed knowledge is distilled for downstream use.
