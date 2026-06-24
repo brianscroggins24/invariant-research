@@ -4,7 +4,8 @@ Minimal landing page for the research wiki.
 
 ## Sources
 
-- `SRC-0001` — [LLM Wiki](raw/sources/SRC-0001-karpathy-llm-wiki.md)
+- `SRC-0001` — [LLM Wiki initial capture](raw/sources/SRC-0001-karpathy-llm-wiki.md) — `superseded`
+- `SRC-0002` — [LLM Wiki](raw/sources/SRC-0002-karpathy-llm-wiki.md) — `active`
 
 ## Knowledge Pages
 

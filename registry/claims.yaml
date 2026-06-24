@@ -5,17 +5,17 @@ claims:
     claim_type: source-claim
     status: reviewed
     sources:
-      - source_id: SRC-0001
+      - source_id: SRC-0002
         locator: "The core idea"
     related_pages:
       - SOURCE-SUMMARY-0001
     notes:
   - claim_id: CLM-0002
-    statement: An LLM Wiki consists of three primary layers: immutable raw sources, an LLM-maintained wiki, and a schema that governs the agent's behavior.
+    statement: "An LLM Wiki consists of three primary layers: immutable raw sources, an LLM-maintained wiki, and a schema that governs the agent's behavior."
     claim_type: source-claim
     status: reviewed
     sources:
-      - source_id: SRC-0001
+      - source_id: SRC-0002
         locator: "Architecture"
     related_pages:
       - SOURCE-SUMMARY-0001
@@ -26,7 +26,7 @@ claims:
     claim_type: source-claim
     status: reviewed
     sources:
-      - source_id: SRC-0001
+      - source_id: SRC-0002
         locator: "Operations"
     related_pages:
       - SOURCE-SUMMARY-0001
@@ -37,7 +37,7 @@ claims:
     claim_type: source-claim
     status: reviewed
     sources:
-      - source_id: SRC-0001
+      - source_id: SRC-0002
         locator: "Indexing and logging"
     related_pages:
       - SOURCE-SUMMARY-0001

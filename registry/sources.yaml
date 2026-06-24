@@ -14,7 +14,25 @@ sources:
     version: 1
     language: en
     authority: primary
-    status: active
+    status: superseded
     supersedes:
+    superseded_by: SRC-0002
+    notes: Initial capture collapsed Markdown formatting; retained for history.
+  - source_id: SRC-0002
+    title: LLM Wiki
+    source_type: technical-proposal
+    authors:
+      - Andrej Karpathy
+    organization:
+    publication_date: 2026-04-04
+    retrieved_at: 2026-06-23
+    original_location: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    local_path: raw/sources/SRC-0002-karpathy-llm-wiki.md
+    content_hash: dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401
+    version: 2
+    language: en
+    authority: primary
+    status: active
+    supersedes: SRC-0001
     superseded_by:
-    notes:
+    notes: Exact raw Markdown capture from the gist raw endpoint.

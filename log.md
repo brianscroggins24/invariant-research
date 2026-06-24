@@ -31,3 +31,13 @@
 - `SOURCE-SUMMARY-0001` was promoted to `reviewed`.
 - `CLM-0001` through `CLM-0004` were promoted to `reviewed`.
 - The first source ingestion is complete.
+
+## 2026-06-23
+
+- The original `SRC-0001` capture was found to have collapsed Markdown formatting.
+- `SRC-0001` was retained and marked `superseded`.
+- An exact raw Markdown capture was added as `SRC-0002`.
+- `SRC-0002` was marked `active`.
+- The existing source summary and claims were updated to reference `SRC-0002`.
+- `PROCESS-0001` received its missing creation and update dates.
+- No substantive source interpretation or claim wording changed.

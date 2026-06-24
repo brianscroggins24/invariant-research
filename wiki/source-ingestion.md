@@ -3,8 +3,8 @@ page_id: PROCESS-0001
 title: Source Ingestion Process
 page_type: process
 status: reviewed
-created_at:
-updated_at:
+created_at: 2026-06-22
+updated_at: 2026-06-23
 sources: []
 related_pages: []
 tags:

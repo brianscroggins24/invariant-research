@@ -5,9 +5,9 @@ page_type: source-summary
 status: reviewed
 created_at: 2026-06-22
 updated_at: 2026-06-22
-source_id: SRC-0001
+source_id: SRC-0002
 sources:
-  - SRC-0001
+  - SRC-0002
 related_pages:
   - PROCESS-0001
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ## Citation
 
-Karpathy, Andrej. "LLM Wiki." Gist, April 4, 2026. Source ID: `SRC-0001`.
+Karpathy, Andrej. "LLM Wiki." Gist, April 4, 2026. Source ID: `SRC-0002`.
 
 ## Source Type
 
@@ -97,3 +97,4 @@ This source is directly relevant because it describes the exact operating model 
 ## Review Notes
 
 The source explicitly distinguishes raw sources, the wiki, and the schema. The interpretation here is that `invariant-research` should treat those as governing layers rather than optional conventions. The main uncertainty is implementation detail, not the overall pattern.
+`SRC-0002` supersedes the malformed initial capture `SRC-0001`; the intellectual source is unchanged. The page ID and summary were preserved because this was a source-capture correction, not a new source analysis.
