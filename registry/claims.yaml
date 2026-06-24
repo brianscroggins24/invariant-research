@@ -42,3 +42,93 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0001
     notes:
+  - claim_id: CLM-0005
+    statement: Market Rebalancing Arbitrage occurs when the sum of YES token prices across a market's conditions is below 1 for a long opportunity or above 1 for a short opportunity.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 3.2.1 (P7)"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0006
+    statement: Combinatorial Arbitrage arises between two dependent markets when a portfolio of bets across both markets guarantees at least one winning payoff and the market-value inequality of the constructed portfolio makes it profitable.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 3.2.2 and Definition 4 (P8)"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0007
+    statement: The authors reduce markets with more than four conditions by retaining the four conditions with the greatest traded volume and adding a fifth logical-OR condition for the remaining outcomes.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 5.1 (P12-13)"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0008
+    statement: On the U.S. election subset, the authors report 40,057 independent market pairs and 1,576 dependent market pairs, then manually confirm 11 NegRisk-NegRisk and 2 NegRisk-Single pairs as combinatorial arbitrage.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 5.2 and Section 6.3 (P13, P17)"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0009
+    statement: Within single conditions, 7,051 of 17.2K conditions had at least one arbitrage opportunity under the authors' thresholds, and all observed opportunities were long.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 6.1 (P14-15), Figure 6"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0010
+    statement: Across all strategies, assuming ε = $1 profit per trade, the authors estimate $39,587,585.02 of total extracted profit, with the highest-profit account generating $2,009,631.76.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 7.4 (P20), Table 1"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0011
+    statement: The paper frames arbitrage detection as a scalable search problem because a naive analysis across related markets requires exponential-time comparisons over the combined condition space.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Abstract and Section 1.1 (P0-P1)"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0012
+    statement: Candidate market pairs are reduced by assigning each market to a topic with Linq-Embed-Mistral embeddings, then restricting dependency checks to markets that share the same topic and end date.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 4.1.1 and Section 4.1 (P9-10)"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:
+  - claim_id: CLM-0013
+    statement: The paper treats arbitrage execution as non-atomic because the orders required for different legs execute separately, so some legs may succeed while others fail and leave the trader exposed.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0003
+        locator: "Section 3.2.1 and Section 7.2 (P7, P18-19)"
+    related_pages:
+      - SOURCE-SUMMARY-0002
+    notes:

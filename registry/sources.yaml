@@ -36,3 +36,24 @@ sources:
     supersedes: SRC-0001
     superseded_by:
     notes: Exact raw Markdown capture from the gist raw endpoint.
+  - source_id: SRC-0003
+    title: "Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets"
+    source_type: research-paper
+    authors:
+      - Oriol Saguillo
+      - Vahid Ghafouri
+      - Lucianna Kiffer
+      - Guillermo Suarez-Tangil
+    organization:
+    publication_date: 2025-08-05
+    retrieved_at: 2026-06-23
+    original_location: https://arxiv.org/pdf/2508.03474
+    local_path: raw/sources/SRC-0003-unravelling-the-probabilistic-forest-arbitrage-in-prediction-markets.pdf
+    content_hash: 9b55dcf818ff6a7d18d102b4711d86b9c49e374994de4ffd77690469a7d0e930
+    version: 1
+    language: en
+    authority: primary-research
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw PDF capture from the arXiv PDF endpoint.

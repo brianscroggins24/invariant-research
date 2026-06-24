@@ -10,3 +10,8 @@ pages:
     title: LLM Wiki
     page_type: source-summary
     status: reviewed
+  - page_id: SOURCE-SUMMARY-0002
+    path: wiki/source-summaries/SRC-0003-unravelling-the-probabilistic-forest-arbitrage-in-prediction-markets.md
+    title: "Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets"
+    page_type: source-summary
+    status: review-required

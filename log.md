@@ -41,3 +41,13 @@
 - The existing source summary and claims were updated to reference `SRC-0002`.
 - `PROCESS-0001` received its missing creation and update dates.
 - No substantive source interpretation or claim wording changed.
+
+## 2026-06-23
+
+- Captured the canonical arXiv PDF for `Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets` as `SRC-0003`.
+- Ran the parent hash script and registered SHA-256 `9b55dcf818ff6a7d18d102b4711d86b9c49e374994de4ffd77690469a7d0e930`.
+- Created `SOURCE-SUMMARY-0002` and candidate claims `CLM-0005` through `CLM-0013`.
+- Registered `SRC-0003` as `pending-ingestion` and left the source summary and claims at `review-required`.
+- Ran baseline and post-write deterministic validation successfully.
+- No synthesis, concept, platform, or strategy pages were created.
+- No promotion, commit, or push was performed.
