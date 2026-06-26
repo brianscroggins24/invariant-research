@@ -132,3 +132,103 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0002
     notes:
+  - claim_id: CLM-0014
+    statement: The article frames arbitrage detection across dependent markets as a scalable search problem because naive pairwise verification over combined condition spaces grows exponentially.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part I: The Marginal Polytope Problem (Why Simple Math Fails)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes:
+  - claim_id: CLM-0015
+    statement: The article says the Bregman projection of the current market state onto the marginal polytope yields the maximum guaranteed profit and identifies trading direction and size.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part II: Bregman Projection (How to Actually Remove Arbitrage)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Practitioner interpretation; direct executable sizing and direction require verification against the cited theoretical paper.
+  - claim_id: CLM-0016
+    statement: The article says Frank-Wolfe with an integer-programming oracle and Gurobi makes projection tractable.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Theoretical description; verify the Frank-Wolfe attribution against the separately cited combinatorial-market-making paper.
+  - claim_id: CLM-0021
+    statement: The article reports that Frank-Wolfe typically converges in 50 to 150 iterations on markets with thousands of conditions.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Performance figure reported by the article; verify against the underlying source material before treating it as corroborated.
+  - claim_id: CLM-0022
+    statement: The article reports a 38% median improvement on security prices once projections become practically fast.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Performance figure reported by the article; primary-source verification is required.
+  - claim_id: CLM-0017
+    statement: The article says Polymarket CLOB execution is non-atomic, so one leg may fill while another fails and leave the trader exposed.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part IV: Execution Under Non-Atomic Constraints (Why Order Books Change Everything)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Non-atomic execution is broadly supported; precise execution methodology requires verification against the cited source.
+  - claim_id: CLM-0023
+    statement: The article uses VWAP and liquidity depth to estimate profit and cites a $0.05 minimum threshold for filtering opportunities.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part IV: Execution Under Non-Atomic Constraints (Why Order Books Change Everything)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Practitioner execution methodology; VWAP, liquidity-depth treatment, and threshold selection require precise source verification.
+  - claim_id: CLM-0018
+    statement: The article says the dependency pipeline uses DeepSeek-R1-Distill-Qwen-32B and pairwise dependency analysis, producing 40,057 independent pairs, 1,576 dependent pairs, 374 cases satisfying the article's strict conditions, and 13 manually verified exploitable pairs.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part V: The Complete System (What Actually Got Deployed)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Article-reported figures; candidate-filtering details from `SRC-0003` must not be attributed to this article.
+  - claim_id: CLM-0019
+    statement: The article proposes a modified Kelly-style sizing rule that incorporates execution probability and caps positions at 50% of order-book depth.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part V: The Complete System (What Actually Got Deployed)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Practitioner recommendation; not validated production configuration.
+  - claim_id: CLM-0020
+    statement: The article reports $39,688,585 of total extracted profit, $2,009,632 for the top single extractor, and 4,049 transactions.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0004
+        locator: "Part V: The Complete System (What Actually Got Deployed)"
+    related_pages:
+      - SOURCE-SUMMARY-0003
+    notes: Article-reported figures; the aggregate total materially conflicts with `SRC-0003`, and the top-trader value is rounded from the primary-paper figure.

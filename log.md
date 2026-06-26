@@ -51,3 +51,14 @@
 - Ran baseline and post-write deterministic validation successfully.
 - No synthesis, concept, platform, or strategy pages were created.
 - No promotion, commit, or push was performed.
+
+## 2026-06-25
+
+- Captured the authenticated Obsidian Web Clipper Markdown article `The Math Needed for Trading on Polymarket (Complete Roadmap)` as `SRC-0004`.
+- Ran the parent hash script and registered the canonical SHA-256 for the copied raw Markdown artifact.
+- Created `SOURCE-SUMMARY-0003` and candidate claims `CLM-0014` through `CLM-0023`.
+- Registered `SRC-0004` as `pending-ingestion` and left the source summary and claims at `review-required`.
+- Added the new source and source-summary entries to `index.md`.
+- Ran baseline and post-write deterministic validation successfully.
+- No synthesis, concept, platform, or strategy pages were created.
+- No promotion, commit, or push was performed.
