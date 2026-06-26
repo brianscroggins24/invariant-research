@@ -7,6 +7,7 @@ Use this rubric to judge whether a source ingestion pass is ready for review.
 - The raw source file exists at the registered local path.
 - The raw source was not overwritten.
 - The content hash matches the captured bytes.
+- The source ID was allocated only after a complete inspectable raw artifact existed.
 - The source record status is correct for the current phase.
 - The source summary points to the active source version.
 - Claims reference the correct source and locator.
@@ -25,8 +26,8 @@ Use this rubric to judge whether a source ingestion pass is ready for review.
 ## Reject or revise when
 
 - A raw capture is reconstructed from memory instead of bytes.
+- A URL, partial preview, cached fragment, or third-party summary was registered as a source.
 - A source version is overwritten instead of versioned.
 - Claims or summary wording drift from the source without justification.
 - A file reference or registry entry points to a missing path.
 - The ingest introduces unreviewed assertions as if they were established fact.
-
