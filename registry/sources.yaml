@@ -330,3 +330,306 @@ sources:
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0019
+    title: Get Series
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/api-reference/market/get-series.md
+    local_path: raw/sources/SRC-0019-get-series.md
+    content_hash: b05f27b8a612f1150a88f4c014e38368a8cd4e8ca2ea5e6f342557e94e61fc5a
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0020
+    title: Get Event
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/api-reference/events/get-event.md
+    local_path: raw/sources/SRC-0020-get-event.md
+    content_hash: 462fb934ddf47df57108e39527bd6519ceab721bf715077446c8fe3dab660b9c
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0021
+    title: Get Market
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/api-reference/market/get-market.md
+    local_path: raw/sources/SRC-0021-get-market.md
+    content_hash: 9c5afaefc3f3472f33141857666a225f2387be9659e387d878176fecfb9476df
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0022
+    title: Get Market Orderbook
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/api-reference/market/get-market-orderbook.md
+    local_path: raw/sources/SRC-0022-get-market-orderbook.md
+    content_hash: c9d768bb478e5d7aa36d1795fcc30b37141dd805b82dfe951b23518ebebc5360
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0023
+    title: Orderbook Responses
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/getting_started/orderbook_responses.md
+    local_path: raw/sources/SRC-0023-orderbook-responses.md
+    content_hash: 561d2e60d9184dd01da91afbc7339a55e42545946d857d1984f16b4a6f084f17
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0024
+    title: Fixed-Point Migration
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/getting_started/fixed_point_migration.md
+    local_path: raw/sources/SRC-0024-fixed-point-migration.md
+    content_hash: 3c2bfb194a0ba5011b7a2912121c5406cf68a1b116064eb1cddc8c120025503f
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: 'Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. The capture includes a page-level “Last Updated: April 17, 2026” line.'
+
+  - source_id: SRC-0025
+    title: Create Order (V2)
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/api-reference/orders/create-order-v2.md
+    local_path: raw/sources/SRC-0025-create-order-v2.md
+    content_hash: 3f923807115c5772487c5173217c2d2125722862a6e873270f18324b8185ed06
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0026
+    title: WebSocket Connection
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/websockets/websocket-connection.md
+    local_path: raw/sources/SRC-0026-websocket-connection.md
+    content_hash: 2b0ea836f1be5f24f8f1385d32bb37a68d52657e4abc692de64f1525f62dca8d
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0027
+    title: Orderbook Updates
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/websockets/orderbook-updates.md
+    local_path: raw/sources/SRC-0027-orderbook-updates.md
+    content_hash: df3ce68ab3d787173ff8c651145510f0174ac2783b0a0229a662f4dd5d63c626
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0028
+    title: Get Series Fee Changes
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/api-reference/exchange/get-series-fee-changes.md
+    local_path: raw/sources/SRC-0028-get-series-fee-changes.md
+    content_hash: 6c12e9442aa88a333cc7d5b63190957defa2a25cd02d8b6920e8191b93da7702
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0029
+    title: Get Event Fee Changes
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/api-reference/events/get-event-fee-changes.md
+    local_path: raw/sources/SRC-0029-get-event-fee-changes.md
+    content_hash: 4f7b5c9cefcc5bc07bb41c684eb91e92c3a638d2de32afe18b428e31c25f3753
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0030
+    title: Fee Rounding
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/getting_started/fee_rounding.md
+    local_path: raw/sources/SRC-0030-fee-rounding.md
+    content_hash: c9b8c7efd50df6512a4528e5a86044ad40699e17ababc7f9c42497c722829796
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0031
+    title: Market Lifecycle
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/getting_started/market_lifecycle.md
+    local_path: raw/sources/SRC-0031-market-lifecycle.md
+    content_hash: 5f3f7c72eda96148fd543e516f506110998bc4a7d58877ec36bcb0454f2d2510
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0032
+    title: Market Settlement
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/getting_started/market_settlement.md
+    local_path: raw/sources/SRC-0032-market-settlement.md
+    content_hash: c8cdf6d9b09b2e76d9e25218ec2d109149b541360d8c10f2dc8a7fa5f23a54e6
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0033
+    title: Historical Data
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/getting_started/historical_data.md
+    local_path: raw/sources/SRC-0033-historical-data.md
+    content_hash: f029cf499d13b78320405604f27ef9c797e70ceda90b55198c3784a8c0b712cd
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0034
+    title: Rate Limits and Tiers
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.kalshi.com/getting_started/rate_limits.md
+    local_path: raw/sources/SRC-0034-rate-limits-and-tiers.md
+    content_hash: 5a40ca749fedc2b5b6de93564c963149e4a145e98fdd89ea3216da78110eb35c
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.

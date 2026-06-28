@@ -89,3 +89,11 @@
 - Registered the 12 Polymarket sources as `pending-ingestion` and left the new summaries and claims at `review-required`.
 - Added the new source and source-summary entries to `index.md`.
 - No promotion, commit, or push was performed.
+## 2026-06-27
+
+- Captured the approved minimum official Kalshi documentation set as `SRC-0019` through `SRC-0034`.
+- Copied the exact markdown captures into the canonical raw-source paths and registered their SHA-256 hashes.
+- Created `SOURCE-SUMMARY-0018` through `SOURCE-SUMMARY-0033` and candidate claims `CLM-0080` through `CLM-0119`.
+- Registered the 16 Kalshi sources as `pending-ingestion` and left the new summaries and claims at `review-required`.
+- Added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed.

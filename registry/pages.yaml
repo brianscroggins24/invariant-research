@@ -90,3 +90,98 @@ pages:
     title: Rate Limits
     page_type: source-summary
     status: review-required
+  - page_id: SOURCE-SUMMARY-0018
+    path: wiki/source-summaries/SRC-0019-get-series.md
+    title: Get Series
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0019
+    path: wiki/source-summaries/SRC-0020-get-event.md
+    title: Get Event
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0020
+    path: wiki/source-summaries/SRC-0021-get-market.md
+    title: Get Market
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0021
+    path: wiki/source-summaries/SRC-0022-get-market-orderbook.md
+    title: Get Market Orderbook
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0022
+    path: wiki/source-summaries/SRC-0023-orderbook-responses.md
+    title: Orderbook Responses
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0023
+    path: wiki/source-summaries/SRC-0024-fixed-point-migration.md
+    title: Fixed-Point Migration
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0024
+    path: wiki/source-summaries/SRC-0025-create-order-v2.md
+    title: Create Order (V2)
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0025
+    path: wiki/source-summaries/SRC-0026-websocket-connection.md
+    title: WebSocket Connection
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0026
+    path: wiki/source-summaries/SRC-0027-orderbook-updates.md
+    title: Orderbook Updates
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0027
+    path: wiki/source-summaries/SRC-0028-get-series-fee-changes.md
+    title: Get Series Fee Changes
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0028
+    path: wiki/source-summaries/SRC-0029-get-event-fee-changes.md
+    title: Get Event Fee Changes
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0029
+    path: wiki/source-summaries/SRC-0030-fee-rounding.md
+    title: Fee Rounding
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0030
+    path: wiki/source-summaries/SRC-0031-market-lifecycle.md
+    title: Market Lifecycle
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0031
+    path: wiki/source-summaries/SRC-0032-market-settlement.md
+    title: Market Settlement
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0032
+    path: wiki/source-summaries/SRC-0033-historical-data.md
+    title: Historical Data
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0033
+    path: wiki/source-summaries/SRC-0034-rate-limits-and-tiers.md
+    title: Rate Limits and Tiers
+    page_type: source-summary
+    status: review-required

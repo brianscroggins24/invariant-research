@@ -792,3 +792,444 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0017
     notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0080
+    statement: A series is a template for recurring events and defines the structure, settlement sources, and metadata applied to each recurring event instance.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0019
+        locator: "Get Series / Series schema and page summary"
+    related_pages:
+      - SOURCE-SUMMARY-0018
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0081
+    statement: The Series schema includes `ticker`, `frequency`, `title`, `category`, `tags`, `settlement_sources`, `contract_url`, `contract_terms_url`, `fee_type`, `fee_multiplier`, `volume_fp`, and `last_updated_ts`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0019
+        locator: "Get Series / Series schema"
+    related_pages:
+      - SOURCE-SUMMARY-0018
+    notes: Direct schema support.
+
+  - claim_id: CLM-0082
+    statement: An event is a real-world occurrence that can contain one or more markets, and `with_nested_markets=true` nests those markets in the event response.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0020
+        locator: "Get Event / page description and `with_nested_markets` parameter"
+    related_pages:
+      - SOURCE-SUMMARY-0019
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0083
+    statement: The EventData schema exposes `event_ticker`, `series_ticker`, `collateral_return_type`, `mutually_exclusive`, `settlement_sources`, `fee_type_override`, and `fee_multiplier_override`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0020
+        locator: "Get Event / EventData schema"
+    related_pages:
+      - SOURCE-SUMMARY-0019
+    notes: Direct schema support.
+
+  - claim_id: CLM-0084
+    statement: When `mutually_exclusive` is true, only one market in the event can resolve to `yes`; when false, multiple markets can resolve to `yes`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0020
+        locator: "Get Event / EventData `mutually_exclusive` description"
+    related_pages:
+      - SOURCE-SUMMARY-0019
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0085
+    statement: The page describes a market as a tradable outcome within an event with YES/NO positions, while the Market schema permits `market_type` values of both `binary` and `scalar`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0021
+        locator: "Get Market / page description and Market schema"
+    related_pages:
+      - SOURCE-SUMMARY-0020
+    notes: The prose description emphasizes binary YES/NO markets, while the schema separately permits scalar markets. Downstream modeling should preserve that distinction rather than assuming every Kalshi market is binary.
+
+  - claim_id: CLM-0086
+    statement: Market responses expose YES/NO bid and ask prices and sizes, last price, volume, open interest, settlement timer, status, and price-range metadata.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0021
+        locator: "Get Market / Market schema"
+    related_pages:
+      - SOURCE-SUMMARY-0020
+    notes: Direct schema support.
+
+  - claim_id: CLM-0087
+    statement: The market status enum includes `initialized`, `inactive`, `active`, `closed`, `determined`, `disputed`, `amended`, and `finalized`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0021
+        locator: "Get Market / Market schema `status` enum"
+    related_pages:
+      - SOURCE-SUMMARY-0020
+    notes: Direct schema support.
+
+  - claim_id: CLM-0088
+    statement: Get Market Orderbook returns the current order-book snapshot for a specific market and uses an optional `depth` parameter to limit levels.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0022
+        locator: "Get Market Orderbook / page description and `depth` parameter"
+    related_pages:
+      - SOURCE-SUMMARY-0021
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0089
+    statement: The response is `orderbook_fp` with `yes_dollars` and `no_dollars` arrays of `[price_dollars, contract_count_fp]` values, and asks are not returned directly.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0022
+        locator: "Get Market Orderbook / `OrderbookCountFp` schema"
+    related_pages:
+      - SOURCE-SUMMARY-0021
+    notes: Direct schema support and page description.
+
+  - claim_id: CLM-0090
+    statement: Kalshi orderbook responses return only YES and NO bids because the opposite-side ask can be derived from binary-market reciprocity.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0023
+        locator: "Orderbook Responses / Response Structure and Why Only Bids?"
+    related_pages:
+      - SOURCE-SUMMARY-0022
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0091
+    statement: The arrays are sorted in ascending price order, the best bid is the last element, and the bid-ask spread is derived from the best bid on one side and the complementary best bid on the other side.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0023
+        locator: "Orderbook Responses / Understanding the Arrays and Calculating Spreads"
+    related_pages:
+      - SOURCE-SUMMARY-0022
+    notes: Directly stated in the page text and example.
+
+  - claim_id: CLM-0092
+    statement: The migration introduces fixed-point `_dollars` price strings with up to 4 decimals and uses `price_level_structure` plus `price_ranges` to define valid tick intervals.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0024
+        locator: "Fixed-Point Migration / Overview and Subpenny Pricing"
+    related_pages:
+      - SOURCE-SUMMARY-0023
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0093
+    statement: Contract-count `_fp` fields are strings with 0-2 decimal places on input, always emit 2 decimals in responses, have 0.01 minimum granularity, and must match legacy integer fields when both are provided.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0024
+        locator: "Fixed-Point Migration / Fractional Contracts"
+    related_pages:
+      - SOURCE-SUMMARY-0023
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0094
+    statement: Create Order V2 requires the Kalshi access-key, signature, and timestamp headers and accepts `ticker`, `side`, `count`, `price`, `time_in_force`, and `self_trade_prevention_type`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0025
+        locator: "Create Order (V2) / security schemes and CreateOrderV2Request schema"
+    related_pages:
+      - SOURCE-SUMMARY-0024
+    notes: Direct schema and security support.
+
+  - claim_id: CLM-0095
+    statement: "The endpoint quotes event markets from the YES side: `bid` means buy YES and `ask` means sell YES; `good_till_canceled` is the expiring-order pattern with `expiration_time`, `GTT` is not a valid API value, and `immediate_or_cancel` cannot be combined with `expiration_time`."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0025
+        locator: "CreateOrderV2Request schema / `side`, `time_in_force`, and `expiration_time` fields"
+    related_pages:
+      - SOURCE-SUMMARY-0024
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0096
+    statement: The response returns `order_id`, `client_order_id`, `fill_count`, `remaining_count`, `average_fill_price`, `average_fee_paid`, and `ts_ms`, with `remaining_count` reflecting the final unfilled quantity after IOC cancellation.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0025
+        locator: "CreateOrderV2Response schema"
+    related_pages:
+      - SOURCE-SUMMARY-0024
+    notes: Direct schema support.
+
+  - claim_id: CLM-0097
+    statement: Self-trade prevention `taker_at_cross` cancels the taker order when it crosses against the same user, while `maker` cancels the resting maker order and continues matching.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0025
+        locator: "SelfTradePreventionType schema"
+    related_pages:
+      - SOURCE-SUMMARY-0024
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0098
+    statement: Kalshi’s WebSocket connection uses `wss://external-api-ws.kalshi.com/` and requires authentication during the handshake even for public data channels.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0026
+        locator: "WebSocket Connection / AsyncAPI root and securitySchemes"
+    related_pages:
+      - SOURCE-SUMMARY-0025
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0099
+    statement: Subscribe, unsubscribe, list_subscriptions, and update_subscription commands use client-generated ids and sid(s), and subscriptions can target `market_ticker(s)` or `market_id(s)`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0026
+        locator: "WebSocket Connection / Subscribe, Unsubscribe, List Subscriptions, and Update Subscription command schemas"
+    related_pages:
+      - SOURCE-SUMMARY-0025
+    notes: Direct schema support.
+
+  - claim_id: CLM-0100
+    statement: "`send_initial_snapshot` can seed the ticker channel, and `use_yes_price` is an orderbook-channel migration flag that defaults to false in this capture."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0026
+        locator: "WebSocket Connection / subscribe command parameters"
+    related_pages:
+      - SOURCE-SUMMARY-0025
+    notes: Time-sensitive migration detail; refresh if the docs change.
+
+  - claim_id: CLM-0101
+    statement: The orderbook channel sends `orderbook_snapshot` first and then incremental `orderbook_delta` updates.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0027
+        locator: "Orderbook Updates / page summary and Orderbook Snapshot / Orderbook Delta schemas"
+    related_pages:
+      - SOURCE-SUMMARY-0026
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0102
+    statement: Snapshot and delta messages both carry `sid` and `seq`; snapshot messages expose `yes_dollars_fp` and `no_dollars_fp`, while delta messages expose `price_dollars`, `delta_fp`, `side`, and market identifiers.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0027
+        locator: "Orderbook Updates / snapshot and delta schemas"
+    related_pages:
+      - SOURCE-SUMMARY-0026
+    notes: Direct schema support.
+
+  - claim_id: CLM-0103
+    statement: The docs say `seq` should be checked for snapshot/delta consistency, but they do not specify a gap-recovery algorithm for missed updates.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0027
+        locator: "Orderbook Updates / `seq` descriptions and channel summary"
+    related_pages:
+      - SOURCE-SUMMARY-0026
+    notes: Explicit ambiguity; no recovery procedure is documented.
+
+  - claim_id: CLM-0104
+    statement: The series fee-changes endpoint returns `series_fee_change_arr` plus optional `series_ticker` and `show_historical` filters, and each record includes id, series ticker, fee type, fee multiplier, and scheduled timestamp.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0028
+        locator: "Get Series Fee Changes / OpenAPI path and SeriesFeeChange schema"
+    related_pages:
+      - SOURCE-SUMMARY-0027
+    notes: Direct schema support.
+
+  - claim_id: CLM-0105
+    statement: The fee-type enum for series fee changes includes `quadratic`, `quadratic_with_maker_fees`, and `flat`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0028
+        locator: "Get Series Fee Changes / FeeType schema"
+    related_pages:
+      - SOURCE-SUMMARY-0027
+    notes: Direct schema support.
+
+  - claim_id: CLM-0106
+    statement: Event fee changes are overrides layered on series fees, and null override fields clear the event override so the series defaults apply again.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0029
+        locator: "Get Event Fee Changes / page description and EventFeeChange schema"
+    related_pages:
+      - SOURCE-SUMMARY-0028
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0107
+    statement: The event fee-changes response is paginated with `event_fee_changes` and `cursor`, and each record includes event ticker, series ticker, override fields, and scheduled effective time.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0029
+        locator: "Get Event Fee Changes / GetEventFeeChangesResponse and EventFeeChange schemas"
+    related_pages:
+      - SOURCE-SUMMARY-0028
+    notes: Direct schema support.
+
+  - claim_id: CLM-0108
+    statement: Direct member balances round to nearest $0.0001 and non-direct balances round to nearest $0.01; each fill produces trade fee, rounding fee, and rebate components.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0030
+        locator: "Fee Rounding / Overview and Rounding Mechanics"
+    related_pages:
+      - SOURCE-SUMMARY-0029
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0109
+    statement: The fee accumulator carries rounding overpayment across all fills of an order, including maker/taker mixes, and issues rebates once accumulated rounding exceeds $0.01.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0030
+        locator: "Fee Rounding / Fee Accumulator"
+    related_pages:
+      - SOURCE-SUMMARY-0029
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0110
+    statement: REST market statuses include `initialized`, `active`, `inactive`, `closed`, `determined`, `disputed`, `amended`, and `finalized`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0031
+        locator: "Market Lifecycle / Statuses"
+    related_pages:
+      - SOURCE-SUMMARY-0030
+    notes: Direct schema/support from the status table.
+
+  - claim_id: CLM-0111
+    statement: The documented transitions include initialized→active at open time without a WebSocket event, active/inactive→closed at close time, inactive→active via deactivated/activated events, closed→determined, and determined/amended→finalized via `settled`.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0031
+        locator: "Market Lifecycle / Transitions"
+    related_pages:
+      - SOURCE-SUMMARY-0030
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0112
+    statement: Once `close_time` passes, order operations including cancellations are rejected with `MARKET_INACTIVE`, and resting orders are cancelled shortly after close.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0031
+        locator: "Market Lifecycle / Orders after close"
+    related_pages:
+      - SOURCE-SUMMARY-0030
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0113
+    statement: The Settlement page states that settlement begins when a market outcome is determined and that positions are automatically resolved with funds transferred; the Lifecycle documentation separately distinguishes `determined` from later `finalized` status.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0032
+        locator: "Market Settlement / opening paragraph and How It Works"
+      - source_id: SRC-0031
+        locator: "Market Lifecycle / Determination and settlement"
+    related_pages:
+      - SOURCE-SUMMARY-0031
+    notes: Read together with `SRC-0031`, determination and finalization are distinct lifecycle states, so this claim must not be interpreted as guaranteeing immediate final cash availability at the instant of determination.
+
+  - claim_id: CLM-0114
+    statement: Yes outcomes pay yes holders $1 per contract, no outcomes pay no holders $1 per contract, only net positions are settled, and scalar settlement may incur fees with whole-cent rounding.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0032
+        locator: "Market Settlement / How It Works and Fees"
+    related_pages:
+      - SOURCE-SUMMARY-0031
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0115
+    statement: Kalshi partitions live and historical data for markets, market candlesticks, trades, and orders, while older events and series remain available through their original endpoints.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0033
+        locator: "Historical Data / Overview"
+    related_pages:
+      - SOURCE-SUMMARY-0032
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0116
+    statement: "GET /historical/cutoff provides the cutoff timestamps, and records older than market_settled_ts, trades_created_ts, or orders_updated_ts must be fetched via the corresponding historical endpoints while resting live orders remain on GET /portfolio/orders."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0033
+        locator: "Historical Data / How It Works, Cutoff Timestamps, Historical Endpoints, and Impacted Live Endpoints"
+    related_pages:
+      - SOURCE-SUMMARY-0032
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0117
+    statement: Every authenticated request costs tokens; sustained rate is budget ÷ cost; the default request cost is 10 tokens; and Read/Write are separate buckets that REST and FIX both drain.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0034
+        locator: "Rate Limits and Tiers / Token-based limits and Read and Write buckets"
+    related_pages:
+      - SOURCE-SUMMARY-0033
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0118
+    statement: Kalshi rate limits use token buckets with burst capacity and no cooldown, and 429 responses do not include `Retry-After` or `X-RateLimit-*` headers.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0034
+        locator: "Rate Limits and Tiers / Bucket capacity and bursting and When you hit the limit"
+    related_pages:
+      - SOURCE-SUMMARY-0033
+    notes: Directly stated in the page text.
+
+  - claim_id: CLM-0119
+    statement: The current event-contract tier budgets are Basic 200/100, Advanced 300/300, Expert 600/600, Premier 1000/1000, Paragon 2000/2000, Prime 4000/4000, and Prestige 6000/8000, with higher tiers earned by volume or assigned manually.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0034
+        locator: "Rate Limits and Tiers / Tiers and budgets, Tier qualification, and Your grants"
+    related_pages:
+      - SOURCE-SUMMARY-0033
+    notes: Time-sensitive table and grant behavior; refresh against the live docs before production use.
