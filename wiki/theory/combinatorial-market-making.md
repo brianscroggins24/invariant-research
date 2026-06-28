@@ -2,7 +2,7 @@
 page_id: THEORY-0001
 title: Combinatorial Market Making
 page_type: theory
-status: review-required
+status: reviewed
 created_at: 2026-06-28
 updated_at: 2026-06-28
 sources:

@@ -68,7 +68,7 @@ sources:
     original_location: https://x.com/RohOnChain/article/2017314080395296995
     local_path: raw/sources/SRC-0004-the-math-needed-for-trading-on-polymarket.md
     content_hash: e8d49c1ffb0928275c23056c7402766834a1564c61d4f49a95347569926bc4c7
-    version: 1
+    version: 2
     language: en
     authority: secondary-practitioner
     status: active
@@ -89,7 +89,7 @@ sources:
     original_location: https://arxiv.org/pdf/1606.02825.pdf
     local_path: raw/sources/SRC-0005-arbitrage-free-combinatorial-market-making-via-integer-programming.pdf
     content_hash: 58170e2db5eae346af6fc198fcdd3b8524ff95f4d0da5bc9370cb8591593180c
-    version: 1
+    version: 2
     language: en
     authority: primary-research
     status: active

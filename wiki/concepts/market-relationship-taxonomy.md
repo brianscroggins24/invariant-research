@@ -2,7 +2,7 @@
 page_id: CONCEPT-0001
 title: Market Relationship Taxonomy
 page_type: concept
-status: review-required
+status: reviewed
 created_at: 2026-06-28
 updated_at: 2026-06-28
 sources:

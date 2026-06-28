@@ -110,3 +110,9 @@
 - Created synthesis pages `CONCEPT-0001`, `CONCEPT-0002`, `CONCEPT-0003`, `THEORY-0001`, `STRATEGY-0001`, `PLATFORM-0001`, and `PLATFORM-0002` at `review-required`.
 - Registered the synthesis pages in `registry/pages.yaml` and added them to `index.md`.
 - The synthesis tree preserves source boundaries between primary research, practitioner interpretation, official documentation, and repository-level inference.
+
+## 2026-06-28
+
+- Promoted synthesis pages `CONCEPT-0001`, `CONCEPT-0002`, `CONCEPT-0003`, `THEORY-0001`, `STRATEGY-0001`, `PLATFORM-0001`, and `PLATFORM-0002` to `reviewed`.
+- Updated `registry/pages.yaml`, the seven synthesis page frontmatter records, and `index.md` to match the reviewed status.
+- No pages were withheld; the Phase 2 synthesis layer passed registry, link, and semantic review checks and is ready for final consistency audit.

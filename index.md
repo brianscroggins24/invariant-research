@@ -79,22 +79,22 @@ Minimal landing page for the research wiki.
 
 ### Concepts
 
-- [Market Relationship Taxonomy](wiki/concepts/market-relationship-taxonomy.md) — `review-required`
-- [Prediction Market Mechanics](wiki/concepts/prediction-market-mechanics.md) — `review-required`
-- [Resolution and Settlement](wiki/concepts/resolution-and-settlement.md) — `review-required`
+- [Market Relationship Taxonomy](wiki/concepts/market-relationship-taxonomy.md) — `reviewed`
+- [Prediction Market Mechanics](wiki/concepts/prediction-market-mechanics.md) — `reviewed`
+- [Resolution and Settlement](wiki/concepts/resolution-and-settlement.md) — `reviewed`
 
 ### Theory
 
-- [Combinatorial Market Making](wiki/theory/combinatorial-market-making.md) — `review-required`
+- [Combinatorial Market Making](wiki/theory/combinatorial-market-making.md) — `reviewed`
 
 ### Strategies
 
-- [Arbitrage and Execution Risk](wiki/strategies/arbitrage-and-execution-risk.md) — `review-required`
+- [Arbitrage and Execution Risk](wiki/strategies/arbitrage-and-execution-risk.md) — `reviewed`
 
 ### Platforms
 
-- [Polymarket](wiki/platforms/polymarket.md) — `review-required`
-- [Kalshi](wiki/platforms/kalshi.md) — `review-required`
+- [Polymarket](wiki/platforms/polymarket.md) — `reviewed`
+- [Kalshi](wiki/platforms/kalshi.md) — `reviewed`
 
 ## Processes
 

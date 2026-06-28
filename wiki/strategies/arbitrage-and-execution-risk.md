@@ -2,7 +2,7 @@
 page_id: STRATEGY-0001
 title: Arbitrage and Execution Risk
 page_type: strategy
-status: review-required
+status: reviewed
 created_at: 2026-06-28
 updated_at: 2026-06-28
 sources:

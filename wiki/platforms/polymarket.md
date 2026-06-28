@@ -2,7 +2,7 @@
 page_id: PLATFORM-0001
 title: Polymarket
 page_type: platform
-status: review-required
+status: reviewed
 created_at: 2026-06-28
 updated_at: 2026-06-28
 sources:

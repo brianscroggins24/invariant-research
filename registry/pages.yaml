@@ -190,40 +190,40 @@ pages:
     path: wiki/concepts/market-relationship-taxonomy.md
     title: Market Relationship Taxonomy
     page_type: concept
-    status: review-required
+    status: reviewed
 
   - page_id: CONCEPT-0002
     path: wiki/concepts/prediction-market-mechanics.md
     title: Prediction Market Mechanics
     page_type: concept
-    status: review-required
+    status: reviewed
 
   - page_id: CONCEPT-0003
     path: wiki/concepts/resolution-and-settlement.md
     title: Resolution and Settlement
     page_type: concept
-    status: review-required
+    status: reviewed
 
   - page_id: THEORY-0001
     path: wiki/theory/combinatorial-market-making.md
     title: Combinatorial Market Making
     page_type: theory
-    status: review-required
+    status: reviewed
 
   - page_id: STRATEGY-0001
     path: wiki/strategies/arbitrage-and-execution-risk.md
     title: Arbitrage and Execution Risk
     page_type: strategy
-    status: review-required
+    status: reviewed
 
   - page_id: PLATFORM-0001
     path: wiki/platforms/polymarket.md
     title: Polymarket
     page_type: platform
-    status: review-required
+    status: reviewed
 
   - page_id: PLATFORM-0002
     path: wiki/platforms/kalshi.md
     title: Kalshi
     page_type: platform
-    status: review-required
+    status: reviewed

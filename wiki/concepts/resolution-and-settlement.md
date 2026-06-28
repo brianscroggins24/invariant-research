@@ -2,7 +2,7 @@
 page_id: CONCEPT-0003
 title: Resolution and Settlement
 page_type: concept
-status: review-required
+status: reviewed
 created_at: 2026-06-28
 updated_at: 2026-06-28
 sources:

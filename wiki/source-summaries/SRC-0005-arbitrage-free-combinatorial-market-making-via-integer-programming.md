@@ -81,7 +81,7 @@ This paper is a primary theoretical source for arbitrage-free combinatorial mark
 
 ## Wiki Pages Affected
 
-- [The Math Needed for Trading on Polymarket (Complete Roadmap)](wiki/source-summaries/SRC-0004-the-math-needed-for-trading-on-polymarket.md) should keep its theory attributions qualified against this primary paper.
+- [The Math Needed for Trading on Polymarket (Complete Roadmap)](SRC-0004-the-math-needed-for-trading-on-polymarket.md) should keep its theory attributions qualified against this primary paper.
 
 ## New Research Questions
 
