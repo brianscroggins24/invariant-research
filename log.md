@@ -71,3 +71,12 @@
 - Registered `SRC-0005` as `pending-ingestion` and left the source summary and claims at `review-required`.
 - Added the new source and source-summary entries to `index.md`.
 - No promotion, commit, or push was performed yet.
+
+## 2026-06-27
+
+- Captured the complete Bloomberg Opinion Markdown article `I Built an AI Trading Platform in Six Days. That’s Terrifying` as `SRC-0006`.
+- Ran baseline validation, allocated provisional IDs, copied the exact raw Markdown into the canonical raw-source path, and registered the canonical SHA-256 `bf637a6e98afd94e021286762ababfcd64eaaa75ad20b934746e54ea8d4eb234`.
+- Created `SOURCE-SUMMARY-0005` and candidate claims `CLM-0035` through `CLM-0044`.
+- Registered `SRC-0006` as `pending-ingestion` and left the source summary and claims at `review-required`.
+- Added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed.

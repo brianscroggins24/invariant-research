@@ -342,3 +342,103 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0004
     notes: Direct support for comparative pricing accuracy; the 38% figure is an accuracy improvement, not a production deployment guarantee.
+  - claim_id: CLM-0035
+    statement: The author says they built an autonomous trading platform in six days that connects to three financial exchanges, ingests news from RSS, web searches, Reddit, and Twitter, uses an LLM to analyze markets and decide when prices are wrong, sizes positions with Kelly criterion, manages risk, and routes orders across venues.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Lines 16-20 and 26"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Direct first-person build account and platform description; the article also says the system runs around the clock and spans 50 modules.
+  - claim_id: CLM-0036
+    statement: The article cites a March 2026 survey of 906 developers and a SemiAnalysis estimate to argue that Claude Code is widely used among AI coding-agent users, that it authored about 4% of public GitHub contributions, and that the share could reach 20% by year-end.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Line 28"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Article-cited evidence; these are reported survey and estimate figures, not measurements performed by the article.
+  - claim_id: CLM-0037
+    statement: The article says Polymarket already shows bot-like behavior, including reports that 14 of its 20 most profitable accounts are bots and that more than 30% of wallets are operated by AI agents.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Line 30"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Third-party-reported market statistics cited by the article; not independently verified in this ingestion.
+  - claim_id: CLM-0038
+    statement: The article says regulators and researchers warn that widespread use of common AI models or model monocultures could increase market correlations, amplify stress, and heighten systemic vulnerabilities.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Lines 38-40"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: This claim captures the article's cited institutional warnings and its monoculture framing.
+  - claim_id: CLM-0039
+    statement: The article says the current regulatory lens focuses on regulated firms, while the relevant agentic traders may be unregulated individuals without reporting obligations, compliance departments, capital requirements, or circuit breakers.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Lines 44-50"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Journalistic analysis about a monitoring blind spot; it is an argument about oversight scope, not an observed market fact.
+  - claim_id: CLM-0040
+    statement: The article says prediction markets are the proving ground, that similar AI trading tools are being adopted across foreign exchange, equities, and credit markets, and that roughly 70% of spot FX activity is electronically executed.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Lines 52-54"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Article-stated market-scope claim plus a cited execution-share statistic.
+  - claim_id: CLM-0041
+    statement: The article presents a hypothetical scenario in which similar-model agents simultaneously downgrade a mid-sized economy, unwind positions, and trigger a rapid cascade into sovereign funding stress.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Lines 56-64"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Explicitly hypothetical scenario used to illustrate a potential feedback loop; not an observed event.
+  - claim_id: CLM-0042
+    statement: The article argues that agentic herds move at machine speed, leaving no gap for human intervention, and that the aggregate effect is a global correlation-risk problem rather than a single-strategy failure.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Lines 66-72"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Journalist analysis and synthesis; a forward-looking risk argument, not direct empirical evidence.
+  - claim_id: CLM-0043
+    statement: The article recommends model-use disclosure, correlation-aware circuit breakers, mandatory registration for autonomous trading systems, and resilience planning for small open economies.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Lines 74-80"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Policy recommendations attributed to the article, not validated operating controls.
+  - claim_id: CLM-0044
+    statement: The article forecasts that prediction markets may be almost entirely machine-versus-machine within a year, most liquid financial markets within three years, and that institutions will need to adapt within five years.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0006
+        locator: "Line 82"
+    related_pages:
+      - SOURCE-SUMMARY-0005
+    notes: Long-horizon forecast; treat as the author's prediction rather than established fact.

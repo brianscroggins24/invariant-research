@@ -96,3 +96,21 @@ sources:
     supersedes:
     superseded_by:
     notes: Exact raw PDF capture from the canonical arXiv PDF endpoint; captured artifact is arXiv v2 dated 2016-06-10.
+  - source_id: SRC-0006
+    title: I Built an AI Trading Platform in Six Days. That’s Terrifying
+    source_type: financial-commentary
+    authors:
+      - Darri Eythorsson
+    organization:
+    publication_date: 2026-04-28
+    retrieved_at: 2026-06-27
+    original_location: https://www.bloomberg.com/opinion/articles/2026-04-28/ai-trading-bots-are-creating-a-major-financial-risk
+    local_path: raw/sources/SRC-0006-i-built-an-ai-trading-platform-in-six-days-thats-terrifying.md
+    content_hash: bf637a6e98afd94e021286762ababfcd64eaaa75ad20b934746e54ea8d4eb234
+    version: 1
+    language: en
+    authority: secondary-journalism
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from authenticated Obsidian Web Clipper.

@@ -25,3 +25,8 @@ pages:
     title: Arbitrage-Free Combinatorial Market Making via Integer Programming
     page_type: source-summary
     status: review-required
+  - page_id: SOURCE-SUMMARY-0005
+    path: wiki/source-summaries/SRC-0006-i-built-an-ai-trading-platform-in-six-days-thats-terrifying.md
+    title: I Built an AI Trading Platform in Six Days. That’s Terrifying
+    page_type: source-summary
+    status: review-required
