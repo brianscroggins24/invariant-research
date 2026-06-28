@@ -75,6 +75,27 @@ Minimal landing page for the research wiki.
 - [Historical Data source summary](wiki/source-summaries/SRC-0033-historical-data.md) — `reviewed`
 - [Rate Limits and Tiers source summary](wiki/source-summaries/SRC-0034-rate-limits-and-tiers.md) — `reviewed`
 
+## Synthesis Pages
+
+### Concepts
+
+- [Market Relationship Taxonomy](wiki/concepts/market-relationship-taxonomy.md) — `review-required`
+- [Prediction Market Mechanics](wiki/concepts/prediction-market-mechanics.md) — `review-required`
+- [Resolution and Settlement](wiki/concepts/resolution-and-settlement.md) — `review-required`
+
+### Theory
+
+- [Combinatorial Market Making](wiki/theory/combinatorial-market-making.md) — `review-required`
+
+### Strategies
+
+- [Arbitrage and Execution Risk](wiki/strategies/arbitrage-and-execution-risk.md) — `review-required`
+
+### Platforms
+
+- [Polymarket](wiki/platforms/polymarket.md) — `review-required`
+- [Kalshi](wiki/platforms/kalshi.md) — `review-required`
+
 ## Processes
 
 - [Source Ingestion Process](wiki/source-ingestion.md)

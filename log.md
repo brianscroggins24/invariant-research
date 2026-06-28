@@ -104,3 +104,9 @@
 - Promoted source summaries `SOURCE-SUMMARY-0002` through `SOURCE-SUMMARY-0033` to `reviewed`.
 - Promoted claims `CLM-0005` through `CLM-0119` to `reviewed`.
 - No artifacts were withheld; the completed Phase 2 source layer is ready for synthesis.
+
+## 2026-06-28
+
+- Created synthesis pages `CONCEPT-0001`, `CONCEPT-0002`, `CONCEPT-0003`, `THEORY-0001`, `STRATEGY-0001`, `PLATFORM-0001`, and `PLATFORM-0002` at `review-required`.
+- Registered the synthesis pages in `registry/pages.yaml` and added them to `index.md`.
+- The synthesis tree preserves source boundaries between primary research, practitioner interpretation, official documentation, and repository-level inference.
