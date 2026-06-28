@@ -14,174 +14,174 @@ pages:
     path: wiki/source-summaries/SRC-0003-unravelling-the-probabilistic-forest-arbitrage-in-prediction-markets.md
     title: "Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets"
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0003
     path: wiki/source-summaries/SRC-0004-the-math-needed-for-trading-on-polymarket.md
     title: The Math Needed for Trading on Polymarket (Complete Roadmap)
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0004
     path: wiki/source-summaries/SRC-0005-arbitrage-free-combinatorial-market-making-via-integer-programming.md
     title: Arbitrage-Free Combinatorial Market Making via Integer Programming
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0005
     path: wiki/source-summaries/SRC-0006-i-built-an-ai-trading-platform-in-six-days-thats-terrifying.md
     title: I Built an AI Trading Platform in Six Days. That’s Terrifying
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0006
     path: wiki/source-summaries/SRC-0007-markets-events.md
     title: Markets & Events
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0007
     path: wiki/source-summaries/SRC-0008-positions-tokens.md
     title: Positions & Tokens
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0008
     path: wiki/source-summaries/SRC-0009-prices-orderbook.md
     title: Prices & Orderbook
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0009
     path: wiki/source-summaries/SRC-0010-order-lifecycle.md
     title: Order Lifecycle
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0010
     path: wiki/source-summaries/SRC-0011-resolution.md
     title: Resolution
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0011
     path: wiki/source-summaries/SRC-0012-authentication.md
     title: Authentication
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0012
     path: wiki/source-summaries/SRC-0013-post-a-new-order.md
     title: Post a new order
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0013
     path: wiki/source-summaries/SRC-0014-get-order-book.md
     title: Get order book
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0014
     path: wiki/source-summaries/SRC-0015-websocket-overview.md
     title: WebSocket Overview
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0015
     path: wiki/source-summaries/SRC-0016-market-channel.md
     title: Market Channel
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0016
     path: wiki/source-summaries/SRC-0017-fees.md
     title: Fees
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0017
     path: wiki/source-summaries/SRC-0018-rate-limits.md
     title: Rate Limits
     page_type: source-summary
-    status: review-required
+    status: reviewed
   - page_id: SOURCE-SUMMARY-0018
     path: wiki/source-summaries/SRC-0019-get-series.md
     title: Get Series
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0019
     path: wiki/source-summaries/SRC-0020-get-event.md
     title: Get Event
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0020
     path: wiki/source-summaries/SRC-0021-get-market.md
     title: Get Market
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0021
     path: wiki/source-summaries/SRC-0022-get-market-orderbook.md
     title: Get Market Orderbook
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0022
     path: wiki/source-summaries/SRC-0023-orderbook-responses.md
     title: Orderbook Responses
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0023
     path: wiki/source-summaries/SRC-0024-fixed-point-migration.md
     title: Fixed-Point Migration
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0024
     path: wiki/source-summaries/SRC-0025-create-order-v2.md
     title: Create Order (V2)
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0025
     path: wiki/source-summaries/SRC-0026-websocket-connection.md
     title: WebSocket Connection
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0026
     path: wiki/source-summaries/SRC-0027-orderbook-updates.md
     title: Orderbook Updates
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0027
     path: wiki/source-summaries/SRC-0028-get-series-fee-changes.md
     title: Get Series Fee Changes
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0028
     path: wiki/source-summaries/SRC-0029-get-event-fee-changes.md
     title: Get Event Fee Changes
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0029
     path: wiki/source-summaries/SRC-0030-fee-rounding.md
     title: Fee Rounding
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0030
     path: wiki/source-summaries/SRC-0031-market-lifecycle.md
     title: Market Lifecycle
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0031
     path: wiki/source-summaries/SRC-0032-market-settlement.md
     title: Market Settlement
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0032
     path: wiki/source-summaries/SRC-0033-historical-data.md
     title: Historical Data
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0033
     path: wiki/source-summaries/SRC-0034-rate-limits-and-tiers.md
     title: Rate Limits and Tiers
     page_type: source-summary
-    status: review-required
+    status: reviewed

@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0031
 title: Market Settlement
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-06-27
 updated_at: 2026-06-27
 source_id: SRC-0032

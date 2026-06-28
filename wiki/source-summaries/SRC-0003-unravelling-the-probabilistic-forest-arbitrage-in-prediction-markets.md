@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0002
 title: "Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets"
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-06-23
 updated_at: 2026-06-23
 source_id: SRC-0003

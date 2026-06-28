@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0003
 title: The Math Needed for Trading on Polymarket (Complete Roadmap)
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-06-25
 updated_at: 2026-06-25
 source_id: SRC-0004

@@ -45,7 +45,7 @@ claims:
   - claim_id: CLM-0005
     statement: Market Rebalancing Arbitrage occurs when the sum of YES token prices across a market's conditions is below 1 for a long opportunity or above 1 for a short opportunity.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 3.2.1 (P7)"
@@ -55,7 +55,7 @@ claims:
   - claim_id: CLM-0006
     statement: Combinatorial Arbitrage arises between two dependent markets when a portfolio of bets across both markets guarantees at least one winning payoff and the market-value inequality of the constructed portfolio makes it profitable.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 3.2.2 and Definition 4 (P8)"
@@ -65,7 +65,7 @@ claims:
   - claim_id: CLM-0007
     statement: The authors reduce markets with more than four conditions by retaining the four conditions with the greatest traded volume and adding a fifth logical-OR condition for the remaining outcomes.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 5.1 (P12-13)"
@@ -75,7 +75,7 @@ claims:
   - claim_id: CLM-0008
     statement: On the U.S. election subset, the authors report 40,057 independent market pairs and 1,576 dependent market pairs, then manually confirm 11 NegRisk-NegRisk and 2 NegRisk-Single pairs as combinatorial arbitrage.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 5.2 and Section 6.3 (P13, P17)"
@@ -85,7 +85,7 @@ claims:
   - claim_id: CLM-0009
     statement: Within single conditions, 7,051 of 17.2K conditions had at least one arbitrage opportunity under the authors' thresholds, and all observed opportunities were long.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 6.1 (P14-15), Figure 6"
@@ -95,7 +95,7 @@ claims:
   - claim_id: CLM-0010
     statement: Across all strategies, assuming ε = $1 profit per trade, the authors estimate $39,587,585.02 of total extracted profit, with the highest-profit account generating $2,009,631.76.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 7.4 (P20), Table 1"
@@ -105,7 +105,7 @@ claims:
   - claim_id: CLM-0011
     statement: The paper frames arbitrage detection as a scalable search problem because a naive analysis across related markets requires exponential-time comparisons over the combined condition space.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Abstract and Section 1.1 (P0-P1)"
@@ -115,7 +115,7 @@ claims:
   - claim_id: CLM-0012
     statement: Candidate market pairs are reduced by assigning each market to a topic with Linq-Embed-Mistral embeddings, then restricting dependency checks to markets that share the same topic and end date.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 4.1.1 and Section 4.1 (P9-10)"
@@ -125,7 +125,7 @@ claims:
   - claim_id: CLM-0013
     statement: The paper treats arbitrage execution as non-atomic because the orders required for different legs execute separately, so some legs may succeed while others fail and leave the trader exposed.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0003
         locator: "Section 3.2.1 and Section 7.2 (P7, P18-19)"
@@ -135,7 +135,7 @@ claims:
   - claim_id: CLM-0014
     statement: The article frames arbitrage detection across dependent markets as a scalable search problem because naive pairwise verification over combined condition spaces grows exponentially.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part I: The Marginal Polytope Problem (Why Simple Math Fails)"
@@ -145,7 +145,7 @@ claims:
   - claim_id: CLM-0015
     statement: The article says the Bregman projection of the current market state onto the marginal polytope yields the maximum guaranteed profit and identifies trading direction and size.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part II: Bregman Projection (How to Actually Remove Arbitrage)"
@@ -155,7 +155,7 @@ claims:
   - claim_id: CLM-0016
     statement: The article says Frank-Wolfe with an integer-programming oracle and Gurobi makes projection tractable.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)"
@@ -165,7 +165,7 @@ claims:
   - claim_id: CLM-0021
     statement: The article reports that Frank-Wolfe typically converges in 50 to 150 iterations on markets with thousands of conditions.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)"
@@ -175,7 +175,7 @@ claims:
   - claim_id: CLM-0022
     statement: The article reports a 38% median improvement on security prices once projections become practically fast.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)"
@@ -185,7 +185,7 @@ claims:
   - claim_id: CLM-0017
     statement: The article says Polymarket CLOB execution is non-atomic, so one leg may fill while another fails and leave the trader exposed.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part IV: Execution Under Non-Atomic Constraints (Why Order Books Change Everything)"
@@ -195,7 +195,7 @@ claims:
   - claim_id: CLM-0023
     statement: The article uses VWAP and liquidity depth to estimate profit and cites a $0.05 minimum threshold for filtering opportunities.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part IV: Execution Under Non-Atomic Constraints (Why Order Books Change Everything)"
@@ -205,7 +205,7 @@ claims:
   - claim_id: CLM-0018
     statement: The article says the dependency pipeline uses DeepSeek-R1-Distill-Qwen-32B and pairwise dependency analysis, producing 40,057 independent pairs, 1,576 dependent pairs, 374 cases satisfying the article's strict conditions, and 13 manually verified exploitable pairs.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part V: The Complete System (What Actually Got Deployed)"
@@ -215,7 +215,7 @@ claims:
   - claim_id: CLM-0019
     statement: The article proposes a modified Kelly-style sizing rule that incorporates execution probability and caps positions at 50% of order-book depth.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part V: The Complete System (What Actually Got Deployed)"
@@ -225,7 +225,7 @@ claims:
   - claim_id: CLM-0020
     statement: The article reports $39,688,585 of total extracted profit, $2,009,632 for the top single extractor, and 4,049 transactions.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0004
         locator: "Part V: The Complete System (What Actually Got Deployed)"
@@ -235,7 +235,7 @@ claims:
   - claim_id: CLM-0024
     statement: The marginal polytope M is the convex hull of valid payoff vectors, and it is exactly the set of coherent prices that can be represented as expectations under some probability distribution over outcomes.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 2.2 (p. 5)"
@@ -245,7 +245,7 @@ claims:
   - claim_id: CLM-0025
     statement: "The paper represents valid payoff vectors with a compact integer-program description Z = { z in {0,1}^I : A^T z >= b }, avoiding explicit enumeration of the outcome space."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 2.3 and Example 2.5 (p. 5)"
@@ -255,7 +255,7 @@ claims:
   - claim_id: CLM-0026
     statement: Proposition 2.4 shows that the guaranteed profit of any trader from state θ is at most D(μ*∥θ), and that bound is achieved by any trade that moves the market to a state θ* with p(θ*) = μ*.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 2.2 and Appendix A (p. 5, p. 19)"
@@ -265,7 +265,7 @@ claims:
   - claim_id: CLM-0027
     statement: Fully-corrective Frank-Wolfe reduces the Bregman projection problem to repeated linear optimization problems over the vertex set Z.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 2.3 and Section 4.1 (p. 10-11)"
@@ -275,7 +275,7 @@ claims:
   - claim_id: CLM-0028
     statement: In FWMM, the linear-optimization oracle is an IP solver, and the experiments use Gurobi Optimizer 5.53.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 4.1 and Section 5.2 (p. 11, p. 15)"
@@ -285,7 +285,7 @@ claims:
   - claim_id: CLM-0029
     statement: The projection objective has a boundary differentiability problem for LMSR, because the Bregman divergence is only subdifferentiable and the gradient can blow up near the boundary of the feasible region.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 4.1 and Appendix C (p. 11, p. 21)"
@@ -295,7 +295,7 @@ claims:
   - claim_id: CLM-0030
     statement: To handle the boundary issue, FWMM contracts the feasible set to a polytope of the form M' = (1 - ε) M^σ + εu, with u chosen as an interior coherent price point.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 4.1 and Section 4.3 (p. 11-12)"
@@ -305,7 +305,7 @@ claims:
   - claim_id: CLM-0031
     statement: The adaptive contracted Frank-Wolfe analysis shows that the duality gap converges to zero and that the non-contracted projection problem is solved under the controlled-growth assumption.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 4.1 and Appendix C (p. 12, p. 21)"
@@ -315,7 +315,7 @@ claims:
   - claim_id: CLM-0032
     statement: The NCAA tournament evaluation uses a combinatorial market with an outcome space of size 2^63.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Abstract and Section 5.2 (p. 1, p. 15)"
@@ -325,7 +325,7 @@ claims:
   - claim_id: CLM-0033
     statement: The paper reports that the first successful projection occurs only after 45 games are already settled, that projection is capped at 30 minutes on a standard workstation, and that the replay took about 5 hours to execute trades that originally spanned 22 days.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Sections 5.2 and 6 (p. 16, p. 18)"
@@ -335,7 +335,7 @@ claims:
   - claim_id: CLM-0034
     statement: FWMM outperforms LCMM in forecast accuracy; once projections succeed, the paper reports median improvements of 38% for variables and 9% for bundles, while the across-all-hourly-summary medians are 3.3% and 2.2% respectively.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0005
         locator: "Section 5.2 (p. 16-17)"
@@ -345,7 +345,7 @@ claims:
   - claim_id: CLM-0035
     statement: The author says they built an autonomous trading platform in six days that connects to three financial exchanges, ingests news from RSS, web searches, Reddit, and Twitter, uses an LLM to analyze markets and decide when prices are wrong, sizes positions with Kelly criterion, manages risk, and routes orders across venues.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Lines 16-20 and 26"
@@ -355,7 +355,7 @@ claims:
   - claim_id: CLM-0036
     statement: The article cites a March 2026 survey of 906 developers and a SemiAnalysis estimate to argue that Claude Code is widely used among AI coding-agent users, that it authored about 4% of public GitHub contributions, and that the share could reach 20% by year-end.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Line 28"
@@ -365,7 +365,7 @@ claims:
   - claim_id: CLM-0037
     statement: The article says Polymarket already shows bot-like behavior, including reports that 14 of its 20 most profitable accounts are bots and that more than 30% of wallets are operated by AI agents.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Line 30"
@@ -375,7 +375,7 @@ claims:
   - claim_id: CLM-0038
     statement: The article says regulators and researchers warn that widespread use of common AI models or model monocultures could increase market correlations, amplify stress, and heighten systemic vulnerabilities.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Lines 38-40"
@@ -385,7 +385,7 @@ claims:
   - claim_id: CLM-0039
     statement: The article says the current regulatory lens focuses on regulated firms, while the relevant agentic traders may be unregulated individuals without reporting obligations, compliance departments, capital requirements, or circuit breakers.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Lines 44-50"
@@ -395,7 +395,7 @@ claims:
   - claim_id: CLM-0040
     statement: The article says prediction markets are the proving ground, that similar AI trading tools are being adopted across foreign exchange, equities, and credit markets, and that roughly 70% of spot FX activity is electronically executed.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Lines 52-54"
@@ -405,7 +405,7 @@ claims:
   - claim_id: CLM-0041
     statement: The article presents a hypothetical scenario in which similar-model agents simultaneously downgrade a mid-sized economy, unwind positions, and trigger a rapid cascade into sovereign funding stress.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Lines 56-64"
@@ -415,7 +415,7 @@ claims:
   - claim_id: CLM-0042
     statement: The article argues that agentic herds move at machine speed, leaving no gap for human intervention, and that the aggregate effect is a global correlation-risk problem rather than a single-strategy failure.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Lines 66-72"
@@ -425,7 +425,7 @@ claims:
   - claim_id: CLM-0043
     statement: The article recommends model-use disclosure, correlation-aware circuit breakers, mandatory registration for autonomous trading systems, and resilience planning for small open economies.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Lines 74-80"
@@ -435,7 +435,7 @@ claims:
   - claim_id: CLM-0044
     statement: The article forecasts that prediction markets may be almost entirely machine-versus-machine within a year, most liquid financial markets within three years, and that institutions will need to adapt within five years.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0006
         locator: "Line 82"
@@ -445,7 +445,7 @@ claims:
   - claim_id: CLM-0045
     statement: Polymarket markets are the fundamental tradable unit, each market represents a single binary yes/no question, and the page identifies markets by Condition ID, Question ID, and token IDs.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0007
         locator: "Markets, lines 17-33"
@@ -455,7 +455,7 @@ claims:
   - claim_id: CLM-0046
     statement: An event groups one or more related markets; the page distinguishes single-market events from multi-market events and uses those examples to show how grouped outcomes work.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0007
         locator: "Events, lines 51-74"
@@ -465,7 +465,7 @@ claims:
   - claim_id: CLM-0047
     statement: "CLOB trading requires `enableOrderBook: true`, and sports markets automatically cancel outstanding limit orders when the game begins, though the game-start time can shift."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0007
         locator: "Markets, lines 35-38; Sports Markets, lines 92-94"
@@ -475,7 +475,7 @@ claims:
   - claim_id: CLM-0048
     statement: Every prediction is represented by outcome tokens, and a position is simply the balance of those tokens for a given market.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0008
         locator: "Lines 9-10"
@@ -485,7 +485,7 @@ claims:
   - claim_id: CLM-0049
     statement: Each market has exactly two outcome tokens, Yes and No, and each token redeems for $1.00 under the corresponding outcome rule.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0008
         locator: "Lines 17-25"
@@ -495,7 +495,7 @@ claims:
   - claim_id: CLM-0050
     statement: Outcome tokens are ERC1155 assets on Polygon using the Gnosis Conditional Token Framework, every Yes/No pair is backed by exactly $1 of pUSD collateral, and the page explicitly describes split, trade, merge, redeem, and position-value flows.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0008
         locator: "Lines 26-93"
@@ -505,7 +505,7 @@ claims:
   - claim_id: CLM-0051
     statement: Polymarket uses a Central Limit Order Book, prices range from $0.00 to $1.00 as implied probability, and the page says prices emerge from supply and demand rather than being set by Polymarket.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0009
         locator: "Lines 9-25"
@@ -515,7 +515,7 @@ claims:
   - claim_id: CLM-0052
     statement: The displayed price is the midpoint of the bid-ask spread unless the spread is wider than $0.10, in which case the last traded price is shown, and execution occurs at the bid or ask rather than at the midpoint.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0009
         locator: "Lines 27-40"
@@ -525,7 +525,7 @@ claims:
   - claim_id: CLM-0053
     statement: The order book contains bids and asks, defines spread as the gap between the highest bid and lowest ask, describes all orders as technically limit orders, and says large orders can move price significantly, so depth matters.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0009
         locator: "Lines 42-105"
@@ -535,7 +535,7 @@ claims:
   - claim_id: CLM-0054
     statement: Orders are created offchain and matched by an operator, while each matched trade is settled onchain atomically, meaning that the settlement of that individual trade either succeeds completely or fails completely.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0010
         locator: "Lines 9 and 78-90"
@@ -545,7 +545,7 @@ claims:
   - claim_id: CLM-0055
     statement: The supported order types are GTC, GTD, FOK, and FAK, and post-only orders only rest on the book or are rejected if they would immediately cross the spread.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0010
         locator: "Lines 28-40"
@@ -555,7 +555,7 @@ claims:
   - claim_id: CLM-0056
     statement: Order submission validates the signature, balance, allowances, and minimum tick size, and the page says some markets impose taker-delay windows before matching.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0010
         locator: "Lines 54-76"
@@ -565,7 +565,7 @@ claims:
   - claim_id: CLM-0057
     statement: The page defines live, matched, delayed, and unmatched order statuses, plus MATCHED, MINED, CONFIRMED, RETRYING, and FAILED trade statuses, and says only the unfilled portion of a partially filled order can be cancelled.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0010
         locator: "Lines 93-130"
@@ -575,7 +575,7 @@ claims:
   - claim_id: CLM-0058
     statement: Polymarket resolves markets through the UMA Optimistic Oracle, and each market's rules specify the resolution source, end date, and edge cases.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0011
         locator: "Lines 9-29"
@@ -585,7 +585,7 @@ claims:
   - claim_id: CLM-0059
     statement: The resolution process uses a 2-hour challenge period, can escalate to UMA's DVM after disputes, and is backed by proposer and disputer bonds.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0011
         locator: "Lines 32-79"
@@ -595,7 +595,7 @@ claims:
   - claim_id: CLM-0060
     statement: After resolution, winning tokens redeem for $1 each through the CTF collateral adapter into pUSD, and the page notes that additional context can clarify rules without changing the question's fundamental intent.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0011
         locator: "Lines 82-106"
@@ -605,7 +605,7 @@ claims:
   - claim_id: CLM-0061
     statement: The CLOB API uses L1 private-key authentication and L2 API-key authentication, with Gamma API, Data API, and CLOB read endpoints treated as public and trading endpoints requiring authenticated headers.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0012
         locator: "Lines 9-20"
@@ -615,7 +615,7 @@ claims:
   - claim_id: CLM-0062
     statement: L1 authentication uses an EIP-712 signature to create or derive API credentials, and L2 uses apiKey, secret, and passphrase values with HMAC-SHA256 request signing.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0012
         locator: "Lines 29-52 and 142-166, 244-256"
@@ -625,7 +625,7 @@ claims:
   - claim_id: CLM-0063
     statement: Trading requests require the five POLY_* headers, user-order creation still requires signing the order payload, and new API users are directed to use POLY_1271 deposit wallets.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0012
         locator: "Lines 49-52, 244-256, and 345-360"
@@ -635,7 +635,7 @@ claims:
   - claim_id: CLM-0064
     statement: POST /order creates a new order in the order book and requires the five L2 security headers.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0013
         locator: "Lines 47-56 and 202-207"
@@ -645,7 +645,7 @@ claims:
   - claim_id: CLM-0065
     statement: SendOrder requires order and owner, and the documented orderType, deferExec, and postOnly constraints are enforced by the schema.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0013
         locator: "Lines 210-240"
@@ -655,7 +655,7 @@ claims:
   - claim_id: CLM-0066
     statement: The endpoint can return live, matched, or delayed statuses, and the matched response includes transaction hashes and trade IDs while the documented errors cover invalid payloads, owner or signer mismatch, banned addresses, closed-only mode, unauthorized requests, and post-only mode.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0013
         locator: "Lines 80-201 and 256-286"
@@ -665,7 +665,7 @@ claims:
   - claim_id: CLM-0067
     statement: GET /book requires token_id and returns a snapshot that includes market, asset_id, timestamp, hash, bids, asks, min_order_size, tick_size, neg_risk, and last_trade_price.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0014
         locator: "Lines 43-86 and 114-169"
@@ -675,7 +675,7 @@ claims:
   - claim_id: CLM-0068
     statement: The returned bids are sorted descending, asks ascending, and the order summary uses string-typed price and size fields on a public endpoint.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0014
         locator: "Lines 111-197"
@@ -685,7 +685,7 @@ claims:
   - claim_id: CLM-0069
     statement: The official WebSocket surface includes market, user, sports, and RTDS channels, with the market channel unauthenticated, the user channel authenticated, and the sports channel unauthenticated.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0015
         locator: "Lines 9-18"
@@ -695,7 +695,7 @@ claims:
   - claim_id: CLM-0070
     statement: Market subscriptions use asset IDs, user subscriptions use condition IDs plus auth, and the overview says subscriptions can be modified without reconnecting.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0015
         locator: "Lines 47-100 and 106-136"
@@ -705,7 +705,7 @@ claims:
   - claim_id: CLM-0071
     statement: The overview documents the market-channel event types and the heartbeat rules, including 10-second PING/PONG for market and user channels and 5-second ping with 10-second pong for sports.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0015
         locator: "Lines 20-32 and 138-180"
@@ -715,7 +715,7 @@ claims:
   - claim_id: CLM-0072
     statement: The market channel supports `initial_dump`, `level`, and `custom_feature_enabled` subscription controls.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0016
         locator: "Lines 29-123 and 134-214"
@@ -725,7 +725,7 @@ claims:
   - claim_id: CLM-0073
     statement: The market channel's `book` event is a full orderbook snapshot, and `price_change` carries incremental price-level updates when orders are placed or cancelled.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0016
         locator: "Lines 277-578"
@@ -735,7 +735,7 @@ claims:
   - claim_id: CLM-0074
     statement: The market channel documents `last_trade_price` and `tick_size_change` events for trade execution and tick-size updates.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0016
         locator: "Lines 587-780"
@@ -745,7 +745,7 @@ claims:
   - claim_id: CLM-0075
     statement: The market channel documents `best_bid_ask`, `new_market`, and `market_resolved` events when the custom feature is enabled.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0016
         locator: "Lines 789-1290"
@@ -755,7 +755,7 @@ claims:
   - claim_id: CLM-0076
     statement: Polymarket charges taker fees on certain markets, exempts geopolitical and world-event markets, and applies fees at match time.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0017
         locator: "Lines 9-17 and 21-47"
@@ -765,7 +765,7 @@ claims:
   - claim_id: CLM-0077
     statement: The fee formula is `fee = C × feeRate × p × (1 - p)`, makers are never charged fees, and fee precision is rounded to 5 decimal places in USDC.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0017
         locator: "Lines 23-47 and 171-191"
@@ -775,7 +775,7 @@ claims:
   - claim_id: CLM-0078
     statement: Rate limits are enforced by Cloudflare throttling, with requests delayed or queued rather than immediately rejected and with sliding reset windows.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0018
         locator: "Lines 9-18"
@@ -785,7 +785,7 @@ claims:
   - claim_id: CLM-0079
     statement: The rate-limits page documents public, authenticated, and trading-specific limits, including burst and sustained trading caps.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0018
         locator: "Lines 22-123"
@@ -795,7 +795,7 @@ claims:
   - claim_id: CLM-0080
     statement: A series is a template for recurring events and defines the structure, settlement sources, and metadata applied to each recurring event instance.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0019
         locator: "Get Series / Series schema and page summary"
@@ -806,7 +806,7 @@ claims:
   - claim_id: CLM-0081
     statement: The Series schema includes `ticker`, `frequency`, `title`, `category`, `tags`, `settlement_sources`, `contract_url`, `contract_terms_url`, `fee_type`, `fee_multiplier`, `volume_fp`, and `last_updated_ts`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0019
         locator: "Get Series / Series schema"
@@ -817,7 +817,7 @@ claims:
   - claim_id: CLM-0082
     statement: An event is a real-world occurrence that can contain one or more markets, and `with_nested_markets=true` nests those markets in the event response.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0020
         locator: "Get Event / page description and `with_nested_markets` parameter"
@@ -828,7 +828,7 @@ claims:
   - claim_id: CLM-0083
     statement: The EventData schema exposes `event_ticker`, `series_ticker`, `collateral_return_type`, `mutually_exclusive`, `settlement_sources`, `fee_type_override`, and `fee_multiplier_override`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0020
         locator: "Get Event / EventData schema"
@@ -839,7 +839,7 @@ claims:
   - claim_id: CLM-0084
     statement: When `mutually_exclusive` is true, only one market in the event can resolve to `yes`; when false, multiple markets can resolve to `yes`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0020
         locator: "Get Event / EventData `mutually_exclusive` description"
@@ -850,7 +850,7 @@ claims:
   - claim_id: CLM-0085
     statement: The page describes a market as a tradable outcome within an event with YES/NO positions, while the Market schema permits `market_type` values of both `binary` and `scalar`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0021
         locator: "Get Market / page description and Market schema"
@@ -861,7 +861,7 @@ claims:
   - claim_id: CLM-0086
     statement: Market responses expose YES/NO bid and ask prices and sizes, last price, volume, open interest, settlement timer, status, and price-range metadata.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0021
         locator: "Get Market / Market schema"
@@ -872,7 +872,7 @@ claims:
   - claim_id: CLM-0087
     statement: The market status enum includes `initialized`, `inactive`, `active`, `closed`, `determined`, `disputed`, `amended`, and `finalized`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0021
         locator: "Get Market / Market schema `status` enum"
@@ -883,7 +883,7 @@ claims:
   - claim_id: CLM-0088
     statement: Get Market Orderbook returns the current order-book snapshot for a specific market and uses an optional `depth` parameter to limit levels.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0022
         locator: "Get Market Orderbook / page description and `depth` parameter"
@@ -894,7 +894,7 @@ claims:
   - claim_id: CLM-0089
     statement: The response is `orderbook_fp` with `yes_dollars` and `no_dollars` arrays of `[price_dollars, contract_count_fp]` values, and asks are not returned directly.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0022
         locator: "Get Market Orderbook / `OrderbookCountFp` schema"
@@ -905,7 +905,7 @@ claims:
   - claim_id: CLM-0090
     statement: Kalshi orderbook responses return only YES and NO bids because the opposite-side ask can be derived from binary-market reciprocity.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0023
         locator: "Orderbook Responses / Response Structure and Why Only Bids?"
@@ -916,7 +916,7 @@ claims:
   - claim_id: CLM-0091
     statement: The arrays are sorted in ascending price order, the best bid is the last element, and the bid-ask spread is derived from the best bid on one side and the complementary best bid on the other side.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0023
         locator: "Orderbook Responses / Understanding the Arrays and Calculating Spreads"
@@ -927,7 +927,7 @@ claims:
   - claim_id: CLM-0092
     statement: The migration introduces fixed-point `_dollars` price strings with up to 4 decimals and uses `price_level_structure` plus `price_ranges` to define valid tick intervals.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0024
         locator: "Fixed-Point Migration / Overview and Subpenny Pricing"
@@ -938,7 +938,7 @@ claims:
   - claim_id: CLM-0093
     statement: Contract-count `_fp` fields are strings with 0-2 decimal places on input, always emit 2 decimals in responses, have 0.01 minimum granularity, and must match legacy integer fields when both are provided.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0024
         locator: "Fixed-Point Migration / Fractional Contracts"
@@ -949,7 +949,7 @@ claims:
   - claim_id: CLM-0094
     statement: Create Order V2 requires the Kalshi access-key, signature, and timestamp headers and accepts `ticker`, `side`, `count`, `price`, `time_in_force`, and `self_trade_prevention_type`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0025
         locator: "Create Order (V2) / security schemes and CreateOrderV2Request schema"
@@ -960,7 +960,7 @@ claims:
   - claim_id: CLM-0095
     statement: "The endpoint quotes event markets from the YES side: `bid` means buy YES and `ask` means sell YES; `good_till_canceled` is the expiring-order pattern with `expiration_time`, `GTT` is not a valid API value, and `immediate_or_cancel` cannot be combined with `expiration_time`."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0025
         locator: "CreateOrderV2Request schema / `side`, `time_in_force`, and `expiration_time` fields"
@@ -971,7 +971,7 @@ claims:
   - claim_id: CLM-0096
     statement: The response returns `order_id`, `client_order_id`, `fill_count`, `remaining_count`, `average_fill_price`, `average_fee_paid`, and `ts_ms`, with `remaining_count` reflecting the final unfilled quantity after IOC cancellation.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0025
         locator: "CreateOrderV2Response schema"
@@ -982,7 +982,7 @@ claims:
   - claim_id: CLM-0097
     statement: Self-trade prevention `taker_at_cross` cancels the taker order when it crosses against the same user, while `maker` cancels the resting maker order and continues matching.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0025
         locator: "SelfTradePreventionType schema"
@@ -993,7 +993,7 @@ claims:
   - claim_id: CLM-0098
     statement: Kalshi’s WebSocket connection uses `wss://external-api-ws.kalshi.com/` and requires authentication during the handshake even for public data channels.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0026
         locator: "WebSocket Connection / AsyncAPI root and securitySchemes"
@@ -1004,7 +1004,7 @@ claims:
   - claim_id: CLM-0099
     statement: Subscribe, unsubscribe, list_subscriptions, and update_subscription commands use client-generated ids and sid(s), and subscriptions can target `market_ticker(s)` or `market_id(s)`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0026
         locator: "WebSocket Connection / Subscribe, Unsubscribe, List Subscriptions, and Update Subscription command schemas"
@@ -1015,7 +1015,7 @@ claims:
   - claim_id: CLM-0100
     statement: "`send_initial_snapshot` can seed the ticker channel, and `use_yes_price` is an orderbook-channel migration flag that defaults to false in this capture."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0026
         locator: "WebSocket Connection / subscribe command parameters"
@@ -1026,7 +1026,7 @@ claims:
   - claim_id: CLM-0101
     statement: The orderbook channel sends `orderbook_snapshot` first and then incremental `orderbook_delta` updates.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0027
         locator: "Orderbook Updates / page summary and Orderbook Snapshot / Orderbook Delta schemas"
@@ -1037,7 +1037,7 @@ claims:
   - claim_id: CLM-0102
     statement: Snapshot and delta messages both carry `sid` and `seq`; snapshot messages expose `yes_dollars_fp` and `no_dollars_fp`, while delta messages expose `price_dollars`, `delta_fp`, `side`, and market identifiers.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0027
         locator: "Orderbook Updates / snapshot and delta schemas"
@@ -1048,7 +1048,7 @@ claims:
   - claim_id: CLM-0103
     statement: The docs say `seq` should be checked for snapshot/delta consistency, but they do not specify a gap-recovery algorithm for missed updates.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0027
         locator: "Orderbook Updates / `seq` descriptions and channel summary"
@@ -1059,7 +1059,7 @@ claims:
   - claim_id: CLM-0104
     statement: The series fee-changes endpoint returns `series_fee_change_arr` plus optional `series_ticker` and `show_historical` filters, and each record includes id, series ticker, fee type, fee multiplier, and scheduled timestamp.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0028
         locator: "Get Series Fee Changes / OpenAPI path and SeriesFeeChange schema"
@@ -1070,7 +1070,7 @@ claims:
   - claim_id: CLM-0105
     statement: The fee-type enum for series fee changes includes `quadratic`, `quadratic_with_maker_fees`, and `flat`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0028
         locator: "Get Series Fee Changes / FeeType schema"
@@ -1081,7 +1081,7 @@ claims:
   - claim_id: CLM-0106
     statement: Event fee changes are overrides layered on series fees, and null override fields clear the event override so the series defaults apply again.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0029
         locator: "Get Event Fee Changes / page description and EventFeeChange schema"
@@ -1092,7 +1092,7 @@ claims:
   - claim_id: CLM-0107
     statement: The event fee-changes response is paginated with `event_fee_changes` and `cursor`, and each record includes event ticker, series ticker, override fields, and scheduled effective time.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0029
         locator: "Get Event Fee Changes / GetEventFeeChangesResponse and EventFeeChange schemas"
@@ -1103,7 +1103,7 @@ claims:
   - claim_id: CLM-0108
     statement: Direct member balances round to nearest $0.0001 and non-direct balances round to nearest $0.01; each fill produces trade fee, rounding fee, and rebate components.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0030
         locator: "Fee Rounding / Overview and Rounding Mechanics"
@@ -1114,7 +1114,7 @@ claims:
   - claim_id: CLM-0109
     statement: The fee accumulator carries rounding overpayment across all fills of an order, including maker/taker mixes, and issues rebates once accumulated rounding exceeds $0.01.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0030
         locator: "Fee Rounding / Fee Accumulator"
@@ -1125,7 +1125,7 @@ claims:
   - claim_id: CLM-0110
     statement: REST market statuses include `initialized`, `active`, `inactive`, `closed`, `determined`, `disputed`, `amended`, and `finalized`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0031
         locator: "Market Lifecycle / Statuses"
@@ -1136,7 +1136,7 @@ claims:
   - claim_id: CLM-0111
     statement: The documented transitions include initialized→active at open time without a WebSocket event, active/inactive→closed at close time, inactive→active via deactivated/activated events, closed→determined, and determined/amended→finalized via `settled`.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0031
         locator: "Market Lifecycle / Transitions"
@@ -1147,7 +1147,7 @@ claims:
   - claim_id: CLM-0112
     statement: Once `close_time` passes, order operations including cancellations are rejected with `MARKET_INACTIVE`, and resting orders are cancelled shortly after close.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0031
         locator: "Market Lifecycle / Orders after close"
@@ -1158,7 +1158,7 @@ claims:
   - claim_id: CLM-0113
     statement: The Settlement page states that settlement begins when a market outcome is determined and that positions are automatically resolved with funds transferred; the Lifecycle documentation separately distinguishes `determined` from later `finalized` status.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0032
         locator: "Market Settlement / opening paragraph and How It Works"
@@ -1171,7 +1171,7 @@ claims:
   - claim_id: CLM-0114
     statement: Yes outcomes pay yes holders $1 per contract, no outcomes pay no holders $1 per contract, only net positions are settled, and scalar settlement may incur fees with whole-cent rounding.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0032
         locator: "Market Settlement / How It Works and Fees"
@@ -1182,7 +1182,7 @@ claims:
   - claim_id: CLM-0115
     statement: Kalshi partitions live and historical data for markets, market candlesticks, trades, and orders, while older events and series remain available through their original endpoints.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0033
         locator: "Historical Data / Overview"
@@ -1193,7 +1193,7 @@ claims:
   - claim_id: CLM-0116
     statement: "GET /historical/cutoff provides the cutoff timestamps, and records older than market_settled_ts, trades_created_ts, or orders_updated_ts must be fetched via the corresponding historical endpoints while resting live orders remain on GET /portfolio/orders."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0033
         locator: "Historical Data / How It Works, Cutoff Timestamps, Historical Endpoints, and Impacted Live Endpoints"
@@ -1204,7 +1204,7 @@ claims:
   - claim_id: CLM-0117
     statement: Every authenticated request costs tokens; sustained rate is budget ÷ cost; the default request cost is 10 tokens; and Read/Write are separate buckets that REST and FIX both drain.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0034
         locator: "Rate Limits and Tiers / Token-based limits and Read and Write buckets"
@@ -1215,7 +1215,7 @@ claims:
   - claim_id: CLM-0118
     statement: Kalshi rate limits use token buckets with burst capacity and no cooldown, and 429 responses do not include `Retry-After` or `X-RateLimit-*` headers.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0034
         locator: "Rate Limits and Tiers / Bucket capacity and bursting and When you hit the limit"
@@ -1226,7 +1226,7 @@ claims:
   - claim_id: CLM-0119
     statement: The current event-contract tier budgets are Basic 200/100, Advanced 300/300, Expert 600/600, Premier 1000/1000, Paragon 2000/2000, Prime 4000/4000, and Prestige 6000/8000, with higher tiers earned by volume or assigned manually.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0034
         locator: "Rate Limits and Tiers / Tiers and budgets, Tier qualification, and Your grants"

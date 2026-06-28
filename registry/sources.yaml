@@ -53,7 +53,7 @@ sources:
     version: 2
     language: en
     authority: primary-research
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw PDF capture from the arXiv PDF endpoint.
@@ -71,7 +71,7 @@ sources:
     version: 1
     language: en
     authority: secondary-practitioner
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from authenticated Obsidian Web Clipper; X Article, not a multi-post thread.
@@ -92,7 +92,7 @@ sources:
     version: 1
     language: en
     authority: primary-research
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw PDF capture from the canonical arXiv PDF endpoint; captured artifact is arXiv v2 dated 2016-06-10.
@@ -110,7 +110,7 @@ sources:
     version: 1
     language: en
     authority: secondary-journalism
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from authenticated Obsidian Web Clipper.
@@ -128,7 +128,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -146,7 +146,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -164,7 +164,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -182,7 +182,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -200,7 +200,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -218,7 +218,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -236,7 +236,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -254,7 +254,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -272,7 +272,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -290,7 +290,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -308,7 +308,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -326,7 +326,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -344,7 +344,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -363,7 +363,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -382,7 +382,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -401,7 +401,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -420,7 +420,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -439,7 +439,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: 'Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. The capture includes a page-level “Last Updated: April 17, 2026” line.'
@@ -458,7 +458,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -477,7 +477,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -496,7 +496,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -515,7 +515,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -534,7 +534,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -553,7 +553,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -572,7 +572,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -591,7 +591,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -610,7 +610,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
@@ -629,7 +629,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.

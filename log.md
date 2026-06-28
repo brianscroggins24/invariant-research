@@ -97,3 +97,10 @@
 - Registered the 16 Kalshi sources as `pending-ingestion` and left the new summaries and claims at `review-required`.
 - Added the new source and source-summary entries to `index.md`.
 - No promotion, commit, or push was performed.
+
+## 2026-06-28
+
+- Promoted the Phase 2 source layer for `SRC-0003` through `SRC-0034` to active/reviewed status after completed validation and review.
+- Promoted source summaries `SOURCE-SUMMARY-0002` through `SOURCE-SUMMARY-0033` to `reviewed`.
+- Promoted claims `CLM-0005` through `CLM-0119` to `reviewed`.
+- No artifacts were withheld; the completed Phase 2 source layer is ready for synthesis.
