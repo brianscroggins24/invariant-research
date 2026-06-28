@@ -62,3 +62,12 @@
 - Ran baseline and post-write deterministic validation successfully.
 - No synthesis, concept, platform, or strategy pages were created.
 - No promotion, commit, or push was performed.
+
+## 2026-06-27
+
+- Captured the canonical arXiv PDF for `Arbitrage-Free Combinatorial Market Making via Integer Programming` as `SRC-0005`.
+- Verified the PDF with `pypdf`, confirmed it is a complete 21-page, text-readable document, and registered the canonical SHA-256 `58170e2db5eae346af6fc198fcdd3b8524ff95f4d0da5bc9370cb8591593180c`.
+- Created `SOURCE-SUMMARY-0004` and candidate claims `CLM-0024` through `CLM-0034`.
+- Registered `SRC-0005` as `pending-ingestion` and left the source summary and claims at `review-required`.
+- Added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed yet.

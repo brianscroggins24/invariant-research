@@ -50,7 +50,7 @@ sources:
     original_location: https://arxiv.org/pdf/2508.03474
     local_path: raw/sources/SRC-0003-unravelling-the-probabilistic-forest-arbitrage-in-prediction-markets.pdf
     content_hash: 9b55dcf818ff6a7d18d102b4711d86b9c49e374994de4ffd77690469a7d0e930
-    version: 1
+    version: 2
     language: en
     authority: primary-research
     status: pending-ingestion
@@ -75,3 +75,24 @@ sources:
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from authenticated Obsidian Web Clipper; X Article, not a multi-post thread.
+  - source_id: SRC-0005
+    title: Arbitrage-Free Combinatorial Market Making via Integer Programming
+    source_type: research-paper
+    authors:
+      - Christian Kroer
+      - Miroslav Dudík
+      - Sébastien Lahaie
+      - Sivaraman Balakrishnan
+    organization:
+    publication_date: 2016-06-10
+    retrieved_at: 2026-06-27
+    original_location: https://arxiv.org/pdf/1606.02825.pdf
+    local_path: raw/sources/SRC-0005-arbitrage-free-combinatorial-market-making-via-integer-programming.pdf
+    content_hash: 58170e2db5eae346af6fc198fcdd3b8524ff95f4d0da5bc9370cb8591593180c
+    version: 1
+    language: en
+    authority: primary-research
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw PDF capture from the canonical arXiv PDF endpoint; captured artifact is arXiv v2 dated 2016-06-10.

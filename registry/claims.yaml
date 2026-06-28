@@ -232,3 +232,113 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0003
     notes: Article-reported figures; the aggregate total materially conflicts with `SRC-0003`, and the top-trader value is rounded from the primary-paper figure.
+  - claim_id: CLM-0024
+    statement: The marginal polytope M is the convex hull of valid payoff vectors, and it is exactly the set of coherent prices that can be represented as expectations under some probability distribution over outcomes.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 2.2 (p. 5)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the marginal-polytope definition and the coherent-price interpretation.
+  - claim_id: CLM-0025
+    statement: "The paper represents valid payoff vectors with a compact integer-program description Z = { z in {0,1}^I : A^T z >= b }, avoiding explicit enumeration of the outcome space."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 2.3 and Example 2.5 (p. 5)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the compact IP representation claim.
+  - claim_id: CLM-0026
+    statement: Proposition 2.4 shows that the guaranteed profit of any trader from state θ is at most D(μ*∥θ), and that bound is achieved by any trade that moves the market to a state θ* with p(θ*) = μ*.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 2.2 and Appendix A (p. 5, p. 19)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the profit/Bregman-projection link; not a standalone sizing rule.
+  - claim_id: CLM-0027
+    statement: Fully-corrective Frank-Wolfe reduces the Bregman projection problem to repeated linear optimization problems over the vertex set Z.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 2.3 and Section 4.1 (p. 10-11)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the Frank-Wolfe reduction.
+  - claim_id: CLM-0028
+    statement: In FWMM, the linear-optimization oracle is an IP solver, and the experiments use Gurobi Optimizer 5.53.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 4.1 and Section 5.2 (p. 11, p. 15)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the oracle/solver implementation detail.
+  - claim_id: CLM-0029
+    statement: The projection objective has a boundary differentiability problem for LMSR, because the Bregman divergence is only subdifferentiable and the gradient can blow up near the boundary of the feasible region.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 4.1 and Appendix C (p. 11, p. 21)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the controlled-gradient / boundary issue.
+  - claim_id: CLM-0030
+    statement: To handle the boundary issue, FWMM contracts the feasible set to a polytope of the form M' = (1 - ε) M^σ + εu, with u chosen as an interior coherent price point.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 4.1 and Section 4.3 (p. 11-12)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the contraction treatment.
+  - claim_id: CLM-0031
+    statement: The adaptive contracted Frank-Wolfe analysis shows that the duality gap converges to zero and that the non-contracted projection problem is solved under the controlled-growth assumption.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 4.1 and Appendix C (p. 12, p. 21)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for the convergence claim.
+  - claim_id: CLM-0032
+    statement: The NCAA tournament evaluation uses a combinatorial market with an outcome space of size 2^63.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Abstract and Section 5.2 (p. 1, p. 15)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: The paper directly states the 2^63 outcome-space size for the NCAA tournament evaluation.
+  - claim_id: CLM-0033
+    statement: The paper reports that the first successful projection occurs only after 45 games are already settled, that projection is capped at 30 minutes on a standard workstation, and that the replay took about 5 hours to execute trades that originally spanned 22 days.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Sections 5.2 and 6 (p. 16, p. 18)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for empirical tractability and runtime findings.
+  - claim_id: CLM-0034
+    statement: FWMM outperforms LCMM in forecast accuracy; once projections succeed, the paper reports median improvements of 38% for variables and 9% for bundles, while the across-all-hourly-summary medians are 3.3% and 2.2% respectively.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0005
+        locator: "Section 5.2 (p. 16-17)"
+    related_pages:
+      - SOURCE-SUMMARY-0004
+    notes: Direct support for comparative pricing accuracy; the 38% figure is an accuracy improvement, not a production deployment guarantee.

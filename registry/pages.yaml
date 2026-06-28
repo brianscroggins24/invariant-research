@@ -20,3 +20,8 @@ pages:
     title: The Math Needed for Trading on Polymarket (Complete Roadmap)
     page_type: source-summary
     status: review-required
+  - page_id: SOURCE-SUMMARY-0004
+    path: wiki/source-summaries/SRC-0005-arbitrage-free-combinatorial-market-making-via-integer-programming.md
+    title: Arbitrage-Free Combinatorial Market Making via Integer Programming
+    page_type: source-summary
+    status: review-required
