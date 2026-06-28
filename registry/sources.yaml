@@ -114,3 +114,219 @@ sources:
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from authenticated Obsidian Web Clipper.
+  - source_id: SRC-0007
+    title: Markets & Events
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/concepts/markets-events.md
+    local_path: raw/sources/SRC-0007-markets-events.md
+    content_hash: a526cce734d70a777080d5849970ff6a730e3662e7b75048b3bb9d93188cb0dd
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0008
+    title: Positions & Tokens
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/concepts/positions-tokens.md
+    local_path: raw/sources/SRC-0008-positions-tokens.md
+    content_hash: bb131a3894d52149058f8554edaa6fafdd9ad72ab2351efbec605d4b3a6e2cc5
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0009
+    title: Prices & Orderbook
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/concepts/prices-orderbook.md
+    local_path: raw/sources/SRC-0009-prices-orderbook.md
+    content_hash: f4b3d25d628e21eb8fa28b1b758f985300e9cd67857b0fefa6a5e21615c465f1
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0010
+    title: Order Lifecycle
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/concepts/order-lifecycle.md
+    local_path: raw/sources/SRC-0010-order-lifecycle.md
+    content_hash: 42194dfc38dfbbebca96d2de6bdff6336ca68acc6dee1236b8f6d9428b9b596a
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0011
+    title: Resolution
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/concepts/resolution.md
+    local_path: raw/sources/SRC-0011-resolution.md
+    content_hash: 83f04e4bc2caadf4bee9c51abc9df2a5c94e8e95a3c367ef39e386e81c00fec3
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0012
+    title: Authentication
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/api-reference/authentication.md
+    local_path: raw/sources/SRC-0012-authentication.md
+    content_hash: 345c7d6fbadfc774f3a334241341017a3ca02564e496fe974e86cf9692c9b419
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0013
+    title: Post a new order
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/api-reference/trade/post-a-new-order.md
+    local_path: raw/sources/SRC-0013-post-a-new-order.md
+    content_hash: 6c1924f515da4d960337a2db67b37c3d43965dbaa5b8616bd02d95a0a789e8f5
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0014
+    title: Get order book
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/api-reference/market-data/get-order-book.md
+    local_path: raw/sources/SRC-0014-get-order-book.md
+    content_hash: fd98e9bea50208a07d4ea51a8d03e2048cb6cbf4db70149fb17deda8770815f7
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0015
+    title: WebSocket Overview
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/market-data/websocket/overview.md
+    local_path: raw/sources/SRC-0015-websocket-overview.md
+    content_hash: 91b2910df7675a07d0445c9be9a88b67e56ca9a31a19fee7f856aae34f1f1146
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0016
+    title: Market Channel
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/api-reference/wss/market.md
+    local_path: raw/sources/SRC-0016-market-channel.md
+    content_hash: 92a02634755fd92cc1c4a3f798ea64f050f76670e677003a9a595d8a8f4c616a
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0017
+    title: Fees
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/trading/fees.md
+    local_path: raw/sources/SRC-0017-fees.md
+    content_hash: faab60a43c79080bd8044f7687fdc03970084661acbb05d1bbe038fe76707cbd
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+  - source_id: SRC-0018
+    title: Rate Limits
+    source_type: official-documentation
+    authors:
+      - Polymarket
+    organization: Polymarket
+    publication_date:
+    retrieved_at: 2026-06-27
+    original_location: https://docs.polymarket.com/api-reference/rate-limits.md
+    local_path: raw/sources/SRC-0018-rate-limits.md
+    content_hash: a698fdbd5b2c53bffea95f0aeb032887b6dc492909b258fd0a3e86a836331b0f
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.

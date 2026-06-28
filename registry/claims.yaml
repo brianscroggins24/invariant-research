@@ -442,3 +442,353 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0005
     notes: Long-horizon forecast; treat as the author's prediction rather than established fact.
+  - claim_id: CLM-0045
+    statement: Polymarket markets are the fundamental tradable unit, each market represents a single binary yes/no question, and the page identifies markets by Condition ID, Question ID, and token IDs.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0007
+        locator: "Markets, lines 17-33"
+    related_pages:
+      - SOURCE-SUMMARY-0006
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0046
+    statement: An event groups one or more related markets; the page distinguishes single-market events from multi-market events and uses those examples to show how grouped outcomes work.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0007
+        locator: "Events, lines 51-74"
+    related_pages:
+      - SOURCE-SUMMARY-0006
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0047
+    statement: "CLOB trading requires `enableOrderBook: true`, and sports markets automatically cancel outstanding limit orders when the game begins, though the game-start time can shift."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0007
+        locator: "Markets, lines 35-38; Sports Markets, lines 92-94"
+    related_pages:
+      - SOURCE-SUMMARY-0006
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0048
+    statement: Every prediction is represented by outcome tokens, and a position is simply the balance of those tokens for a given market.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0008
+        locator: "Lines 9-10"
+    related_pages:
+      - SOURCE-SUMMARY-0007
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0049
+    statement: Each market has exactly two outcome tokens, Yes and No, and each token redeems for $1.00 under the corresponding outcome rule.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0008
+        locator: "Lines 17-25"
+    related_pages:
+      - SOURCE-SUMMARY-0007
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0050
+    statement: Outcome tokens are ERC1155 assets on Polygon using the Gnosis Conditional Token Framework, every Yes/No pair is backed by exactly $1 of pUSD collateral, and the page explicitly describes split, trade, merge, redeem, and position-value flows.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0008
+        locator: "Lines 26-93"
+    related_pages:
+      - SOURCE-SUMMARY-0007
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0051
+    statement: Polymarket uses a Central Limit Order Book, prices range from $0.00 to $1.00 as implied probability, and the page says prices emerge from supply and demand rather than being set by Polymarket.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0009
+        locator: "Lines 9-25"
+    related_pages:
+      - SOURCE-SUMMARY-0008
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0052
+    statement: The displayed price is the midpoint of the bid-ask spread unless the spread is wider than $0.10, in which case the last traded price is shown, and execution occurs at the bid or ask rather than at the midpoint.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0009
+        locator: "Lines 27-40"
+    related_pages:
+      - SOURCE-SUMMARY-0008
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0053
+    statement: The order book contains bids and asks, defines spread as the gap between the highest bid and lowest ask, describes all orders as technically limit orders, and says large orders can move price significantly, so depth matters.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0009
+        locator: "Lines 42-105"
+    related_pages:
+      - SOURCE-SUMMARY-0008
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0054
+    statement: Orders are created offchain and matched by an operator, while each matched trade is settled onchain atomically, meaning that the settlement of that individual trade either succeeds completely or fails completely.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0010
+        locator: "Lines 9 and 78-90"
+    related_pages:
+      - SOURCE-SUMMARY-0009
+    notes: Atomicity is scoped to settlement of an individual matched trade. The page does not establish atomic execution across multiple independently submitted orders or arbitrage legs. Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0055
+    statement: The supported order types are GTC, GTD, FOK, and FAK, and post-only orders only rest on the book or are rejected if they would immediately cross the spread.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0010
+        locator: "Lines 28-40"
+    related_pages:
+      - SOURCE-SUMMARY-0009
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0056
+    statement: Order submission validates the signature, balance, allowances, and minimum tick size, and the page says some markets impose taker-delay windows before matching.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0010
+        locator: "Lines 54-76"
+    related_pages:
+      - SOURCE-SUMMARY-0009
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0057
+    statement: The page defines live, matched, delayed, and unmatched order statuses, plus MATCHED, MINED, CONFIRMED, RETRYING, and FAILED trade statuses, and says only the unfilled portion of a partially filled order can be cancelled.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0010
+        locator: "Lines 93-130"
+    related_pages:
+      - SOURCE-SUMMARY-0009
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0058
+    statement: Polymarket resolves markets through the UMA Optimistic Oracle, and each market's rules specify the resolution source, end date, and edge cases.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0011
+        locator: "Lines 9-29"
+    related_pages:
+      - SOURCE-SUMMARY-0010
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0059
+    statement: The resolution process uses a 2-hour challenge period, can escalate to UMA's DVM after disputes, and is backed by proposer and disputer bonds.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0011
+        locator: "Lines 32-79"
+    related_pages:
+      - SOURCE-SUMMARY-0010
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0060
+    statement: After resolution, winning tokens redeem for $1 each through the CTF collateral adapter into pUSD, and the page notes that additional context can clarify rules without changing the question's fundamental intent.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0011
+        locator: "Lines 82-106"
+    related_pages:
+      - SOURCE-SUMMARY-0010
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0061
+    statement: The CLOB API uses L1 private-key authentication and L2 API-key authentication, with Gamma API, Data API, and CLOB read endpoints treated as public and trading endpoints requiring authenticated headers.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0012
+        locator: "Lines 9-20"
+    related_pages:
+      - SOURCE-SUMMARY-0011
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0062
+    statement: L1 authentication uses an EIP-712 signature to create or derive API credentials, and L2 uses apiKey, secret, and passphrase values with HMAC-SHA256 request signing.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0012
+        locator: "Lines 29-52 and 142-166, 244-256"
+    related_pages:
+      - SOURCE-SUMMARY-0011
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0063
+    statement: Trading requests require the five POLY_* headers, user-order creation still requires signing the order payload, and new API users are directed to use POLY_1271 deposit wallets.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0012
+        locator: "Lines 49-52, 244-256, and 345-360"
+    related_pages:
+      - SOURCE-SUMMARY-0011
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0064
+    statement: POST /order creates a new order in the order book and requires the five L2 security headers.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0013
+        locator: "Lines 47-56 and 202-207"
+    related_pages:
+      - SOURCE-SUMMARY-0012
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0065
+    statement: SendOrder requires order and owner, and the documented orderType, deferExec, and postOnly constraints are enforced by the schema.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0013
+        locator: "Lines 210-240"
+    related_pages:
+      - SOURCE-SUMMARY-0012
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0066
+    statement: The endpoint can return live, matched, or delayed statuses, and the matched response includes transaction hashes and trade IDs while the documented errors cover invalid payloads, owner or signer mismatch, banned addresses, closed-only mode, unauthorized requests, and post-only mode.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0013
+        locator: "Lines 80-201 and 256-286"
+    related_pages:
+      - SOURCE-SUMMARY-0012
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0067
+    statement: GET /book requires token_id and returns a snapshot that includes market, asset_id, timestamp, hash, bids, asks, min_order_size, tick_size, neg_risk, and last_trade_price.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0014
+        locator: "Lines 43-86 and 114-169"
+    related_pages:
+      - SOURCE-SUMMARY-0013
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0068
+    statement: The returned bids are sorted descending, asks ascending, and the order summary uses string-typed price and size fields on a public endpoint.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0014
+        locator: "Lines 111-197"
+    related_pages:
+      - SOURCE-SUMMARY-0013
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0069
+    statement: The official WebSocket surface includes market, user, sports, and RTDS channels, with the market channel unauthenticated, the user channel authenticated, and the sports channel unauthenticated.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0015
+        locator: "Lines 9-18"
+    related_pages:
+      - SOURCE-SUMMARY-0014
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0070
+    statement: Market subscriptions use asset IDs, user subscriptions use condition IDs plus auth, and the overview says subscriptions can be modified without reconnecting.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0015
+        locator: "Lines 47-100 and 106-136"
+    related_pages:
+      - SOURCE-SUMMARY-0014
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0071
+    statement: The overview documents the market-channel event types and the heartbeat rules, including 10-second PING/PONG for market and user channels and 5-second ping with 10-second pong for sports.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0015
+        locator: "Lines 20-32 and 138-180"
+    related_pages:
+      - SOURCE-SUMMARY-0014
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0072
+    statement: The market channel supports `initial_dump`, `level`, and `custom_feature_enabled` subscription controls.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0016
+        locator: "Lines 29-123 and 134-214"
+    related_pages:
+      - SOURCE-SUMMARY-0015
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0073
+    statement: The market channel's `book` event is a full orderbook snapshot, and `price_change` carries incremental price-level updates when orders are placed or cancelled.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0016
+        locator: "Lines 277-578"
+    related_pages:
+      - SOURCE-SUMMARY-0015
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0074
+    statement: The market channel documents `last_trade_price` and `tick_size_change` events for trade execution and tick-size updates.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0016
+        locator: "Lines 587-780"
+    related_pages:
+      - SOURCE-SUMMARY-0015
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0075
+    statement: The market channel documents `best_bid_ask`, `new_market`, and `market_resolved` events when the custom feature is enabled.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0016
+        locator: "Lines 789-1290"
+    related_pages:
+      - SOURCE-SUMMARY-0015
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0076
+    statement: Polymarket charges taker fees on certain markets, exempts geopolitical and world-event markets, and applies fees at match time.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0017
+        locator: "Lines 9-17 and 21-47"
+    related_pages:
+      - SOURCE-SUMMARY-0016
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0077
+    statement: The fee formula is `fee = C × feeRate × p × (1 - p)`, makers are never charged fees, and fee precision is rounded to 5 decimal places in USDC.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0017
+        locator: "Lines 23-47 and 171-191"
+    related_pages:
+      - SOURCE-SUMMARY-0016
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0078
+    statement: Rate limits are enforced by Cloudflare throttling, with requests delayed or queued rather than immediately rejected and with sliding reset windows.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0018
+        locator: "Lines 9-18"
+    related_pages:
+      - SOURCE-SUMMARY-0017
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.
+  - claim_id: CLM-0079
+    statement: The rate-limits page documents public, authenticated, and trading-specific limits, including burst and sustained trading caps.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0018
+        locator: "Lines 22-123"
+    related_pages:
+      - SOURCE-SUMMARY-0017
+    notes: Captured from official docs on 2026-06-27; no page-level last-updated date was present in the markdown capture.

@@ -80,3 +80,12 @@
 - Registered `SRC-0006` as `pending-ingestion` and left the source summary and claims at `review-required`.
 - Added the new source and source-summary entries to `index.md`.
 - No promotion, commit, or push was performed.
+
+## 2026-06-27
+
+- Captured the approved official Polymarket documentation set as `SRC-0007` through `SRC-0018`.
+- Copied the exact markdown captures into the canonical raw-source paths and registered their SHA-256 hashes.
+- Created `SOURCE-SUMMARY-0006` through `SOURCE-SUMMARY-0017` and candidate claims `CLM-0045` through `CLM-0079`.
+- Registered the 12 Polymarket sources as `pending-ingestion` and left the new summaries and claims at `review-required`.
+- Added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed.
