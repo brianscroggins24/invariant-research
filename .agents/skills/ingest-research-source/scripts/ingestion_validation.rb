@@ -13,6 +13,7 @@ module IngestionValidation
   ALLOWED_PAGE_STATUSES = %w[draft proposed review-required reviewed disputed stale superseded archived].freeze
   ALLOWED_CLAIM_STATUSES = %w[review-required reviewed disputed stale superseded archived].freeze
   SOURCE_SUMMARY_PREFIX = 'SOURCE-SUMMARY-'.freeze
+  ALLOWED_PLAYBOOKS = %w[academic-research official-documentation practitioner-content journalism].freeze
   GOVERNED_MARKDOWN_ROOTS = %w[AGENTS.md README.md index.md log.md].freeze
   GOVERNED_MARKDOWN_DIRS = %w[wiki].freeze
   ROOT_RELATIVE_PREFIXES = %w[wiki raw templates index.md log.md AGENTS.md README.md].freeze
@@ -115,11 +116,15 @@ module IngestionValidation
     candidates.uniq.find { |candidate| candidate.exist? }
   end
 
-  def capture_report_errors(report, base_dir: Dir.pwd)
+  def capture_report_errors(report, base_dir: Dir.pwd, require_playbook: true)
     report = report.transform_keys(&:to_s)
     errors = []
 
     required = %w[artifact_path artifact_exists artifact_complete artifact_inspectable capture_method canonical_url capture_date failure_reason]
+    playbook_keys = %w[primary_playbook secondary_playbooks source_type_ambiguity]
+    playbook_fields_present = playbook_keys.any? { |field| report.key?(field) }
+    require_complete_playbook = require_playbook || playbook_fields_present
+    required += playbook_keys if require_complete_playbook
     required.each do |field|
       errors << "capture report missing #{field}" unless report.key?(field)
     end
@@ -133,6 +138,39 @@ module IngestionValidation
     artifact_complete = report['artifact_complete'] == true
     artifact_inspectable = report['artifact_inspectable'] == true
     failure_reason = report['failure_reason'].to_s.strip
+    if require_complete_playbook
+      primary_playbook = report['primary_playbook']
+      secondary_playbooks = report['secondary_playbooks']
+      source_type_ambiguity = report['source_type_ambiguity']
+
+      unless primary_playbook.is_a?(String) && !primary_playbook.strip.empty?
+        errors << 'capture report primary_playbook is required for new ingestion and must be a nonempty string'
+      else
+        primary_playbook = primary_playbook.strip
+        unless ALLOWED_PLAYBOOKS.include?(primary_playbook)
+          errors << "capture report primary_playbook must be one of #{ALLOWED_PLAYBOOKS.join(', ')}, got #{primary_playbook.inspect}"
+        end
+      end
+
+      unless secondary_playbooks.is_a?(Array)
+        errors << 'capture report secondary_playbooks must be an array'
+      end
+      unless source_type_ambiguity.is_a?(String)
+        errors << 'capture report source_type_ambiguity must be a string'
+      end
+
+      if secondary_playbooks.is_a?(Array)
+        secondary_list = secondary_playbooks.map { |value| value.to_s.strip }
+        secondary_values = secondary_list.reject(&:empty?)
+        unsupported = secondary_values.reject { |value| ALLOWED_PLAYBOOKS.include?(value) }
+        errors << "capture report secondary_playbooks must use supported values: #{unsupported.join(', ')}" unless unsupported.empty?
+        duplicates = secondary_values.group_by { |value| value }.select { |_, values| values.length > 1 }.keys
+        errors << "capture report secondary_playbooks contains duplicate values: #{duplicates.join(', ')}" unless duplicates.empty?
+        if primary_playbook.is_a?(String) && !primary_playbook.strip.empty? && secondary_values.include?(primary_playbook.strip)
+          errors << 'capture report primary_playbook must not also appear in secondary_playbooks'
+        end
+      end
+    end
 
     errors << 'capture report requires artifact_path' if artifact_path.empty?
     errors << "capture report artifact_path does not exist: #{report['artifact_path']}" unless artifact_path_obj.exist?
@@ -143,9 +181,9 @@ module IngestionValidation
     errors
   end
 
-  def validate_capture_report_path(path, base_dir: Dir.pwd)
+  def validate_capture_report_path(path, base_dir: Dir.pwd, require_playbook: true)
     report, report_path = read_capture_report(path)
-    errors = capture_report_errors(report, base_dir: base_dir)
+    errors = capture_report_errors(report, base_dir: base_dir, require_playbook: require_playbook)
     [errors, report_path]
   rescue StandardError => e
     [[e.message], File.expand_path(path)]

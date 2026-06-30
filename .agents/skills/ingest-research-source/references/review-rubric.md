@@ -8,6 +8,7 @@ Use this rubric to judge whether a source ingestion pass is ready for review.
 - The raw source was not overwritten.
 - The content hash matches the captured bytes.
 - A structured capture report passed before ID allocation for the ingested source.
+- A primary evidence playbook was selected before analysis began.
 - The source ID was allocated only after a complete inspectable raw artifact existed.
 - The source record status is correct for the current phase.
 - The source summary points to the active source version.
@@ -21,6 +22,7 @@ Use this rubric to judge whether a source ingestion pass is ready for review.
 ## Quality checks
 
 - The summary separates explicit source statements from Invariant interpretation.
+- The summary reflects the selected playbook and evidence boundary.
 - Claims use precise locators and avoid broad paraphrase.
 - Uncertainty stays visible instead of being collapsed away.
 - Duplicate or superseded sources are linked explicitly.
@@ -32,6 +34,7 @@ Use this rubric to judge whether a source ingestion pass is ready for review.
 - A URL, partial preview, cached fragment, or third-party summary was registered as a source.
 - The capture report says the artifact is incomplete or uninspectable but ingestion continues anyway.
 - A source version is overwritten instead of versioned.
+- The selected playbook does not match the source type.
 - Claims or summary wording drift from the source without justification.
 - A file reference or registry entry points to a missing path.
 - The ingest introduces unreviewed assertions as if they were established fact.

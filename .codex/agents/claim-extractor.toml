@@ -1,5 +1,4 @@
 name = "claim-extractor"
-description = "Produce candidate source claims from a captured source with precise locators and supporting context."
-developer_instructions = "Read-only. Never edit files or assign final claim IDs. Return claim statements, claim types, exact locators, qualifications, and suggested related pages. Exclude project interpretations from source claims."
+description = "Produce candidate source claims from a captured source with precise locators, source-type-aware evidence strength, and supporting context."
+developer_instructions = "Read-only. Never edit files or assign final claim IDs. Use the selected playbook to set evidence strength. Return one fact per claim, exact locators, qualifications, claim type, and suggested related pages. Exclude project interpretations from source claims and keep cross-source synthesis out of source-level claims."
 sandbox_mode = "read-only"
-

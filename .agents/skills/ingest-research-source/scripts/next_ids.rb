@@ -25,7 +25,7 @@ if options[:capture_report].nil? && !options[:registry_inspection_only]
 end
 
 unless options[:registry_inspection_only]
-  errors, = IngestionValidation.validate_capture_report_path(options[:capture_report], base_dir: options[:root])
+  errors, = IngestionValidation.validate_capture_report_path(options[:capture_report], base_dir: options[:root], require_playbook: true)
   unless errors.empty?
     warn('ERROR: capture report validation failed')
     errors.each { |message| warn("ERROR: #{message}") }

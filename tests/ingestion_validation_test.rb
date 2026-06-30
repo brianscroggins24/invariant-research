@@ -17,6 +17,10 @@ class IngestionValidationTest < Minitest::Test
     File.write(path, content)
   end
 
+  def read_utf8_file(path)
+    File.binread(path).force_encoding('UTF-8')
+  end
+
   def with_temp_dir
     Dir.mktmpdir('ingestion-validation-test') do |dir|
       yield dir
@@ -103,21 +107,36 @@ class IngestionValidationTest < Minitest::Test
     Open3.capture3(*(['ruby', script] + args), chdir: chdir)
   end
 
-  def capture_report_text(artifact_path:, artifact_exists:, artifact_complete:, artifact_inspectable:, failure_reason: '', capture_method: 'local file', canonical_url: 'https://example.com/source', capture_date: '2024-01-01')
-    <<~MD
-      ---
-      artifact_path: #{artifact_path}
-      artifact_exists: #{artifact_exists}
-      artifact_complete: #{artifact_complete}
-      artifact_inspectable: #{artifact_inspectable}
-      capture_method: #{capture_method}
-      canonical_url: #{canonical_url}
-      capture_date: #{capture_date}
-      failure_reason: #{failure_reason}
-      ---
+  def capture_report_text(artifact_path:, artifact_exists:, artifact_complete:, artifact_inspectable:, failure_reason: '', capture_method: 'local file', canonical_url: 'https://example.com/source', capture_date: '2024-01-01', primary_playbook: nil, secondary_playbooks: nil, source_type_ambiguity: nil)
+    lines = [
+      '---',
+      "artifact_path: #{artifact_path}",
+      "artifact_exists: #{artifact_exists}",
+      "artifact_complete: #{artifact_complete}",
+      "artifact_inspectable: #{artifact_inspectable}",
+      "capture_method: #{capture_method}",
+      "canonical_url: #{canonical_url}",
+      "capture_date: #{capture_date}"
+    ]
 
-      # Capture Report
-    MD
+    lines << "primary_playbook: #{primary_playbook}" unless primary_playbook.nil?
+    unless secondary_playbooks.nil?
+      if Array(secondary_playbooks).empty?
+        lines << 'secondary_playbooks: []'
+      else
+        lines << 'secondary_playbooks:'
+        Array(secondary_playbooks).each { |value| lines << "  - #{value}" }
+      end
+    end
+    unless source_type_ambiguity.nil?
+      lines << %(source_type_ambiguity: #{source_type_ambiguity == '' ? '""' : source_type_ambiguity})
+    end
+    lines << "failure_reason: #{failure_reason}"
+    lines << '---'
+    lines << ''
+    lines << '# Capture Report'
+    lines << ''
+    lines.join("\n")
   end
 
   def test_capture_report_passes_when_complete
@@ -132,6 +151,9 @@ class IngestionValidationTest < Minitest::Test
         'capture_method' => 'local file',
         'canonical_url' => 'https://example.com',
         'capture_date' => '2024-01-01',
+        'primary_playbook' => 'academic-research',
+        'secondary_playbooks' => [],
+        'source_type_ambiguity' => '',
         'failure_reason' => '',
         'content_type' => 'text/markdown',
         'page_count' => 1,
@@ -139,6 +161,225 @@ class IngestionValidationTest < Minitest::Test
       }
 
       assert_empty IngestionValidation.capture_report_errors(report, base_dir: dir)
+    end
+  end
+
+  def test_capture_report_valid_primary_playbook_passes
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'academic-research',
+        'secondary_playbooks' => [],
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      assert_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_missing_primary_playbook_fails
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'secondary_playbooks' => [],
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      refute_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_unsupported_playbook_fails
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'unsupported-playbook',
+        'secondary_playbooks' => [],
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      refute_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_duplicate_primary_secondary_value_fails
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'academic-research',
+        'secondary_playbooks' => ['academic-research'],
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      refute_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_valid_secondary_playbooks_pass
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'journalism',
+        'secondary_playbooks' => ['practitioner-content'],
+        'source_type_ambiguity' => 'mixed commentary and reporting',
+        'failure_reason' => ''
+      }
+
+      assert_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_empty_secondary_playbooks_pass
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'official-documentation',
+        'secondary_playbooks' => [],
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      assert_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_null_secondary_playbooks_fails_new_ingestion
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'official-documentation',
+        'secondary_playbooks' => nil,
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      refute_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_duplicate_secondary_values_fail
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'journalism',
+        'secondary_playbooks' => ['practitioner-content', 'practitioner-content'],
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      refute_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_empty_source_type_ambiguity_passes
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'journalism',
+        'secondary_playbooks' => ['practitioner-content'],
+        'source_type_ambiguity' => '',
+        'failure_reason' => ''
+      }
+
+      assert_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
+    end
+  end
+
+  def test_capture_report_null_source_type_ambiguity_fails_new_ingestion
+    with_temp_dir do |dir|
+      artifact = File.join(dir, 'artifact.md')
+      File.write(artifact, 'complete')
+      report = {
+        'artifact_path' => artifact,
+        'artifact_exists' => true,
+        'artifact_complete' => true,
+        'artifact_inspectable' => true,
+        'capture_method' => 'local file',
+        'canonical_url' => 'https://example.com',
+        'capture_date' => '2024-01-01',
+        'primary_playbook' => 'journalism',
+        'secondary_playbooks' => ['practitioner-content'],
+        'source_type_ambiguity' => nil,
+        'failure_reason' => ''
+      }
+
+      refute_empty IngestionValidation.capture_report_errors(report, base_dir: dir, require_playbook: true)
     end
   end
 
@@ -555,6 +796,65 @@ class IngestionValidationTest < Minitest::Test
     end
   end
 
+  def test_playbook_files_exist_and_skill_references_them
+    playbooks = %w[
+      .agents/skills/ingest-research-source/references/academic-research.md
+      .agents/skills/ingest-research-source/references/official-documentation.md
+      .agents/skills/ingest-research-source/references/practitioner-content.md
+      .agents/skills/ingest-research-source/references/journalism.md
+    ]
+    touched_docs = %w[
+      .agents/skills/ingest-research-source/SKILL.md
+      .agents/skills/ingest-research-source/references/ingestion-checklist.md
+      .agents/skills/ingest-research-source/references/review-rubric.md
+      .codex/agents/source-capturer.toml
+      .codex/agents/source-analyst.toml
+      .codex/agents/claim-extractor.toml
+      .codex/agents/ingestion-reviewer.toml
+      templates/source-summary.md
+      wiki/source-ingestion.md
+    ]
+
+    playbooks.each do |relative_path|
+      path = File.join(ROOT, relative_path)
+      assert File.exist?(path), "missing playbook #{relative_path}"
+      refute_match(%r{/(Users|private)/|[A-Z]:[\\/]}, read_utf8_file(path), "absolute path leaked into #{relative_path}")
+    end
+
+    touched_docs.each do |relative_path|
+      refute_match(%r{/(Users|private)/|[A-Z]:[\\/]}, read_utf8_file(File.join(ROOT, relative_path)), "absolute path leaked into #{relative_path}")
+    end
+
+    skill = read_utf8_file(File.join(ROOT, '.agents/skills/ingest-research-source/SKILL.md'))
+    playbooks.each do |relative_path|
+      assert_includes(skill, File.basename(relative_path))
+    end
+  end
+
+  def test_agent_instructions_require_playbook_selection
+    source_capturer = read_utf8_file(File.join(ROOT, '.codex/agents/source-capturer.toml'))
+    source_analyst = read_utf8_file(File.join(ROOT, '.codex/agents/source-analyst.toml'))
+    claim_extractor = read_utf8_file(File.join(ROOT, '.codex/agents/claim-extractor.toml'))
+    ingestion_reviewer = read_utf8_file(File.join(ROOT, '.codex/agents/ingestion-reviewer.toml'))
+
+    assert_match(/select exactly one primary evidence playbook/i, source_capturer)
+    assert_match(/selected playbook/i, source_capturer)
+    assert_match(/selected playbook/i, source_analyst)
+    assert_match(/selected playbook/i, claim_extractor)
+    assert_match(/selected playbook/i, ingestion_reviewer)
+    assert_match(/bounded final consistency and governance review/i, ingestion_reviewer)
+    assert_match(/review only the files named in the task or, if no files are named, the staged diff/i, ingestion_reviewer)
+  end
+
+  def test_ingestion_review_brief_exists_and_is_bounded
+    path = File.join(ROOT, '.agents/skills/ingest-research-source/references/ingestion-review-brief.md')
+    text = read_utf8_file(path)
+
+    assert File.exist?(path)
+    assert_match(/Review only the files named in the task or, if no files are named, the staged diff/i, text)
+    assert_match(/Return PASS or FAIL for each category/i, text)
+  end
+
   def test_missing_target_fails
     with_temp_dir do |dir|
       write_file(dir, 'wiki/source-summaries/a.md', "[Missing](missing.md)\n")
@@ -856,6 +1156,9 @@ class IngestionValidationTest < Minitest::Test
                    artifact_exists: false,
                    artifact_complete: false,
                    artifact_inspectable: false,
+                   primary_playbook: 'official-documentation',
+                   secondary_playbooks: [],
+                   source_type_ambiguity: '',
                    failure_reason: 'missing artifact'
                  ))
 
@@ -903,6 +1206,9 @@ class IngestionValidationTest < Minitest::Test
                    artifact_exists: true,
                    artifact_complete: true,
                    artifact_inspectable: true,
+                   primary_playbook: 'official-documentation',
+                   secondary_playbooks: [],
+                   source_type_ambiguity: '',
                    failure_reason: ''
                  ))
 
@@ -937,6 +1243,9 @@ class IngestionValidationTest < Minitest::Test
                    artifact_exists: true,
                    artifact_complete: true,
                    artifact_inspectable: true,
+                   primary_playbook: 'journalism',
+                   secondary_playbooks: ['practitioner-content'],
+                   source_type_ambiguity: 'mixed reported commentary',
                    failure_reason: ''
                  ))
 
@@ -957,5 +1266,125 @@ class IngestionValidationTest < Minitest::Test
       assert next_status.success?, next_stdout + next_stderr
       assert_match(/source_id=SRC-0002/, next_stdout)
     end
+  end
+
+  def test_validate_capture_report_legacy_mode_accepts_missing_playbook_fields
+    with_git_repo do |dir|
+      commit_baseline_repo(dir)
+      write_file(dir, 'artifact.md', 'complete')
+      write_file(dir, 'capture-report.md', capture_report_text(
+                   artifact_path: 'artifact.md',
+                   artifact_exists: true,
+                   artifact_complete: true,
+                   artifact_inspectable: true,
+                   failure_reason: ''
+                 ))
+
+      stdout, stderr, status = Open3.capture3(
+        'ruby',
+        File.join(ROOT, '.agents/skills/ingest-research-source/scripts/validate_capture_report.rb'),
+        '--file',
+        'capture-report.md',
+        '--root',
+        dir,
+        '--allow-legacy',
+        chdir: dir
+      )
+
+      assert status.success?, stdout + stderr
+      assert_match(/PASS: capture report validation succeeded/, stdout)
+    end
+  end
+
+  def test_validate_capture_report_legacy_mode_rejects_missing_playbook_fields_without_flag
+    with_git_repo do |dir|
+      commit_baseline_repo(dir)
+      write_file(dir, 'artifact.md', 'complete')
+      write_file(dir, 'capture-report.md', capture_report_text(
+                   artifact_path: 'artifact.md',
+                   artifact_exists: true,
+                   artifact_complete: true,
+                   artifact_inspectable: true,
+                   failure_reason: ''
+                 ))
+
+      stdout, stderr, status = Open3.capture3(
+        'ruby',
+        File.join(ROOT, '.agents/skills/ingest-research-source/scripts/validate_capture_report.rb'),
+        '--file',
+        'capture-report.md',
+        '--root',
+        dir,
+        chdir: dir
+      )
+
+      refute status.success?
+      assert_equal '', stdout
+      assert_match(/capture report missing primary_playbook/, stderr)
+      assert_match(/capture report validation failed/, stderr)
+    end
+  end
+
+  def test_validate_capture_report_legacy_mode_rejects_partial_playbook_block
+    with_git_repo do |dir|
+      commit_baseline_repo(dir)
+      write_file(dir, 'artifact.md', 'complete')
+      write_file(dir, 'capture-report.md', <<~MD)
+        ---
+        artifact_path: artifact.md
+        artifact_exists: true
+        artifact_complete: true
+        artifact_inspectable: true
+        capture_method: local file
+        canonical_url: https://example.com/source
+        capture_date: 2024-01-01
+        primary_playbook: academic-research
+        failure_reason: ""
+        ---
+
+        # Capture Report
+      MD
+
+      stdout, stderr, status = Open3.capture3(
+        'ruby',
+        File.join(ROOT, '.agents/skills/ingest-research-source/scripts/validate_capture_report.rb'),
+        '--file',
+        'capture-report.md',
+        '--root',
+        dir,
+        '--allow-legacy',
+        chdir: dir
+      )
+
+      refute status.success?
+      assert_equal '', stdout
+      assert_match(/capture report missing secondary_playbooks/, stderr)
+      assert_match(/capture report missing source_type_ambiguity/, stderr)
+      assert_match(/capture report validation failed/, stderr)
+    end
+  end
+
+  def test_playbook_source_type_and_authority_mappings_match_registry_conventions
+    playbook_docs = {
+      'academic-research' => ['research-paper', 'primary-research'],
+      'official-documentation' => ['official-documentation', 'primary-platform'],
+      'practitioner-content' => ['social-article', 'secondary-practitioner'],
+      'journalism' => ['financial-commentary', 'secondary-journalism']
+    }
+
+    playbook_docs.each do |playbook, (source_type, authority)|
+      path = File.join(ROOT, ".agents/skills/ingest-research-source/references/#{playbook}.md")
+      text = read_utf8_file(path)
+      assert_match(/Selected playbook: `#{Regexp.escape(playbook)}`/i, text)
+      assert_match(/Registry source_type: `#{Regexp.escape(source_type)}`/i, text)
+      assert_match(/Authority: `#{Regexp.escape(authority)}`/i, text)
+    end
+  end
+
+  def test_test_method_names_are_unique
+    test_names = File.read(__FILE__, encoding: 'UTF-8').scan(/^\s*def\s+(test_[A-Za-z0-9_!?=]+)/).flatten
+    duplicates = test_names.group_by { |name| name }.select { |_name, names| names.length > 1 }.keys.sort
+
+    assert_empty duplicates, "duplicate test method definitions: #{duplicates.join(', ')}"
   end
 end

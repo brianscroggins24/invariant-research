@@ -21,6 +21,10 @@ Record the source citation here.
 
 State the source type and identify what the source explicitly says.
 
+## Selected Playbook
+
+Identify the source-type playbook used for analysis and note whether a secondary playbook was needed to narrow the boundary.
+
 ## Purpose or Research Question
 
 Explain the purpose of the source or the question it addresses. Distinguish direct statements from Invariant's inference.
@@ -64,3 +68,5 @@ Record questions that remain open after reading the source.
 ## Review Notes
 
 Use this section for review comments, including what is explicit, what is inferred, and what remains uncertain.
+
+Note the selected playbook and any evidence-boundary decisions here if they affect interpretation.
