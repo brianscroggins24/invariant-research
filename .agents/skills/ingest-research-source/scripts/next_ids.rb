@@ -1,9 +1,39 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'optparse'
 require 'yaml'
 
-ROOT = File.expand_path('../../../../', __dir__)
+require_relative 'ingestion_validation'
+
+options = {
+  root: IngestionValidation.repo_root(__dir__),
+  registry_inspection_only: false
+}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: next_ids.rb --capture-report CAPTURE_REPORT.md [--root REPO_ROOT] [--registry-inspection-only]'
+  opts.on('--capture-report PATH', 'Validated capture report markdown file') { |value| options[:capture_report] = value }
+  opts.on('--root PATH', 'Repository root') { |value| options[:root] = value }
+  opts.on('--registry-inspection-only', 'Print next IDs without authorizing ingestion; do not use for source ingestion') do
+    options[:registry_inspection_only] = true
+  end
+end.parse!
+
+if options[:capture_report].nil? && !options[:registry_inspection_only]
+  abort('ERROR: --capture-report is required for source-ingestion ID allocation')
+end
+
+unless options[:registry_inspection_only]
+  errors, = IngestionValidation.validate_capture_report_path(options[:capture_report], base_dir: options[:root])
+  unless errors.empty?
+    warn('ERROR: capture report validation failed')
+    errors.each { |message| warn("ERROR: #{message}") }
+    exit 1
+  end
+else
+  warn('WARNING: --registry-inspection-only bypasses capture-report validation and does not authorize ingestion')
+end
 
 def load_yaml(path)
   YAML.load_file(path)
@@ -30,9 +60,9 @@ def assert_unique_ids!(ids, kind)
   abort("ERROR: duplicate #{kind} IDs found: #{duplicates.join(', ')}")
 end
 
-sources = load_yaml(File.join(ROOT, 'registry/sources.yaml'))['sources']
-pages = load_yaml(File.join(ROOT, 'registry/pages.yaml'))['pages']
-claims = load_yaml(File.join(ROOT, 'registry/claims.yaml'))['claims']
+sources = load_yaml(File.join(options[:root], 'registry/sources.yaml'))['sources']
+pages = load_yaml(File.join(options[:root], 'registry/pages.yaml'))['pages']
+claims = load_yaml(File.join(options[:root], 'registry/claims.yaml'))['claims']
 
 source_ids = sources.map { |row| row['source_id'] }
 page_ids = pages.map { |row| row['page_id'] }

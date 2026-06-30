@@ -2,20 +2,24 @@
 
 1. Read `AGENTS.md` and `wiki/source-ingestion.md`.
 2. Inspect `registry/sources.yaml`, `registry/pages.yaml`, `registry/claims.yaml`, `index.md`, and `log.md`.
-3. Ask `source-capturer` to perform an acquisition check and, if possible, capture the complete raw artifact into a temporary acquisition location or inspect a complete user-provided artifact.
-4. If acquisition fails or only partial material exists, stop immediately, report the remaining legitimate capture options, and do not allocate IDs or touch registries, `index.md`, or `log.md`.
-5. Only after capture succeeds, run `scripts/next_ids.rb` to identify the next available source, summary-page, and claim IDs.
+3. Ask `source-capturer` to perform an acquisition check, and require a structured capture report for the attempt.
+4. Validate the capture report before allocating IDs. If acquisition fails, the artifact is incomplete, or the capture report fails, stop immediately, report the remaining legitimate capture options, and do not touch registries, `index.md`, or `log.md`.
+5. Only after a passing capture report succeeds, run `scripts/next_ids.rb --capture-report capture-report.md` to identify the next available source, summary-page, and claim IDs.
 6. After ID allocation, copy or move the exact artifact into `raw/sources/`, then run `scripts/hash_source.sh <path>` to compute SHA-256.
 7. Register the source as `pending-ingestion` first.
 8. Create or update the source-summary page from `templates/source-summary.md`.
 9. Extract candidate claims with precise locators.
 10. Register pages and claims, keeping new artifacts at `review-required`.
 11. Update `index.md` and `log.md` after the registry edits are consistent.
-12. Run `scripts/validate_ingestion.rb` to validate YAML, file paths, hashes, and references before finishing.
+12. Run `scripts/validate_ingestion.rb` to validate YAML, file paths, hashes, dates, versions, and references before finishing.
+13. Run `scripts/validate_links.rb` on governed Markdown files when reviewing link integrity.
+14. Run `scripts/validate_promotion.rb` only for status-only promotion diffs.
 
 ## Script usage
 
-- `scripts/next_ids.rb` after capture succeeds
+- `scripts/validate_capture_report.rb capture-report.md`
+- `scripts/next_ids.rb --capture-report capture-report.md` after capture succeeds
+- `scripts/next_ids.rb --registry-inspection-only` only for explicit maintenance inspection, never for ingestion
 - `scripts/hash_source.sh raw/sources/SRC-0002-example.md`
 - `scripts/validate_ingestion.rb`
 
