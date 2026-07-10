@@ -633,3 +633,24 @@ sources:
     supersedes:
     superseded_by:
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+
+  - source_id: SRC-0035
+    title: "Makers and Takers: The Economics of the Kalshi Prediction Market"
+    source_type: research-paper
+    authors:
+      - Constantin Bürgi
+      - Wanying Deng
+      - Karl Whelan
+    organization: University College Dublin
+    publication_date:
+    retrieved_at: 2026-07-09
+    original_location: https://www.karlwhelan.com/Papers/Kalshi.pdf
+    local_path: raw/sources/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.pdf
+    content_hash: 457f86eee6311637f22f1755fde34de76e52320a667c3ad3d66c95b56cfeedbe
+    version: 1
+    language: en
+    authority: primary-research
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: "Author-hosted PDF capture from karlwhelan.com. `version: 1` is the repository source-record/capture version for this first inspected artifact; the PDF itself shows no explicit external version marker. The title page says January 2026, and the PDF metadata creation date is 2026-01-29, but no exact publication date is supported by the artifact."

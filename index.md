@@ -38,6 +38,7 @@ Minimal landing page for the research wiki.
 - `SRC-0032` — [Market Settlement](raw/sources/SRC-0032-market-settlement.md) — `active`
 - `SRC-0033` — [Historical Data](raw/sources/SRC-0033-historical-data.md) — `active`
 - `SRC-0034` — [Rate Limits and Tiers](raw/sources/SRC-0034-rate-limits-and-tiers.md) — `active`
+- `SRC-0035` — [Makers and Takers: The Economics of the Kalshi Prediction Market](raw/sources/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.pdf) — `pending-ingestion`
 
 ## Knowledge Pages
 
@@ -74,6 +75,7 @@ Minimal landing page for the research wiki.
 - [Market Settlement source summary](wiki/source-summaries/SRC-0032-market-settlement.md) — `reviewed`
 - [Historical Data source summary](wiki/source-summaries/SRC-0033-historical-data.md) — `reviewed`
 - [Rate Limits and Tiers source summary](wiki/source-summaries/SRC-0034-rate-limits-and-tiers.md) — `reviewed`
+- [Makers and Takers: The Economics of the Kalshi Prediction Market source summary](wiki/source-summaries/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.md) — `review-required`
 
 ## Synthesis Pages
 

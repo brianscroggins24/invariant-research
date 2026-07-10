@@ -116,3 +116,11 @@
 - Promoted synthesis pages `CONCEPT-0001`, `CONCEPT-0002`, `CONCEPT-0003`, `THEORY-0001`, `STRATEGY-0001`, `PLATFORM-0001`, and `PLATFORM-0002` to `reviewed`.
 - Updated `registry/pages.yaml`, the seven synthesis page frontmatter records, and `index.md` to match the reviewed status.
 - No pages were withheld; the Phase 2 synthesis layer passed registry, link, and semantic review checks and is ready for final consistency audit.
+
+## 2026-07-09
+
+- Captured `SRC-0035` as the author-hosted PDF for "Makers and Takers: The Economics of the Kalshi Prediction Market" and verified that the artifact is complete and inspectable.
+- Copied the exact PDF into the canonical raw-source path and registered its SHA-256 hash.
+- Created `SOURCE-SUMMARY-0034` and candidate claims `CLM-0120` through `CLM-0126` at `review-required`.
+- Registered `SRC-0035` as `pending-ingestion` and added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed.

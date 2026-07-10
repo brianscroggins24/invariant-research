@@ -1233,3 +1233,80 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0033
     notes: Time-sensitive table and grant behavior; refresh against the live docs before production use.
+
+  - claim_id: CLM-0120
+    statement: From 2021 through April 2025, the authors use Kalshi transaction-level data covering 46,282 contracts across 12,403 events, filtered to events with at least $1,000 total trading volume at closure, and they analyze over 300,000 price observations when both sides of each traded contract are counted.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0035
+        locator: "Abstract and 3.1 Data and Summary Statistics (pp. 1, 9-13)"
+    related_pages:
+      - SOURCE-SUMMARY-0034
+    notes: Directly stated empirical sample scope; the 300,000 figure is the price-observation count, not the number of distinct contracts.
+
+  - claim_id: CLM-0121
+    statement: "Kalshi is quote-driven: makers post offers to buy Yes or No that are visible on the site, takers accept those offers, and the transaction-level API records which side of each trade was the maker and which was the taker."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0035
+        locator: "2.2 How Kalshi Works (pp. 5-6) and 4. Evidence on Makers and Takers (pp. 26-27)"
+    related_pages:
+      - SOURCE-SUMMARY-0034
+    notes: Directly stated market-structure description and API capability.
+
+  - claim_id: CLM-0122
+    statement: "The paper finds that Kalshi prices become more accurate as markets approach closing."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0035
+        locator: "Abstract and 3.2 Winning Fractions and Forecast Accuracy (pp. 1, 14-16)"
+    related_pages:
+      - SOURCE-SUMMARY-0034
+    notes: Directly stated descriptive finding about forecast accuracy versus horizon.
+
+  - claim_id: CLM-0123
+    statement: "Kalshi prices display a favorite-longshot bias: low-price contracts win less often than needed to break even after fees, high-price contracts earn small positive returns, and the average contract return is about minus 20%."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0035
+        locator: "Abstract, 3.2 Winning Fractions and Forecast Accuracy, and 3.4 Regression Evidence (pp. 1, 14-25)"
+    related_pages:
+      - SOURCE-SUMMARY-0034
+    notes: Directly stated descriptive result; the return figure is the paper's sample-period average, not a timeless platform constant.
+
+  - claim_id: CLM-0124
+    statement: "After fees, makers earn higher average returns than takers, with the paper reporting approximately minus 9.64% for makers versus minus 31.46% for takers."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0035
+        locator: "4. Evidence on Makers and Takers and Figures 6-8 (pp. 27-30)"
+    related_pages:
+      - SOURCE-SUMMARY-0034
+    notes: Directly stated empirical comparison; the figures are post-fee returns.
+
+  - claim_id: CLM-0125
+    statement: "During the sample period Kalshi charged takers a fee of 0.07P(1-P) per contract, rounded up to the nearest cent, and the paper notes that this makes the average fee on a 50c contract purchased in a 100-contract lot equal to 1.77% of contract value."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0035
+        locator: "2.2 How Kalshi Works (p. 6) and 3.3 Returns on Contracts (p. 17)"
+    related_pages:
+      - SOURCE-SUMMARY-0034
+    notes: Historical fee rule and rounding behavior for the sampled period; not a claim about the current fee regime.
+
+  - claim_id: CLM-0126
+    statement: "The calibration model requires a small bias toward overstating low probabilities, and the authors report that a model with only unbiased belief heterogeneity cannot reproduce the observed maker-taker return pattern."
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0035
+        locator: "5. A Model of Kalshi, especially 5.1-5.3 (pp. 31-39)"
+    related_pages:
+      - SOURCE-SUMMARY-0034
+    notes: Calibration result, not a production guarantee or a claim of unique identification.
