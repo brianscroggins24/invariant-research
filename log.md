@@ -153,3 +153,5 @@
 - Promoted `SRC-0035` through `SRC-0039` from `pending-ingestion` to `active`, promoted `SOURCE-SUMMARY-0034` through `SOURCE-SUMMARY-0038` from `review-required` to `reviewed`, and promoted `CLM-0120` through `CLM-0170` from `review-required` to `reviewed`.
 - Updated `registry/sources.yaml`, `registry/pages.yaml`, `registry/claims.yaml`, the five source-summary frontmatter records, and `index.md` to reflect the reviewed source layer.
 - `SRC-0036` retains the documented process-proof gap: the original temporary capture-report file and pre-ID `next_ids.rb --capture-report` output were not preserved, even though the current artifact and repository validators pass.
+- Created `CONCEPT-0004` / `Market Accuracy and Price Discovery` at `review-required` to synthesize the reviewed Kalshi and Polymarket accuracy and price-discovery evidence from `SRC-0035` through `SRC-0038`.
+- Created `CONCEPT-0005` / `Informed Trading and Surveillance` and `STRATEGY-0002` / `Liquidity Provision and Execution Quality` at `review-required` to extend the cross-paper synthesis around anomaly screening, identity limits, maker/taker economics, and execution-quality interpretation.

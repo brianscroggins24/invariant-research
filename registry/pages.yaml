@@ -204,6 +204,18 @@ pages:
     page_type: concept
     status: reviewed
 
+  - page_id: CONCEPT-0004
+    path: wiki/concepts/market-accuracy-and-price-discovery.md
+    title: Market Accuracy and Price Discovery
+    page_type: concept
+    status: review-required
+
+  - page_id: CONCEPT-0005
+    path: wiki/concepts/informed-trading-and-surveillance.md
+    title: Informed Trading and Surveillance
+    page_type: concept
+    status: review-required
+
   - page_id: THEORY-0001
     path: wiki/theory/combinatorial-market-making.md
     title: Combinatorial Market Making
@@ -215,6 +227,12 @@ pages:
     title: Arbitrage and Execution Risk
     page_type: strategy
     status: reviewed
+
+  - page_id: STRATEGY-0002
+    path: wiki/strategies/liquidity-provision-and-execution-quality.md
+    title: Liquidity Provision and Execution Quality
+    page_type: strategy
+    status: review-required
 
   - page_id: PLATFORM-0001
     path: wiki/platforms/polymarket.md
