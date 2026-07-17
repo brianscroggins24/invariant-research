@@ -147,3 +147,9 @@
 - Created `SOURCE-SUMMARY-0038` and candidate claims `CLM-0164` through `CLM-0170` at `review-required`.
 - Registered `SRC-0039` as `pending-ingestion` and added the new source and source-summary entries to `index.md`.
 - No promotion, commit, or push was performed.
+
+## 2026-07-17
+
+- Promoted `SRC-0035` through `SRC-0039` from `pending-ingestion` to `active`, promoted `SOURCE-SUMMARY-0034` through `SOURCE-SUMMARY-0038` from `review-required` to `reviewed`, and promoted `CLM-0120` through `CLM-0170` from `review-required` to `reviewed`.
+- Updated `registry/sources.yaml`, `registry/pages.yaml`, `registry/claims.yaml`, the five source-summary frontmatter records, and `index.md` to reflect the reviewed source layer.
+- `SRC-0036` retains the documented process-proof gap: the original temporary capture-report file and pre-ID `next_ids.rb --capture-report` output were not preserved, even though the current artifact and repository validators pass.

@@ -1237,7 +1237,7 @@ claims:
   - claim_id: CLM-0120
     statement: From 2021 through April 2025, the authors use Kalshi transaction-level data covering 46,282 contracts across 12,403 events.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "Abstract and 3.1 Data and Summary Statistics (pp. 1, 9-13)"
@@ -1248,7 +1248,7 @@ claims:
   - claim_id: CLM-0127
     statement: "The main sample includes only contracts with total trading volume at closure of at least $1,000, and the paper counts over 300,000 price observations when both sides of each traded contract are included."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "3.1 Data and Summary Statistics (pp. 9-13)"
@@ -1259,7 +1259,7 @@ claims:
   - claim_id: CLM-0121
     statement: "Kalshi is quote-driven: makers post offers to buy Yes or No that are visible on the site, takers accept those offers, and the transaction-level API records which side of each trade was the maker and which was the taker."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "2.2 How Kalshi Works (pp. 5-6) and 4. Evidence on Makers and Takers (pp. 26-27)"
@@ -1270,7 +1270,7 @@ claims:
   - claim_id: CLM-0122
     statement: "The paper finds that Kalshi prices become more accurate as markets approach closing."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "Abstract and 3.2 Winning Fractions and Forecast Accuracy (pp. 1, 14-16)"
@@ -1281,7 +1281,7 @@ claims:
   - claim_id: CLM-0123
     statement: "Kalshi prices display a favorite-longshot bias."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "Abstract, 3.2 Winning Fractions and Forecast Accuracy, and 3.4 Regression Evidence (pp. 1, 14-25)"
@@ -1292,7 +1292,7 @@ claims:
   - claim_id: CLM-0128
     statement: "Low-price contracts win less often than needed to break even after fees."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "Abstract and 3.2 Winning Fractions and Forecast Accuracy (pp. 1, 14-16)"
@@ -1303,7 +1303,7 @@ claims:
   - claim_id: CLM-0129
     statement: "High-price contracts earn small positive returns."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "Abstract and 3.3 Returns on Contracts (pp. 1, 17-18)"
@@ -1314,7 +1314,7 @@ claims:
   - claim_id: CLM-0130
     statement: "The average contract return is about minus 20%."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "3.2 Winning Fractions and Forecast Accuracy (pp. 14-16)"
@@ -1325,7 +1325,7 @@ claims:
   - claim_id: CLM-0124
     statement: "After fees, makers earn higher average returns than takers, with the paper reporting approximately minus 9.64% for makers versus minus 31.46% for takers."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "4. Evidence on Makers and Takers and Figures 6-8 (pp. 27-30)"
@@ -1336,7 +1336,7 @@ claims:
   - claim_id: CLM-0125
     statement: "During the sample period Kalshi charged takers a fee of 0.07P(1-P) per contract."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "2.2 How Kalshi Works (p. 6) and 3.3 Returns on Contracts (p. 17)"
@@ -1347,7 +1347,7 @@ claims:
   - claim_id: CLM-0131
     statement: "Kalshi rounds the total taker fee up to the nearest cent."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "3.3 Returns on Contracts (p. 17)"
@@ -1358,7 +1358,7 @@ claims:
   - claim_id: CLM-0132
     statement: "The paper notes that a 50c contract purchased in a 100-contract lot has an average fee equal to 1.77% of contract value."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "3.3 Returns on Contracts (p. 17)"
@@ -1369,7 +1369,7 @@ claims:
   - claim_id: CLM-0126
     statement: "The calibration model requires a small bias toward overstating low probabilities, and the authors report that a model with only unbiased belief heterogeneity cannot reproduce the observed maker-taker return pattern."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0035
         locator: "5. A Model of Kalshi, especially 5.1-5.3 (pp. 31-39)"
@@ -1380,7 +1380,7 @@ claims:
   - claim_id: CLM-0133
     statement: "The paper analyzes Polymarket trades from November 11, 2022 through March 29, 2026, covering 2.48 million users, 588.3 million trades, 614,883 markets, 255,427 events, and $67.1 billion in volume."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Abstract, Section 3.3, and Table 2 (pp. 1, 15-16, 47-48)"
@@ -1391,7 +1391,7 @@ claims:
   - claim_id: CLM-0134
     statement: "Trading gains are highly concentrated: the top 0.1% of users with positive PnL capture 51.2% of gains, the top 1% capture 76.5%, and roughly 69% of users end the sample with a loss."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Abstract and Section 4.1 (pp. 1, 18-19)"
@@ -1402,7 +1402,7 @@ claims:
   - claim_id: CLM-0135
     statement: "The paper's excess-hit-rate measure is strongly negative across the loss tail and rises to about +0.20 for the most profitable users, but the authors caution that this pattern alone does not establish skill."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Section 4.2 and Figure 4 (pp. 19-20)"
@@ -1413,7 +1413,7 @@ claims:
   - claim_id: CLM-0136
     statement: "The paper's finite-mixture model classifies about 29.3% of users as skilled."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Internet Appendix Section C and Section 4.2 (p. 20)"
@@ -1424,7 +1424,7 @@ claims:
   - claim_id: CLM-0137
     statement: "A one-standard-deviation increase in maker-volume share is associated with a 9.0 percentage-point higher probability of positive performance."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Section 5 and Table 4 (pp. 21-24)"
@@ -1435,7 +1435,7 @@ claims:
   - claim_id: CLM-0138
     statement: "Among the top 0.1% of earners, 47.3% of volume is supplied as makers versus 17.1% for the bottom 95%."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Table 5, Panel A (p. 25)"
@@ -1446,7 +1446,7 @@ claims:
   - claim_id: CLM-0139
     statement: "Removing the minimum-tick spread cost would move 18.5% of losers into non-negative PnL, and the top 0.1% of winners would earn about 3.2% more absent spread costs."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Section 6.2 and Table 9 (pp. 31-32)"
@@ -1457,7 +1457,7 @@ claims:
   - claim_id: CLM-0140
     statement: "Month-to-month performance is only modestly persistent, and the persistence that does exist is concentrated among users who trade primarily through limit orders."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Section 6.1 and Tables 6-8 (pp. 27-33)"
@@ -1468,7 +1468,7 @@ claims:
   - claim_id: CLM-0141
     statement: "The 100 most successful users account for 27.7% of aggregate winners' profits, and a meaningful fraction are pure liquidity providers."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Section 7 and Internet Appendix Section L (pp. 34-36, 149-158)"
@@ -1479,7 +1479,7 @@ claims:
   - claim_id: CLM-0142
     statement: "The authors argue that insider trading is unlikely to explain the largest winners, and the two prosecuted insider-trading cases discussed in the paper together account for roughly 0.13% of aggregate winners' profits."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Section 7 and Conclusion (pp. 35-36)"
@@ -1490,7 +1490,7 @@ claims:
   - claim_id: CLM-0143
     statement: "The paper aggregates by wallet address, notes that some traders may operate multiple wallets, and observes only Polymarket activity, so cross-platform arbitrage and wallet-to-wallet transfers are not fully captured."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0036
         locator: "Section 3.2 (pp. 13-14)"
@@ -1501,7 +1501,7 @@ claims:
   - claim_id: CLM-0144
     statement: "The paper analyzes Polymarket markets created after January 1, 2023 and resolved by December 31, 2025, covering 98,906 events, 210,322 markets, 1.72 million accounts, and $13.76 billion in trading volume."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 2 (pp. 7-9)"
@@ -1512,7 +1512,7 @@ claims:
   - claim_id: CLM-0145
     statement: "The skill measure is a sign-randomization test that flips buy/sell direction at the event level, uses B = 1,000 simulations per account, and classifies an account as skilled when its p-value is below 0.05."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 3.1 (pp. 10-13)"
@@ -1523,7 +1523,7 @@ claims:
   - claim_id: CLM-0146
     statement: "Under the benchmark specification with at least 10 events and no multiple-testing adjustment, 54,325 accounts are classified as skilled, or 3.16% of all accounts; under the Benjamini-Hochberg adjustment, the skilled share falls to 1.95% of all accounts."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Table 1 (pp. 12-14)"
@@ -1534,7 +1534,7 @@ claims:
   - claim_id: CLM-0147
     statement: "Skill is persistent out of sample: the training/test correlation of p-values is 0.35, 46% of skilled traders remain skilled in the test set, and realized PnL ranks are much less stable than the skill classification."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 3.3 (pp. 16-18), Table 3"
@@ -1545,7 +1545,7 @@ claims:
   - claim_id: CLM-0148
     statement: "Skilled traders' order imbalance predicts both next-period price changes and final outcomes, with coefficients of 2.05 and 7.77, while the lucky group has no statistically significant predictive power."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 3.4 (pp. 19-21), Table 4"
@@ -1556,7 +1556,7 @@ claims:
   - claim_id: CLM-0149
     statement: "Skilled traders' volume share reduces absolute pricing error, with a full-sample coefficient of -4.95 and stronger negative effects near resolution."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 3.5 (pp. 22-24), Table 5"
@@ -1567,7 +1567,7 @@ claims:
   - claim_id: CLM-0150
     statement: "Skilled traders react to public news: in both FOMC and corporate earnings windows, their order imbalance moves in the direction of the surprise, unlike the other groups."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 4.3.1 (pp. 30-31), Table 8"
@@ -1578,7 +1578,7 @@ claims:
   - claim_id: CLM-0151
     statement: "In multi-outcome events, skilled traders enforce the law of one price by buying equal quantities of No tokens across all outcomes, and the paper identifies arbitrage blocks by trade gaps longer than 10 seconds."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 4.3.2 (pp. 32-33), Figure 4"
@@ -1589,7 +1589,7 @@ claims:
   - claim_id: CLM-0152
     statement: "Skilled traders bet against the favorite-longshot bias by selling overpriced long shots and buying underpriced favorites."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 4.3.3 (pp. 33-34), Figure 5"
@@ -1600,7 +1600,7 @@ claims:
   - claim_id: CLM-0153
     statement: "The insider proxies flag 967 accounts that trade in 6.0% of markets, 1.3% of profits, and 0.2% of volume, and only 1.1% of those accounts are classified as skilled, indicating that insiders are localized and largely distinct from the skilled minority."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0037
         locator: "Section 4.2 (pp. 27-29), Table 7"
@@ -1611,7 +1611,7 @@ claims:
   - claim_id: CLM-0154
     statement: "The paper's empirical analysis uses Polymarket markets created after January 1, 2023 and resolved by December 31, 2025, covering 98,906 events, 210,322 markets, 1.72 million accounts, and $13.76 billion in volume."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 3 (pp. 7-9)"
@@ -1622,7 +1622,7 @@ claims:
   - claim_id: CLM-0155
     statement: "For open markets, the paper marks positions to the last trade price, and it computes total PnL as of January 1, 2026."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 3.2 (pp. 11-12)"
@@ -1633,7 +1633,7 @@ claims:
   - claim_id: CLM-0156
     statement: "Polymarket prices are generally accurate but show a tendency to overtrade the default and Yes option early in a market's life, and the biggest inaccuracies occur early and close to resolution."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 4.1 (pp. 13-15)"
@@ -1644,7 +1644,7 @@ claims:
   - claim_id: CLM-0157
     statement: "The paper finds no evidence of a market-wide longshot bias on Polymarket."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 4.1 (pp. 13-15)"
@@ -1655,7 +1655,7 @@ claims:
   - claim_id: CLM-0158
     statement: "In the tennis comparison, Polymarket's predicted probabilities are slightly more accurate than bookmaker odds, and Polymarket is closer to the outcome in 68.2% of games at game start."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 4.2 (pp. 16-21)"
@@ -1666,7 +1666,7 @@ claims:
   - claim_id: CLM-0159
     statement: "Less than a third of traders earn positive profits, and the share of winning traders remains below 50% over time before stabilizing at roughly 30% by 2025-2026."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 5.1 (pp. 22-23)"
@@ -1677,7 +1677,7 @@ claims:
   - claim_id: CLM-0160
     statement: "The t-test on gain per bet suggests skill beyond luck: the empirical p-value distribution rises above the null in the left tail, and the authors interpret this as roughly 5% of regular traders exhibiting positive skill."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 5.2 (pp. 23-24)"
@@ -1688,7 +1688,7 @@ claims:
   - claim_id: CLM-0161
     statement: "Monthly profits and winning probabilities are persistent over time: traders in the top PnL decile of the previous month earn significantly more in the next month, and the paper reports a 20.83 percentage-point increase in the chance of a positive PnL in its logistic example."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 5.3 (pp. 25-26)"
@@ -1699,7 +1699,7 @@ claims:
   - claim_id: CLM-0162
     statement: "Top traders place a higher share of bets on favorites, have a higher mean implied probability, and show greater variance in implied probabilities than bottom traders."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 5.4 (pp. 27-29), Table 3"
@@ -1710,7 +1710,7 @@ claims:
   - claim_id: CLM-0163
     statement: "Top traders trade earlier in the market lifecycle and less in the later part of the market, which the paper interprets as consistent with exploiting early-stage mispricing."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0038
         locator: "Section 5.4 (pp. 29-30), Table 4"
@@ -1721,7 +1721,7 @@ claims:
   - claim_id: CLM-0164
     statement: "The paper presents a systematic empirical and legal study of informed trading on prediction markets, analyzes over 210,000 suspicious wallet-market pairs from Polymarket markets between February 2024 and February 2026, and reports a 69.9% win rate and approximately $143 million in aggregate anomalous profit."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0039
         locator: "Abstract and Conclusion (pp. 1, 95-96)"
@@ -1732,7 +1732,7 @@ claims:
   - claim_id: CLM-0165
     statement: "The composite screening score combines bet size anomalies, profitability, pre-event timing, and directional concentration."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0039
         locator: "Abstract (p. 1)"
@@ -1743,7 +1743,7 @@ claims:
   - claim_id: CLM-0166
     statement: "The paper's case studies include the Maduro trade, the IDF case, the Nobel Peace Prize case, the AlphaRaccoon case, the OpenAI browser case, and the Taylor Swift / romanticpaul case."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0039
         locator: "Empirical evidence section (p. 6)"
@@ -1754,7 +1754,7 @@ claims:
   - claim_id: CLM-0167
     statement: "The paper's stated limitations are that it cannot observe an entire portfolio position for a given individual or entity, may miss multiple blockchain identifiers, may be looking at a profitable trade that was only one leg of a larger strategy or hedge, and cannot rule out coincidental patterns rather than material nonpublic information."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0039
         locator: "Limitations (p. 6)"
@@ -1765,7 +1765,7 @@ claims:
   - claim_id: CLM-0168
     statement: "The paper's statistical validation reports monotonically increasing win rates, significant permutation test results, and an aggregate profit of $143.0 million across 138,281 profitable (wallet, market) pairs."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0039
         locator: "Statistical validation and Conclusion (pp. 86, 95-96)"
@@ -1776,7 +1776,7 @@ claims:
   - claim_id: CLM-0169
     statement: "The paper concludes that the classical and misappropriation theories of securities fraud do not map cleanly onto prediction-market event contracts, and that Rule 180.1 is narrower than SEC Rule 10b-5 in critical respects."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0039
         locator: "Legal analysis (pp. 1, 95-96)"
@@ -1787,7 +1787,7 @@ claims:
   - claim_id: CLM-0170
     statement: "The paper argues for mandatory platform-level registration and surveillance obligations, contract-level rules targeting high-risk information channels, and an extended misappropriation theory for decentralized platforms."
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0039
         locator: "Conclusion and policy discussion (pp. 86, 95-96)"

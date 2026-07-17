@@ -650,7 +650,7 @@ sources:
     version: 1
     language: en
     authority: primary-research
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: "Author-hosted PDF capture from karlwhelan.com. `version: 1` is the repository source-record/capture version for this first inspected artifact; the PDF itself shows no explicit external version marker. The title page says January 2026, and the PDF metadata creation date is 2026-01-29, but no exact publication date is supported by the artifact."
@@ -672,7 +672,7 @@ sources:
     version: 1
     language: en
     authority: primary-research
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact raw PDF capture from the user-provided local artifact; the PDF title page says June 12, 2026, and the artifact shows no explicit external version marker.
@@ -694,7 +694,7 @@ sources:
     version: 1
     language: en
     authority: primary-research
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: "Exact raw PDF capture from the user-provided local artifact; the title page says 'This version: June 25, 2026' and the artifact shows no explicit external version marker."
@@ -714,7 +714,7 @@ sources:
     version: 1
     language: en
     authority: primary-research
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: "Exact raw PDF capture from the user-provided local artifact; the title page says 'Last updated: May 24, 2026' and the PDF metadata creation date is 2026-05-24. The artifact shows no explicit external version marker."
@@ -734,7 +734,7 @@ sources:
     version: 1
     language: en
     authority: primary-research
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: "Exact raw PDF capture from the user-provided local artifact. The title page says March 16, 2026 and 'FIRST DRAFT – COMMENTS WELCOME'. The artifact shows no explicit external version marker."

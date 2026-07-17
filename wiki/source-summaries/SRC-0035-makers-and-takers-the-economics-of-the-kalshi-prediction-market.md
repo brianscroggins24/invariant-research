@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0034
 title: "Makers and Takers: The Economics of the Kalshi Prediction Market"
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-07-09
 updated_at: 2026-07-09
 source_id: SRC-0035

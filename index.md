@@ -38,11 +38,11 @@ Minimal landing page for the research wiki.
 - `SRC-0032` — [Market Settlement](raw/sources/SRC-0032-market-settlement.md) — `active`
 - `SRC-0033` — [Historical Data](raw/sources/SRC-0033-historical-data.md) — `active`
 - `SRC-0034` — [Rate Limits and Tiers](raw/sources/SRC-0034-rate-limits-and-tiers.md) — `active`
-- `SRC-0035` — [Makers and Takers: The Economics of the Kalshi Prediction Market](raw/sources/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.pdf) — `pending-ingestion`
-- `SRC-0036` — [Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket](raw/sources/SRC-0036-who-wins-and-who-loses-in-prediction-markets-evidence-from-polymarket.pdf) — `pending-ingestion`
-- `SRC-0037` — [Prediction Market Accuracy: Crowd Wisdom or Informed Minority?](raw/sources/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.pdf) — `pending-ingestion`
-- `SRC-0038` — [Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket](raw/sources/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.pdf) — `pending-ingestion`
-- `SRC-0039` — [From Iran to Taylor Swift: Informed Trading in Prediction Markets](raw/sources/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.pdf) — `pending-ingestion`
+- `SRC-0035` — [Makers and Takers: The Economics of the Kalshi Prediction Market](raw/sources/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.pdf) — `active`
+- `SRC-0036` — [Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket](raw/sources/SRC-0036-who-wins-and-who-loses-in-prediction-markets-evidence-from-polymarket.pdf) — `active`
+- `SRC-0037` — [Prediction Market Accuracy: Crowd Wisdom or Informed Minority?](raw/sources/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.pdf) — `active`
+- `SRC-0038` — [Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket](raw/sources/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.pdf) — `active`
+- `SRC-0039` — [From Iran to Taylor Swift: Informed Trading in Prediction Markets](raw/sources/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.pdf) — `active`
 
 ## Knowledge Pages
 
@@ -79,11 +79,11 @@ Minimal landing page for the research wiki.
 - [Market Settlement source summary](wiki/source-summaries/SRC-0032-market-settlement.md) — `reviewed`
 - [Historical Data source summary](wiki/source-summaries/SRC-0033-historical-data.md) — `reviewed`
 - [Rate Limits and Tiers source summary](wiki/source-summaries/SRC-0034-rate-limits-and-tiers.md) — `reviewed`
-- [Makers and Takers: The Economics of the Kalshi Prediction Market source summary](wiki/source-summaries/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.md) — `review-required`
-- [Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket source summary](wiki/source-summaries/SRC-0036-who-wins-and-who-loses-in-prediction-markets-evidence-from-polymarket.md) — `review-required`
-- [Prediction Market Accuracy: Crowd Wisdom or Informed Minority? source summary](wiki/source-summaries/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.md) — `review-required`
-- [Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket source summary](wiki/source-summaries/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.md) — `review-required`
-- [From Iran to Taylor Swift: Informed Trading in Prediction Markets source summary](wiki/source-summaries/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.md) — `review-required`
+- [Makers and Takers: The Economics of the Kalshi Prediction Market source summary](wiki/source-summaries/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.md) — `reviewed`
+- [Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket source summary](wiki/source-summaries/SRC-0036-who-wins-and-who-loses-in-prediction-markets-evidence-from-polymarket.md) — `reviewed`
+- [Prediction Market Accuracy: Crowd Wisdom or Informed Minority? source summary](wiki/source-summaries/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.md) — `reviewed`
+- [Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket source summary](wiki/source-summaries/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.md) — `reviewed`
+- [From Iran to Taylor Swift: Informed Trading in Prediction Markets source summary](wiki/source-summaries/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.md) — `reviewed`
 
 ## Synthesis Pages
 

@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0038
 title: "From Iran to Taylor Swift: Informed Trading in Prediction Markets"
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-07-15
 updated_at: 2026-07-15
 source_id: SRC-0039

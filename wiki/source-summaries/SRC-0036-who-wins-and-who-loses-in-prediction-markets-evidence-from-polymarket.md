@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0035
 title: "Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket"
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-07-15
 updated_at: 2026-07-15
 source_id: SRC-0036

@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0036
 title: "Prediction Market Accuracy: Crowd Wisdom or Informed Minority?"
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-07-15
 updated_at: 2026-07-15
 source_id: SRC-0037

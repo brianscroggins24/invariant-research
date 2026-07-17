@@ -232,28 +232,28 @@ pages:
     path: wiki/source-summaries/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.md
     title: "Makers and Takers: The Economics of the Kalshi Prediction Market"
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0035
     path: wiki/source-summaries/SRC-0036-who-wins-and-who-loses-in-prediction-markets-evidence-from-polymarket.md
     title: "Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket"
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0036
     path: wiki/source-summaries/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.md
     title: "Prediction Market Accuracy: Crowd Wisdom or Informed Minority?"
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0037
     path: wiki/source-summaries/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.md
     title: "Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket"
     page_type: source-summary
-    status: review-required
+    status: reviewed
 
   - page_id: SOURCE-SUMMARY-0038
     path: wiki/source-summaries/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.md
     title: "From Iran to Taylor Swift: Informed Trading in Prediction Markets"
     page_type: source-summary
-    status: review-required
+    status: reviewed
