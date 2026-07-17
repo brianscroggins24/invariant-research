@@ -155,3 +155,7 @@
 - `SRC-0036` retains the documented process-proof gap: the original temporary capture-report file and pre-ID `next_ids.rb --capture-report` output were not preserved, even though the current artifact and repository validators pass.
 - Created `CONCEPT-0004` / `Market Accuracy and Price Discovery` at `review-required` to synthesize the reviewed Kalshi and Polymarket accuracy and price-discovery evidence from `SRC-0035` through `SRC-0038`.
 - Created `CONCEPT-0005` / `Informed Trading and Surveillance` and `STRATEGY-0002` / `Liquidity Provision and Execution Quality` at `review-required` to extend the cross-paper synthesis around anomaly screening, identity limits, maker/taker economics, and execution-quality interpretation.
+
+## 2026-07-17
+
+- Promoted `CONCEPT-0004` / `Market Accuracy and Price Discovery`, `CONCEPT-0005` / `Informed Trading and Surveillance`, and `STRATEGY-0002` / `Liquidity Provision and Execution Quality` to `reviewed` after synthesis review and validation.

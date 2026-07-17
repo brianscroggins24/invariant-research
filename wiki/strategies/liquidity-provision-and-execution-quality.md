@@ -2,7 +2,7 @@
 page_id: STRATEGY-0002
 title: Liquidity Provision and Execution Quality
 page_type: strategy
-status: review-required
+status: reviewed
 created_at: 2026-07-17
 updated_at: 2026-07-17
 sources:

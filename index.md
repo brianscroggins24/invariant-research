@@ -92,8 +92,8 @@ Minimal landing page for the research wiki.
 - [Market Relationship Taxonomy](wiki/concepts/market-relationship-taxonomy.md) — `reviewed`
 - [Prediction Market Mechanics](wiki/concepts/prediction-market-mechanics.md) — `reviewed`
 - [Resolution and Settlement](wiki/concepts/resolution-and-settlement.md) — `reviewed`
-- [Market Accuracy and Price Discovery](wiki/concepts/market-accuracy-and-price-discovery.md) — `review-required`
-- [Informed Trading and Surveillance](wiki/concepts/informed-trading-and-surveillance.md) — `review-required`
+- [Market Accuracy and Price Discovery](wiki/concepts/market-accuracy-and-price-discovery.md) — `reviewed`
+- [Informed Trading and Surveillance](wiki/concepts/informed-trading-and-surveillance.md) — `reviewed`
 
 ### Theory
 
@@ -102,7 +102,7 @@ Minimal landing page for the research wiki.
 ### Strategies
 
 - [Arbitrage and Execution Risk](wiki/strategies/arbitrage-and-execution-risk.md) — `reviewed`
-- [Liquidity Provision and Execution Quality](wiki/strategies/liquidity-provision-and-execution-quality.md) — `review-required`
+- [Liquidity Provision and Execution Quality](wiki/strategies/liquidity-provision-and-execution-quality.md) — `reviewed`
 
 ### Platforms
 

@@ -208,13 +208,13 @@ pages:
     path: wiki/concepts/market-accuracy-and-price-discovery.md
     title: Market Accuracy and Price Discovery
     page_type: concept
-    status: review-required
+    status: reviewed
 
   - page_id: CONCEPT-0005
     path: wiki/concepts/informed-trading-and-surveillance.md
     title: Informed Trading and Surveillance
     page_type: concept
-    status: review-required
+    status: reviewed
 
   - page_id: THEORY-0001
     path: wiki/theory/combinatorial-market-making.md
@@ -232,7 +232,7 @@ pages:
     path: wiki/strategies/liquidity-provision-and-execution-quality.md
     title: Liquidity Provision and Execution Quality
     page_type: strategy
-    status: review-required
+    status: reviewed
 
   - page_id: PLATFORM-0001
     path: wiki/platforms/polymarket.md

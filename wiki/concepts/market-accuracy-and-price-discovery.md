@@ -2,7 +2,7 @@
 page_id: CONCEPT-0004
 title: Market Accuracy and Price Discovery
 page_type: concept
-status: review-required
+status: reviewed
 created_at: 2026-07-17
 updated_at: 2026-07-17
 sources:
