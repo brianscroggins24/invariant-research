@@ -44,19 +44,27 @@ The paper analyzes transaction-level data from Kalshi's inception in 2021 throug
 
 - Kalshi is quote-driven: makers post offers to buy Yes or No, takers accept offers, and the API records maker/taker side directly.
 - Prices become more accurate as markets approach closing, but they still exhibit a strong favorite-longshot bias.
-- Low-price contracts lose far more often than needed to break even after fees, while high-price contracts can earn small positive returns.
+- Low-price contracts lose far more often than needed to break even after fees.
+- High-price contracts can earn small positive returns.
+- The average contract return is about minus 20%.
 - Makers earn higher returns than takers, but both sides still display a favorite-longshot pattern.
-- During the sample period, taker fees were a material part of the execution-cost story because they were rounded up to the nearest cent.
+- During the sample period, taker fees were a material part of the execution-cost story.
 - The model with biased beliefs toward 0.5 fits the observed maker/taker pattern better than a model with only unbiased belief heterogeneity.
 
 ## Important Claims
 
-- [CLM-0120] The sample spans 2021 through April 2025 and covers 46,282 contracts across 12,403 events with more than 300,000 price observations.
+- [CLM-0120] The sample spans 2021 through April 2025 and covers 46,282 contracts across 12,403 events.
+- [CLM-0127] The main sample applies a $1,000 total-volume-at-close filter and counts over 300,000 price observations when both sides are included.
 - [CLM-0121] Kalshi is quote-driven and the API directly identifies maker and taker side.
 - [CLM-0122] Prices become more accurate as markets approach closing.
-- [CLM-0123] Kalshi prices exhibit a favorite-longshot bias and the average contract return is about minus 20%.
+- [CLM-0123] Kalshi prices exhibit a favorite-longshot bias.
+- [CLM-0128] Low-price contracts win less often than needed to break even after fees.
+- [CLM-0129] High-price contracts earn small positive returns.
+- [CLM-0130] The average contract return is about minus 20%.
 - [CLM-0124] Makers earn higher average returns than takers after fees.
-- [CLM-0125] The sample-period taker fee rule is 0.07P(1-P) rounded up to the nearest cent.
+- [CLM-0125] The sample-period taker fee rule is 0.07P(1-P) per contract.
+- [CLM-0131] Kalshi rounds the total taker fee up to the nearest cent.
+- [CLM-0132] The paper's worked example gives a 1.77% average fee for a 50c contract in a 100-contract lot.
 - [CLM-0126] The calibrated model needs a bias toward overstating low probabilities; unbiased belief heterogeneity alone does not reproduce the observed maker-taker return pattern.
 
 ## Limitations

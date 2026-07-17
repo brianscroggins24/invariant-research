@@ -80,6 +80,7 @@
 - Registered `SRC-0006` as `pending-ingestion` and left the source summary and claims at `review-required`.
 - Added the new source and source-summary entries to `index.md`.
 - No promotion, commit, or push was performed.
+- No promotion, commit, or push was performed.
 
 ## 2026-06-27
 
@@ -96,6 +97,7 @@
 - Created `SOURCE-SUMMARY-0018` through `SOURCE-SUMMARY-0033` and candidate claims `CLM-0080` through `CLM-0119`.
 - Registered the 16 Kalshi sources as `pending-ingestion` and left the new summaries and claims at `review-required`.
 - Added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed.
 - No promotion, commit, or push was performed.
 
 ## 2026-06-28
@@ -120,7 +122,28 @@
 ## 2026-07-09
 
 - Captured `SRC-0035` as the author-hosted PDF for "Makers and Takers: The Economics of the Kalshi Prediction Market" and verified that the artifact is complete and inspectable.
-- Copied the exact PDF into the canonical raw-source path and registered its SHA-256 hash.
-- Created `SOURCE-SUMMARY-0034` and candidate claims `CLM-0120` through `CLM-0126` at `review-required`.
+- Created `SOURCE-SUMMARY-0034` and candidate claims `CLM-0120` through `CLM-0132` at `review-required`.
 - Registered `SRC-0035` as `pending-ingestion` and added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed.
+
+## 2026-07-15
+
+- Captured `SRC-0036` as the complete user-provided PDF for "Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket" and verified that the artifact is complete and inspectable.
+- Created `SOURCE-SUMMARY-0035` and candidate claims `CLM-0133` through `CLM-0143` at `review-required`.
+- Registered `SRC-0036` as `pending-ingestion` and added the new source and source-summary entries to `index.md`.
+- `SRC-0036` was ingested from a user-provided complete PDF artifact after SSRN acquisition was blocked in the agent environment. The current artifact, registry, summary, claims, links, and repository validators pass, but the original temporary capture-report file and pre-ID `next_ids.rb --capture-report` output were not preserved. This is documented as a process-proof gap for the source-level ingestion; no source was promoted in this batch.
+- No promotion, commit, or push was performed.
+- Captured `SRC-0037` as the complete user-provided PDF for "Prediction Market Accuracy: Crowd Wisdom or Informed Minority?" and verified that the artifact is complete and inspectable.
+- Copied the exact PDF into the canonical raw-source path and registered its SHA-256 hash.
+- Created `SOURCE-SUMMARY-0036` and candidate claims `CLM-0144` through `CLM-0153` at `review-required`.
+- Registered `SRC-0037` as `pending-ingestion` and added the new source and source-summary entries to `index.md`.
+- Captured `SRC-0038` as the complete user-provided PDF for "Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket" and verified that the artifact is complete and inspectable.
+- Copied the exact PDF into the canonical raw-source path and registered its SHA-256 hash.
+- Created `SOURCE-SUMMARY-0037` and candidate claims `CLM-0154` through `CLM-0163` at `review-required`.
+- Registered `SRC-0038` as `pending-ingestion` and added the new source and source-summary entries to `index.md`.
+- No promotion, commit, or push was performed.
+- Captured `SRC-0039` as the complete user-provided PDF for "From Iran to Taylor Swift: Informed Trading in Prediction Markets" and verified that the artifact is complete and inspectable.
+- Copied the exact PDF into the canonical raw-source path and registered its SHA-256 hash.
+- Created `SOURCE-SUMMARY-0038` and candidate claims `CLM-0164` through `CLM-0170` at `review-required`.
+- Registered `SRC-0039` as `pending-ingestion` and added the new source and source-summary entries to `index.md`.
 - No promotion, commit, or push was performed.

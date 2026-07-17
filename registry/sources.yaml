@@ -654,3 +654,87 @@ sources:
     supersedes:
     superseded_by:
     notes: "Author-hosted PDF capture from karlwhelan.com. `version: 1` is the repository source-record/capture version for this first inspected artifact; the PDF itself shows no explicit external version marker. The title page says January 2026, and the PDF metadata creation date is 2026-01-29, but no exact publication date is supported by the artifact."
+
+  - source_id: SRC-0036
+    title: Who Wins and Who Loses in Prediction Markets? Evidence from Polymarket
+    source_type: research-paper
+    authors:
+      - Pat Akey
+      - Vincent Grégoire
+      - Nicolas Harvie
+      - Charles Martineau
+    organization:
+    publication_date: 2026-06-12
+    retrieved_at: 2026-07-15
+    original_location: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6443103
+    local_path: raw/sources/SRC-0036-who-wins-and-who-loses-in-prediction-markets-evidence-from-polymarket.pdf
+    content_hash: bda1fc1fe2eb431c9485b6a186c7a15c03e1d28b3a4ac63bbf000021828145f3
+    version: 1
+    language: en
+    authority: primary-research
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact raw PDF capture from the user-provided local artifact; the PDF title page says June 12, 2026, and the artifact shows no explicit external version marker.
+
+  - source_id: SRC-0037
+    title: "Prediction Market Accuracy: Crowd Wisdom or Informed Minority?"
+    source_type: research-paper
+    authors:
+      - Roberto Gómez-Cram
+      - Yunhan Guo
+      - Theis Ingerslev Jensen
+      - Howard Kung
+    organization:
+    publication_date: 2026-06-25
+    retrieved_at: 2026-07-15
+    original_location: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6617059
+    local_path: raw/sources/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.pdf
+    content_hash: e14588b2c747d9660fedc6847194334462cc38b445d8829922e65848bddc5066
+    version: 1
+    language: en
+    authority: primary-research
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: "Exact raw PDF capture from the user-provided local artifact; the title page says 'This version: June 25, 2026' and the artifact shows no explicit external version marker."
+
+  - source_id: SRC-0038
+    title: "Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket"
+    source_type: research-paper
+    authors:
+      - Felix Reichenbach
+      - Martin Walther
+    organization:
+    publication_date: 2026-05-24
+    retrieved_at: 2026-07-15
+    original_location: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5910522
+    local_path: raw/sources/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.pdf
+    content_hash: 2581ef5c9e3b4cf57e339a21aa54f08363fb35c30f501711b2178e331575cdd2
+    version: 1
+    language: en
+    authority: primary-research
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: "Exact raw PDF capture from the user-provided local artifact; the title page says 'Last updated: May 24, 2026' and the PDF metadata creation date is 2026-05-24. The artifact shows no explicit external version marker."
+
+  - source_id: SRC-0039
+    title: "From Iran to Taylor Swift: Informed Trading in Prediction Markets"
+    source_type: research-paper
+    authors:
+      - Joshua Mitts
+      - Moran Ofir
+    organization:
+    publication_date: 2026-03-16
+    retrieved_at: 2026-07-15
+    original_location: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6426778
+    local_path: raw/sources/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.pdf
+    content_hash: c0c4c81e1036f3f58ab8074c7e246e7650b918aaa26ac6eea567b8ba2222e126
+    version: 1
+    language: en
+    authority: primary-research
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: "Exact raw PDF capture from the user-provided local artifact. The title page says March 16, 2026 and 'FIRST DRAFT – COMMENTS WELCOME'. The artifact shows no explicit external version marker."
