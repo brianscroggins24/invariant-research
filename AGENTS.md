@@ -83,3 +83,78 @@
 - Live state belongs in `invariant-engine`.
 - Deterministic calculations belong in `invariant-engine`.
 - The wiki cannot serve as production configuration.
+
+## Downstream Consumer Contract
+
+This repository is the governed research source of truth for downstream implementation work, including `invariant-engine`.
+
+Downstream agents may use this repository to plan and constrain implementation, but must treat it as an evidence base, not as executable code or production configuration.
+
+### Consumer Entry Points
+
+Downstream agents should begin with:
+
+1. `AGENTS.md`
+2. `index.md`
+3. relevant files in `context/`
+4. reviewed synthesis pages in `wiki/`
+5. reviewed source summaries
+6. `registry/sources.yaml`
+7. `registry/pages.yaml`
+8. `registry/claims.yaml`
+
+Raw sources are audit artifacts. Do not use raw sources directly for implementation planning unless resolving an ambiguity in reviewed synthesis, reviewed claims, reviewed source summaries, or context packs.
+
+### Reviewed Evidence Rules
+
+Downstream implementation decisions may rely only on:
+
+- active sources;
+- reviewed source summaries;
+- reviewed claims;
+- reviewed synthesis pages;
+- reviewed context packs.
+
+Downstream agents must not rely on:
+
+- pending sources;
+- review-required claims or pages;
+- raw-source snippets alone;
+- unreviewed notes;
+- external memory;
+- uncited assumptions.
+
+If evidence is missing or ambiguous, the downstream agent must stop and report the gap instead of inventing behavior.
+
+### Candidate Source Intake
+
+Downstream agents may identify candidate raw sources that could improve this repository.
+
+Candidate sources are proposals only. They may be collected in a downstream working area or handoff note, but they must not be treated as reviewed evidence.
+
+Downstream agents must not:
+
+- add candidate material directly to `raw/sources`;
+- allocate source IDs;
+- register candidate sources in `registry/sources.yaml`;
+- create claims from candidate sources;
+- promote candidate material;
+- treat candidate material as authoritative.
+
+A human/research-review pass must decide whether candidate sources should be ingested through the normal source-ingestion process.
+
+### Implementation Boundary
+
+This repository does not authorize implementation behavior by itself.
+
+If reviewed research marks a concept as deferred, out of scope, diagnostic-only, unsupported, or requiring further review, downstream agents must preserve that boundary.
+
+Before making substantial implementation changes, downstream agents should produce or update an implementation plan that identifies:
+
+- research pages consulted;
+- claims or synthesis pages used;
+- implementation scope;
+- explicit non-goals;
+- deferred items;
+- open questions;
+- validation strategy.
