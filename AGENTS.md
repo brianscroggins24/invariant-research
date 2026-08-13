@@ -8,7 +8,7 @@
 4. `registry/*` is the authoritative metadata layer for sources, pages, and claims.
 5. `wiki/*` contains synthesized knowledge and working structure derived from sources and review.
 6. `context/*` contains compact agent context packs derived from reviewed knowledge.
-7. `invariant-engine` is the authoritative home for executable trading logic, live state, and deterministic calculations.
+7. `invariant-engine` is the authoritative home for executable trading logic, live state, deterministic calculations, and implementation artifacts. This repository may guide `invariant-engine`, but it does not contain or authorize executable trading behavior.
 
 ## Immutable Raw-Source Rules
 
@@ -75,39 +75,44 @@
 - Linting should not rewrite history or mutate raw sources.
 - Linting failures should be treated as governance issues, not as signals to silently fix unsupported content.
 
-## Research Versus Trading Logic
+## Expert Planning And Downstream Prompting Contract
 
-- The wiki may explain strategies, assumptions, and reasoning.
-- The wiki cannot authorize trades.
-- LLM-generated relationships are not verified financial truth.
-- Live state belongs in `invariant-engine`.
-- Deterministic calculations belong in `invariant-engine`.
-- The wiki cannot serve as production configuration.
+This repository is the governed research source of truth and expert planning system for downstream implementation work, including `invariant-engine`.
 
-## Downstream Consumer Contract
+Agents working in this repository may:
 
-This repository is the governed research source of truth for downstream implementation work, including `invariant-engine`.
+- answer research-grounded questions;
+- produce implementation prompts;
+- produce architecture notes;
+- produce downstream review instructions;
+- identify missing evidence;
+- ingest new sources when needed;
+- synthesize new evidence into reviewed repository structure.
 
-Downstream agents may use this repository to plan and constrain implementation, but must treat it as an evidence base, not as executable code or production configuration.
+All such work must follow this repository’s source-ingestion, provenance, immutability, citation, review, and validation requirements.
 
-### Consumer Entry Points
+This repository may guide downstream implementation, but it does not itself contain executable trading logic, live state, deterministic calculations, or production configuration.
 
-Downstream agents should begin with:
+### Expert Research Behavior
 
-1. `AGENTS.md`
-2. `index.md`
-3. relevant files in `context/`
-4. reviewed synthesis pages in `wiki/`
-5. reviewed source summaries
-6. `registry/sources.yaml`
-7. `registry/pages.yaml`
-8. `registry/claims.yaml`
+When asked to guide downstream implementation, agents should act as research-grounded experts.
 
-Raw sources are audit artifacts. Do not use raw sources directly for implementation planning unless resolving an ambiguity in reviewed synthesis, reviewed claims, reviewed source summaries, or context packs.
+They should:
 
-### Reviewed Evidence Rules
+- consult reviewed pages before drafts or raw sources;
+- preserve conflicts and uncertainty;
+- distinguish source-supported claims from hypotheses;
+- identify implementation constraints supported by reviewed evidence;
+- identify missing evidence instead of inventing behavior;
+- generate bounded prompts for downstream coding agents.
 
-Downstream implementation decisions may rely only on:
+When new external sources appear necessary, agents working in this repository may ingest them only through the normal source-ingestion workflow.
+
+Newly ingested material must default to the appropriate unreviewed lifecycle state until reviewed.
+
+### Prompt Generation Rules
+
+Downstream prompts should rely only on:
 
 - active sources;
 - reviewed source summaries;
@@ -115,7 +120,7 @@ Downstream implementation decisions may rely only on:
 - reviewed synthesis pages;
 - reviewed context packs.
 
-Downstream agents must not rely on:
+Downstream prompts must not rely on:
 
 - pending sources;
 - review-required claims or pages;
@@ -124,37 +129,87 @@ Downstream agents must not rely on:
 - external memory;
 - uncited assumptions.
 
-If evidence is missing or ambiguous, the downstream agent must stop and report the gap instead of inventing behavior.
+If reviewed evidence is missing or ambiguous, the prompt must say so and instruct the downstream agent to stop, return questions, or report candidate sources rather than invent behavior.
 
-### Candidate Source Intake
+### Downstream Prompt Requirements
 
-Downstream agents may identify candidate raw sources that could improve this repository.
+Prompts generated for downstream coding agents should identify:
 
-Candidate sources are proposals only. They may be collected in a downstream working area or handoff note, but they must not be treated as reviewed evidence.
+- research files consulted;
+- claims or synthesis pages used;
+- implementation scope;
+- explicit non-goals;
+- deferred items;
+- open questions;
+- validation expectations;
+- expected completion report.
 
-Downstream agents must not:
+Prompts must preserve any boundaries recorded in reviewed synthesis or context files.
+
+### Source Discovery And Intake
+
+Agents may identify new sources that could improve this repository.
+
+If the agent is working inside `invariant-research`, it may ingest those sources only by following the repository’s source-ingestion process.
+
+Ingestion must preserve:
+
+- source provenance;
+- immutable raw artifacts;
+- source registration;
+- source summaries;
+- claim registration;
+- synthesis updates where appropriate;
+- lifecycle status discipline;
+- validation before completion.
+
+Agents must not bypass source registration, ID allocation, capture validation, raw immutability, or review requirements.
+
+If the agent is working outside this repository, such as in `invariant-engine`, new sources are candidate sources only. They may be returned in a handoff report, issue, note, or candidate-source bundle, but they must not be treated as reviewed evidence until ingested and reviewed in this repository.
+
+### Candidate Source Feedback From Downstream Agents
+
+Downstream coding agents may identify candidate sources that could improve this repository.
+
+Candidate sources are proposals only unless and until they are ingested through this repository’s source-ingestion workflow.
+
+A downstream candidate-source report should include:
+
+- title;
+- URL or artifact location;
+- author or publisher, if known;
+- publication or retrieval date, if known;
+- why the source matters;
+- which implementation question it affects;
+- suggested source type;
+- whether it appears primary, secondary, official, practitioner, or journalistic;
+- risks or limitations;
+- whether existing reviewed evidence already covers the point.
+
+Downstream agents must not treat candidate sources as reviewed evidence.
+
+Unless explicitly operating inside this repository through the normal source-ingestion workflow, downstream agents must not:
 
 - add candidate material directly to `raw/sources`;
 - allocate source IDs;
 - register candidate sources in `registry/sources.yaml`;
 - create claims from candidate sources;
 - promote candidate material;
-- treat candidate material as authoritative.
+- cite candidate material as authoritative.
 
-A human/research-review pass must decide whether candidate sources should be ingested through the normal source-ingestion process.
+A research-review pass must decide whether candidate sources should be ingested, rejected, deferred, or superseded.
 
-### Implementation Boundary
+### Raw Source Intake Boundary
 
-This repository does not authorize implementation behavior by itself.
+Candidate raw materials may be collected for review, but accepted raw sources must enter `raw/sources` only through the repository’s source-ingestion process.
 
-If reviewed research marks a concept as deferred, out of scope, diagnostic-only, unsupported, or requiring further review, downstream agents must preserve that boundary.
+Files accepted into `raw/sources` are immutable and must satisfy the repository’s provenance, registration, and review requirements.
 
-Before making substantial implementation changes, downstream agents should produce or update an implementation plan that identifies:
+## Research Versus Trading Logic
 
-- research pages consulted;
-- claims or synthesis pages used;
-- implementation scope;
-- explicit non-goals;
-- deferred items;
-- open questions;
-- validation strategy.
+- The wiki may explain strategies, assumptions, and reasoning.
+- The wiki cannot authorize trades.
+- LLM-generated relationships are not verified financial truth.
+- Live state belongs in `invariant-engine`.
+- Deterministic calculations belong in `invariant-engine`.
+- The wiki cannot serve as production configuration.
