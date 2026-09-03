@@ -2031,7 +2031,7 @@ claims:
   - claim_id: CLM-0190
     statement: Kalshi states that production and demo credentials are not shared; demo API keys work only against demo endpoints and production API keys work only against production endpoints.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0042
         locator: "Environment introduction, line 9"
@@ -2043,7 +2043,7 @@ claims:
   - claim_id: CLM-0191
     statement: Kalshi labels the external-api REST bases as recommended for production and demo and labels the shared REST bases as also supported for compatibility.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0042
         locator: "REST API table and following paragraph, lines 11-20"
@@ -2055,7 +2055,7 @@ claims:
   - claim_id: CLM-0192
     statement: Kalshi states that the request hostname does not change the signature payload and demonstrates signing the full API-root path without the hostname or query string.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0042
         locator: "Request Signing, lines 45-67"
@@ -2067,7 +2067,7 @@ claims:
   - claim_id: CLM-0193
     statement: Kalshi documents separate recommended and also-supported production and demo WebSocket URLs for the Trade API.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0042
         locator: "WebSocket API table, lines 26-33"
@@ -2079,7 +2079,7 @@ claims:
   - claim_id: CLM-0194
     statement: Kalshi documents broad read and write API-key scopes plus narrower child scopes, with read granting read endpoints, write granting write endpoints, and each child scope limited to its endpoint group.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0043
         locator: "ApiKeyScope enum and description, lines 161-185"
@@ -2091,7 +2091,7 @@ claims:
   - claim_id: CLM-0195
     statement: The generate-key request says broad write requires broad read, child scopes may be granted without a broad parent, and omission of scopes defaults to broad read plus write access.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0043
         locator: "GenerateApiKeyRequest scopes description, lines 109-117"
@@ -2103,7 +2103,7 @@ claims:
   - claim_id: CLM-0196
     statement: The documented successful generate-key response requires an API key ID and a PEM-format RSA private key that cannot be retrieved again after the response.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0043
         locator: "Endpoint synopsis, lines 5-7; GenerateApiKeyResponse, lines 139-152"
@@ -2115,7 +2115,7 @@ claims:
   - claim_id: CLM-0197
     statement: The documented successful Get API Keys response requires every returned API-key object to include a scopes array describing scopes granted to that key.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0044
         locator: "GetApiKeysResponse and ApiKey schemas, lines 97-132"
@@ -2127,7 +2127,7 @@ claims:
   - claim_id: CLM-0198
     statement: As captured, Kalshi's Quick Start states that no authentication headers are required for the public series, event, market, and order-book endpoints covered by the guide.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0045
         locator: "Guide scope, lines 7-9; Making Unauthenticated Requests, lines 11-21"
@@ -2139,7 +2139,7 @@ claims:
   - claim_id: CLM-0199
     statement: The guide's Python and JavaScript examples send GET requests to the production market-orderbook path without supplying authentication headers.
     claim_type: source-claim
-    status: review-required
+    status: reviewed
     sources:
       - source_id: SRC-0045
         locator: "Step 3 Python example, lines 134-138; JavaScript example, lines 152-154"

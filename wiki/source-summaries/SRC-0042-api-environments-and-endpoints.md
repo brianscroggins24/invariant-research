@@ -2,7 +2,7 @@
 page_id: SOURCE-SUMMARY-0041
 title: API Environments and Endpoints
 page_type: source-summary
-status: review-required
+status: reviewed
 created_at: 2026-09-02
 updated_at: 2026-09-02
 source_id: SRC-0042

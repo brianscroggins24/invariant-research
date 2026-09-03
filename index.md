@@ -45,10 +45,10 @@ Minimal landing page for the research wiki.
 - `SRC-0039` — [From Iran to Taylor Swift: Informed Trading in Prediction Markets](raw/sources/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.pdf) — `active`
 - `SRC-0040` — [API Keys](raw/sources/SRC-0040-kalshi-api-keys-authentication.md) — `active`
 - `SRC-0041` — [Get Market Orderbook](raw/sources/SRC-0041-get-market-orderbook-v2.md) — `active`
-- `SRC-0042` — [API Environments and Endpoints](raw/sources/SRC-0042-api-environments-and-endpoints.md) — `pending-ingestion`
-- `SRC-0043` — [Generate API Key](raw/sources/SRC-0043-generate-api-key.md) — `pending-ingestion`
-- `SRC-0044` — [Get API Keys](raw/sources/SRC-0044-get-api-keys.md) — `pending-ingestion`
-- `SRC-0045` — [Quick Start: Market Data](raw/sources/SRC-0045-quick-start-market-data.md) — `pending-ingestion`
+- `SRC-0042` — [API Environments and Endpoints](raw/sources/SRC-0042-api-environments-and-endpoints.md) — `active`
+- `SRC-0043` — [Generate API Key](raw/sources/SRC-0043-generate-api-key.md) — `active`
+- `SRC-0044` — [Get API Keys](raw/sources/SRC-0044-get-api-keys.md) — `active`
+- `SRC-0045` — [Quick Start: Market Data](raw/sources/SRC-0045-quick-start-market-data.md) — `active`
 
 ## Knowledge Pages
 
@@ -92,10 +92,10 @@ Minimal landing page for the research wiki.
 - [From Iran to Taylor Swift: Informed Trading in Prediction Markets source summary](wiki/source-summaries/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.md) — `reviewed`
 - [API Keys source summary](wiki/source-summaries/SRC-0040-kalshi-api-keys-authentication.md) — `reviewed`
 - [Get Market Orderbook source summary, refreshed](wiki/source-summaries/SRC-0041-get-market-orderbook-v2.md) — `reviewed`
-- [API Environments and Endpoints source summary](wiki/source-summaries/SRC-0042-api-environments-and-endpoints.md) — `review-required`
-- [Generate API Key source summary](wiki/source-summaries/SRC-0043-generate-api-key.md) — `review-required`
-- [Get API Keys source summary](wiki/source-summaries/SRC-0044-get-api-keys.md) — `review-required`
-- [Quick Start: Market Data source summary](wiki/source-summaries/SRC-0045-quick-start-market-data.md) — `review-required`
+- [API Environments and Endpoints source summary](wiki/source-summaries/SRC-0042-api-environments-and-endpoints.md) — `reviewed`
+- [Generate API Key source summary](wiki/source-summaries/SRC-0043-generate-api-key.md) — `reviewed`
+- [Get API Keys source summary](wiki/source-summaries/SRC-0044-get-api-keys.md) — `reviewed`
+- [Quick Start: Market Data source summary](wiki/source-summaries/SRC-0045-quick-start-market-data.md) — `reviewed`
 
 ## Synthesis Pages
 

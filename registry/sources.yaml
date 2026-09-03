@@ -791,7 +791,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact official Markdown capture. No explicit publication or page-update date was present. Environment, origin, compatibility, and signing behavior is capture-date scoped.
@@ -810,7 +810,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact official Markdown capture of OpenAPI-derived documentation. No explicit publication or page-update date was present. Scope names, defaults, and key-generation behavior are capture-date scoped and do not authorize invocation.
@@ -829,7 +829,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact official Markdown capture of OpenAPI-derived documentation. Canonical HTML JSON-LD reported dateModified 2026-09-02T22:09:39.980Z; that value is capture metadata, not present in the raw Markdown. Returned scope visibility is capture-date scoped.
@@ -848,7 +848,7 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: pending-ingestion
+    status: active
     supersedes:
     superseded_by:
     notes: Exact official Markdown capture of a tutorial-style guide. No explicit publication or page-update date was present. Its public unauthenticated order-book guidance conflicts with active SRC-0041 operation-level security and must remain unresolved.

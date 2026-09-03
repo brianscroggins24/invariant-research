@@ -202,3 +202,9 @@
 - Registered `SRC-0045` as `pending-ingestion` and created `SOURCE-SUMMARY-0044` plus candidate claims `CLM-0198` and `CLM-0199` at `review-required`.
 - The guide explicitly presents the REST order-book request as unauthenticated, conflicting with active `SRC-0041` operation-level security. The conflict remains visible and unresolved; no live API request or credential use occurred.
 - No promotion, commit, or push was performed.
+
+## 2026-09-02
+
+- Promoted `SRC-0042` through `SRC-0045` from `pending-ingestion` to `active` after completed validation and independent review.
+- Promoted `SOURCE-SUMMARY-0041` through `SOURCE-SUMMARY-0044` and `CLM-0190` through `CLM-0199` from `review-required` to `reviewed`.
+- Preserved the unresolved authentication conflict between `SRC-0041` and `SRC-0045`; no live request, credential access, synthesis update, commit, or push was performed.
