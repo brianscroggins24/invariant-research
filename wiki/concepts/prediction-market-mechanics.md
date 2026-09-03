@@ -4,7 +4,7 @@ title: Prediction Market Mechanics
 page_type: concept
 status: reviewed
 created_at: 2026-06-28
-updated_at: 2026-06-28
+updated_at: 2026-08-31
 sources:
   - SRC-0008
   - SRC-0009
@@ -13,7 +13,7 @@ sources:
   - SRC-0015
   - SRC-0016
   - SRC-0021
-  - SRC-0022
+  - SRC-0041
   - SRC-0023
   - SRC-0024
   - SRC-0025
@@ -106,7 +106,7 @@ Explain the stable mechanics needed to interpret quoted prices and decide whethe
 ## Why Midpoint Is Not an Execution Guarantee
 
 - `SRC-0009` explicitly distinguishes display price from execution price. [CLM-0052]
-- `SRC-0014` and `SRC-0022` show that actual order-book snapshots carry depth and side-specific levels, so execution must still consume available size. [CLM-0067] [CLM-0088] [CLM-0089]
+- `SRC-0014` and `SRC-0041` show that actual order-book snapshots carry depth and side-specific levels, so execution must still consume available size. [CLM-0067] [CLM-0088] [CLM-0089]
 - Repository synthesis: midpoint can be misleading if depth is thin or if the complementary side moves while the order is staged.
 
 ## Mutable Platform Details
@@ -133,4 +133,4 @@ Explain the stable mechanics needed to interpret quoted prices and decide whethe
 
 - `SRC-0008` and `SRC-0009`: [CLM-0048], [CLM-0049], [CLM-0050], [CLM-0051], [CLM-0052], [CLM-0053]
 - `SRC-0010`, `SRC-0014`, `SRC-0015`, `SRC-0016`: [CLM-0054], [CLM-0055], [CLM-0056], [CLM-0057], [CLM-0067], [CLM-0068], [CLM-0069], [CLM-0070], [CLM-0071], [CLM-0072], [CLM-0073], [CLM-0074], [CLM-0075]
-- `SRC-0021`, `SRC-0022`, `SRC-0023`, `SRC-0024`, `SRC-0025`, `SRC-0026`, `SRC-0027`: [CLM-0085], [CLM-0086], [CLM-0088], [CLM-0089], [CLM-0090], [CLM-0091], [CLM-0092], [CLM-0093], [CLM-0094], [CLM-0095], [CLM-0096], [CLM-0097], [CLM-0101], [CLM-0102], [CLM-0103]
+- `SRC-0021`, `SRC-0041`, `SRC-0023`, `SRC-0024`, `SRC-0025`, `SRC-0026`, `SRC-0027`: [CLM-0085], [CLM-0086], [CLM-0088], [CLM-0089], [CLM-0090], [CLM-0091], [CLM-0092], [CLM-0093], [CLM-0094], [CLM-0095], [CLM-0096], [CLM-0097], [CLM-0101], [CLM-0102], [CLM-0103]

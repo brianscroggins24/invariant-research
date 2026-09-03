@@ -25,7 +25,7 @@ Minimal landing page for the research wiki.
 - `SRC-0019` — [Get Series](raw/sources/SRC-0019-get-series.md) — `active`
 - `SRC-0020` — [Get Event](raw/sources/SRC-0020-get-event.md) — `active`
 - `SRC-0021` — [Get Market](raw/sources/SRC-0021-get-market.md) — `active`
-- `SRC-0022` — [Get Market Orderbook](raw/sources/SRC-0022-get-market-orderbook.md) — `active`
+- `SRC-0022` — [Get Market Orderbook](raw/sources/SRC-0022-get-market-orderbook.md) — `superseded`
 - `SRC-0023` — [Orderbook Responses](raw/sources/SRC-0023-orderbook-responses.md) — `active`
 - `SRC-0024` — [Fixed-Point Migration](raw/sources/SRC-0024-fixed-point-migration.md) — `active`
 - `SRC-0025` — [Create Order (V2)](raw/sources/SRC-0025-create-order-v2.md) — `active`
@@ -43,6 +43,12 @@ Minimal landing page for the research wiki.
 - `SRC-0037` — [Prediction Market Accuracy: Crowd Wisdom or Informed Minority?](raw/sources/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.pdf) — `active`
 - `SRC-0038` — [Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket](raw/sources/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.pdf) — `active`
 - `SRC-0039` — [From Iran to Taylor Swift: Informed Trading in Prediction Markets](raw/sources/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.pdf) — `active`
+- `SRC-0040` — [API Keys](raw/sources/SRC-0040-kalshi-api-keys-authentication.md) — `active`
+- `SRC-0041` — [Get Market Orderbook](raw/sources/SRC-0041-get-market-orderbook-v2.md) — `active`
+- `SRC-0042` — [API Environments and Endpoints](raw/sources/SRC-0042-api-environments-and-endpoints.md) — `pending-ingestion`
+- `SRC-0043` — [Generate API Key](raw/sources/SRC-0043-generate-api-key.md) — `pending-ingestion`
+- `SRC-0044` — [Get API Keys](raw/sources/SRC-0044-get-api-keys.md) — `pending-ingestion`
+- `SRC-0045` — [Quick Start: Market Data](raw/sources/SRC-0045-quick-start-market-data.md) — `pending-ingestion`
 
 ## Knowledge Pages
 
@@ -66,7 +72,7 @@ Minimal landing page for the research wiki.
 - [Get Series source summary](wiki/source-summaries/SRC-0019-get-series.md) — `reviewed`
 - [Get Event source summary](wiki/source-summaries/SRC-0020-get-event.md) — `reviewed`
 - [Get Market source summary](wiki/source-summaries/SRC-0021-get-market.md) — `reviewed`
-- [Get Market Orderbook source summary](wiki/source-summaries/SRC-0022-get-market-orderbook.md) — `reviewed`
+- [Get Market Orderbook source summary](wiki/source-summaries/SRC-0022-get-market-orderbook.md) — `superseded`
 - [Orderbook Responses source summary](wiki/source-summaries/SRC-0023-orderbook-responses.md) — `reviewed`
 - [Fixed-Point Migration source summary](wiki/source-summaries/SRC-0024-fixed-point-migration.md) — `reviewed`
 - [Create Order (V2) source summary](wiki/source-summaries/SRC-0025-create-order-v2.md) — `reviewed`
@@ -84,6 +90,12 @@ Minimal landing page for the research wiki.
 - [Prediction Market Accuracy: Crowd Wisdom or Informed Minority? source summary](wiki/source-summaries/SRC-0037-prediction-market-accuracy-crowd-wisdom-or-informed-minority.md) — `reviewed`
 - [Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket source summary](wiki/source-summaries/SRC-0038-exploring-decentralized-prediction-markets-accuracy-skill-and-bias-on-polymarket.md) — `reviewed`
 - [From Iran to Taylor Swift: Informed Trading in Prediction Markets source summary](wiki/source-summaries/SRC-0039-from-iran-to-taylor-swift-informed-trading-in-prediction-markets.md) — `reviewed`
+- [API Keys source summary](wiki/source-summaries/SRC-0040-kalshi-api-keys-authentication.md) — `reviewed`
+- [Get Market Orderbook source summary, refreshed](wiki/source-summaries/SRC-0041-get-market-orderbook-v2.md) — `reviewed`
+- [API Environments and Endpoints source summary](wiki/source-summaries/SRC-0042-api-environments-and-endpoints.md) — `review-required`
+- [Generate API Key source summary](wiki/source-summaries/SRC-0043-generate-api-key.md) — `review-required`
+- [Get API Keys source summary](wiki/source-summaries/SRC-0044-get-api-keys.md) — `review-required`
+- [Quick Start: Market Data source summary](wiki/source-summaries/SRC-0045-quick-start-market-data.md) — `review-required`
 
 ## Synthesis Pages
 

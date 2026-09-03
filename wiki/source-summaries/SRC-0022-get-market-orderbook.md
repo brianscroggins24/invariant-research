@@ -2,9 +2,9 @@
 page_id: SOURCE-SUMMARY-0021
 title: Get Market Orderbook
 page_type: source-summary
-status: reviewed
+status: superseded
 created_at: 2026-06-27
-updated_at: 2026-06-27
+updated_at: 2026-08-31
 source_id: SRC-0022
 sources:
   - SRC-0022

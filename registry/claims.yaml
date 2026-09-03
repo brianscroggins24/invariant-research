@@ -885,10 +885,10 @@ claims:
     claim_type: source-claim
     status: reviewed
     sources:
-      - source_id: SRC-0022
+      - source_id: SRC-0041
         locator: "Get Market Orderbook / page description and `depth` parameter"
     related_pages:
-      - SOURCE-SUMMARY-0021
+      - SOURCE-SUMMARY-0040
     notes: Directly stated in the page text.
 
   - claim_id: CLM-0089
@@ -896,10 +896,10 @@ claims:
     claim_type: source-claim
     status: reviewed
     sources:
-      - source_id: SRC-0022
+      - source_id: SRC-0041
         locator: "Get Market Orderbook / `OrderbookCountFp` schema"
     related_pages:
-      - SOURCE-SUMMARY-0021
+      - SOURCE-SUMMARY-0040
     notes: Direct schema support and page description.
 
   - claim_id: CLM-0090
@@ -1794,3 +1794,356 @@ claims:
     related_pages:
       - SOURCE-SUMMARY-0038
     notes: These are policy recommendations, not validated production controls.
+
+  - claim_id: CLM-0171
+    statement: Kalshi documents that its API-key process is the same for demo and production environments.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "API Keys, lines 9-11"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: This does not establish identical hosts, data, permissions, rate limits, or credential portability between environments.
+
+  - claim_id: CLM-0172
+    statement: The documented account-interface API-key workflow presents an RSA-format private key and an associated unique Key ID.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "Generating an API Key, lines 19-27"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: The page does not specify RSA key size, generation parameters, encryption defaults, or a broader credential schema.
+
+  - claim_id: CLM-0173
+    statement: Kalshi says it does not store the generated private key and that the user cannot retrieve it after closing the generation page.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "Store Your API Key and Key ID, lines 23-29"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: The page does not document rotation, revocation, backup, secret-manager integration, or local file-permission requirements.
+
+  - claim_id: CLM-0174
+    statement: Kalshi documents that each request to its trading API must be signed with the generated private key.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "Using a API Key, lines 31-34"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: The phrase "trading api" is not endpoint-specific. Request signing is authentication behavior, not authorization to trade.
+
+  - claim_id: CLM-0175
+    statement: "The documented request-authentication headers are KALSHI-ACCESS-KEY carrying the Key ID, KALSHI-ACCESS-TIMESTAMP carrying the request timestamp in milliseconds, and KALSHI-ACCESS-SIGNATURE carrying the private-key-generated signature."
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "Using a API Key, lines 35-41"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: The page does not state accepted clock skew, timestamp expiry, replay handling, or authentication-error responses.
+
+  - claim_id: CLM-0176
+    statement: The documented signing message is the timestamp followed by the HTTP method followed by the request path, with query parameters excluded from the signed path.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "Using a API Key, lines 43-47; Python example, lines 110-113; JavaScript example, lines 175-178"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: Query stripping applies to signing input, not the transmitted URL. Method-case and path-normalization rules are not fully specified.
+
+  - claim_id: CLM-0177
+    statement: The Python and JavaScript examples generate Base64-encoded RSA-PSS signatures using SHA-256 and digest-length salt.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "Python signing example, lines 69-90; JavaScript signing example, lines 141-158"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: Medium-strength example-level evidence; the page provides no normative test vectors, key size, or library-version guarantee.
+
+  - claim_id: CLM-0178
+    statement: Both captured request examples use HTTP GET and attach the three documented authentication headers to a demo-environment request.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0040
+        locator: "Python request example, lines 93-123; JavaScript request example, lines 161-189"
+    related_pages:
+      - SOURCE-SUMMARY-0039
+      - PLATFORM-0002
+    notes: Example-level evidence supports signed GET mechanics, not endpoint scope, read-only credential scope, or trading authority.
+
+  - claim_id: CLM-0179
+    statement: "Kalshi documents the market-orderbook operation as HTTP GET /markets/{ticker}/orderbook."
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "OpenAPI operation, lines 13 and 62-69"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+    notes: This does not establish availability, latency, freshness, or any write method.
+
+  - claim_id: CLM-0180
+    statement: "The order-book operation declares KALSHI-ACCESS-KEY, KALSHI-ACCESS-SIGNATURE, and KALSHI-ACCESS-TIMESTAMP as its three header security schemes."
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "Operation security and security schemes, lines 98-101 and 182-197"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+    notes: The page does not fully specify signing-input construction, clock skew, expiry, replay behavior, or credential scope. Authentication is not trading authority.
+
+  - claim_id: CLM-0181
+    statement: The OpenAPI document lists two production base servers and two demo base servers for the Trade API.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "OpenAPI servers, lines 21-29"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+    notes: The page supplies no priority, failover, data-equivalence, or credential-portability guarantee. Server addresses are mutable.
+
+  - claim_id: CLM-0182
+    statement: The order-book operation requires a string ticker path parameter identifying the market.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "TickerPath parameter, lines 70-71 and 103-110"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+    notes: The page gives no ticker format, escaping, length, or case-normalization rule.
+
+  - claim_id: CLM-0183
+    statement: "The optional integer depth query parameter defaults to 0 and has a schema range of 0 through 100, while its prose also says 0 or negative retrieves all levels."
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "Depth parameter, lines 72-84"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+      - CONCEPT-0002
+    notes: The negative-value prose conflicts with schema minimum 0 and validation min=0; negative depth remains unresolved.
+
+  - claim_id: CLM-0184
+    statement: "The documented binary-market order book returns active YES bids and NO bids rather than ask arrays, and states that a YES bid at X is equivalent to a NO ask at 100-X with the same contract size."
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "Endpoint description, lines 5-7 and 63-68"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+      - CONCEPT-0002
+    notes: Venue-local binary-market semantics only; this does not establish scalar behavior, rounding rules, or a published ask ladder.
+
+  - claim_id: CLM-0185
+    statement: A successful order-book response requires the top-level orderbook_fp property.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "200 response and GetMarketOrderbookResponse, lines 85-91 and 112-119"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+      - CONCEPT-0002
+    notes: The page does not state whether unknown additional fields can occur or whether the value can be null.
+
+  - claim_id: CLM-0186
+    statement: orderbook_fp requires yes_dollars and no_dollars, each represented as an array of fixed-point price-level entries.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "OrderbookCountFp schema, lines 120-136"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+      - CONCEPT-0002
+    notes: No array minimum, empty-book behavior, or uniqueness constraint is specified.
+
+  - claim_id: CLM-0187
+    statement: "Each fixed-point price level is exactly a two-string array [dollars_string, fp], with dollar price first and fixed-point contract quantity second."
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "PriceLevelDollarsCountFp schema, lines 149-162"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+      - CONCEPT-0002
+    notes: Example formatting does not define general precision, bounds, normalization, or rounding semantics.
+
+  - claim_id: CLM-0188
+    statement: "The endpoint documents 401 authentication-required, 404 not-found, and 500 internal-server-error responses."
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "Operation responses and response components, lines 92-97 and 163-181"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+    notes: The list does not establish that no other HTTP or transport failure can occur, and no retry policy is documented.
+
+  - claim_id: CLM-0189
+    statement: The referenced ErrorResponse schema defines code, message, and details as optional string properties with no required list.
+    claim_type: source-claim
+    status: reviewed
+    sources:
+      - source_id: SRC-0041
+        locator: "ErrorResponse and response components, lines 137-148 and 163-181"
+    related_pages:
+      - SOURCE-SUMMARY-0040
+      - PLATFORM-0002
+    notes: No stable error-code enumeration is supplied; clients cannot rely on all fields being present.
+
+  - claim_id: CLM-0190
+    statement: Kalshi states that production and demo credentials are not shared; demo API keys work only against demo endpoints and production API keys work only against production endpoints.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0042
+        locator: "Environment introduction, line 9"
+    related_pages:
+      - SOURCE-SUMMARY-0041
+      - PLATFORM-0002
+    notes: This establishes environment non-portability, not permission equivalence, cross-transport portability, or authentication-error behavior.
+
+  - claim_id: CLM-0191
+    statement: Kalshi labels the external-api REST bases as recommended for production and demo and labels the shared REST bases as also supported for compatibility.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0042
+        locator: "REST API table and following paragraph, lines 11-20"
+    related_pages:
+      - SOURCE-SUMMARY-0041
+      - PLATFORM-0002
+    notes: Recommendation and compatibility support do not establish automatic failover safety, operational equivalence, or permanent support.
+
+  - claim_id: CLM-0192
+    statement: Kalshi states that the request hostname does not change the signature payload and demonstrates signing the full API-root path without the hostname or query string.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0042
+        locator: "Request Signing, lines 45-67"
+    related_pages:
+      - SOURCE-SUMMARY-0041
+      - PLATFORM-0002
+    notes: This does not define path encoding or normalization edge cases, method normalization, timestamps, algorithms, or normative test vectors.
+
+  - claim_id: CLM-0193
+    statement: Kalshi documents separate recommended and also-supported production and demo WebSocket URLs for the Trade API.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0042
+        locator: "WebSocket API table, lines 26-33"
+    related_pages:
+      - SOURCE-SUMMARY-0041
+      - PLATFORM-0002
+    notes: The URL inventory does not establish subscription, recovery, failover, credential, or data-equivalence semantics.
+
+  - claim_id: CLM-0194
+    statement: Kalshi documents broad read and write API-key scopes plus narrower child scopes, with read granting read endpoints, write granting write endpoints, and each child scope limited to its endpoint group.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0043
+        locator: "ApiKeyScope enum and description, lines 161-185"
+    related_pages:
+      - SOURCE-SUMMARY-0042
+      - PLATFORM-0002
+    notes: The enumeration is capture-date scoped and does not establish that every scope is available to every account or how runtime enforcement behaves.
+
+  - claim_id: CLM-0195
+    statement: The generate-key request says broad write requires broad read, child scopes may be granted without a broad parent, and omission of scopes defaults to broad read plus write access.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0043
+        locator: "GenerateApiKeyRequest scopes description, lines 109-117"
+    related_pages:
+      - SOURCE-SUMMARY-0042
+      - PLATFORM-0002
+    notes: The default is descriptive prose rather than a separate OpenAPI default keyword. Empty, duplicate, unknown, and other invalid combinations are not defined.
+
+  - claim_id: CLM-0196
+    statement: The documented successful generate-key response requires an API key ID and a PEM-format RSA private key that cannot be retrieved again after the response.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0043
+        locator: "Endpoint synopsis, lines 5-7; GenerateApiKeyResponse, lines 139-152"
+    related_pages:
+      - SOURCE-SUMMARY-0042
+      - PLATFORM-0002
+    notes: The page does not define key size, encryption, recovery, rotation, revocation, or safe retry after ambiguous response loss.
+
+  - claim_id: CLM-0197
+    statement: The documented successful Get API Keys response requires every returned API-key object to include a scopes array describing scopes granted to that key.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0044
+        locator: "GetApiKeysResponse and ApiKey schemas, lines 97-132"
+    related_pages:
+      - SOURCE-SUMMARY-0043
+      - PLATFORM-0002
+    notes: This establishes documented response visibility, not actual scopes on any uninspected credential or proof of runtime enforcement.
+
+  - claim_id: CLM-0198
+    statement: As captured, Kalshi's Quick Start states that no authentication headers are required for the public series, event, market, and order-book endpoints covered by the guide.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0045
+        locator: "Guide scope, lines 7-9; Making Unauthenticated Requests, lines 11-21"
+    related_pages:
+      - SOURCE-SUMMARY-0044
+      - PLATFORM-0002
+    notes: This capture-date-scoped direct prose conflicts with reviewed CLM-0180 and SRC-0041. It does not extend to WebSockets, trading, portfolio management, or every market-data endpoint.
+
+  - claim_id: CLM-0199
+    statement: The guide's Python and JavaScript examples send GET requests to the production market-orderbook path without supplying authentication headers.
+    claim_type: source-claim
+    status: review-required
+    sources:
+      - source_id: SRC-0045
+        locator: "Step 3 Python example, lines 134-138; JavaScript example, lines 152-154"
+    related_pages:
+      - SOURCE-SUMMARY-0044
+      - PLATFORM-0002
+    notes: Example-level evidence does not prove runtime success, permanence, or a formal no-authentication contract; the conflict with SRC-0041 remains unresolved.

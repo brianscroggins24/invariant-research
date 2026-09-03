@@ -4,12 +4,13 @@ title: Kalshi
 page_type: platform
 status: reviewed
 created_at: 2026-06-28
-updated_at: 2026-06-28
+updated_at: 2026-08-31
 sources:
   - SRC-0019
   - SRC-0020
   - SRC-0021
-  - SRC-0022
+  - SRC-0040
+  - SRC-0041
   - SRC-0023
   - SRC-0024
   - SRC-0025
@@ -31,6 +32,7 @@ tags:
   - kalshi
   - platform
   - fixed-point
+  - authentication
   - rate-limits
 ---
 
@@ -38,9 +40,9 @@ tags:
 
 ## Scope and Freshness
 
-- Documentation capture date: 2026-06-27.
-- Source-ID range: `SRC-0019` through `SRC-0034`.
-- Schemas, migration timelines, fees, historical cutoffs, lifecycle fields, and limits are mutable and must be refreshed before implementation.
+- Core documentation capture date: 2026-06-27 for `SRC-0019` through `SRC-0034`.
+- Authentication and REST order-book refresh date: 2026-08-31 for active `SRC-0040` and `SRC-0041`; `SRC-0041` supersedes `SRC-0022`.
+- Schemas, authentication, migration timelines, fees, historical cutoffs, lifecycle fields, and limits remain mutable and require scope-specific refresh before implementation.
 
 ## Series, Events, and Markets
 
@@ -80,6 +82,15 @@ tags:
 
 - `Get Market Orderbook` returns a snapshot for a specific market and uses an optional depth parameter. [CLM-0088]
 - The response is `orderbook_fp` with `yes_dollars` and `no_dollars` arrays of `[price_dollars, contract_count_fp]` values. [CLM-0089]
+
+## REST Request Authentication
+
+- The refreshed order-book operation requires the access-key, RSA-PSS signature, and millisecond-timestamp headers. [CLM-0175] [CLM-0180]
+- The documented signing input concatenates timestamp, HTTP method, and the path without query parameters. [CLM-0176]
+- Captured examples use Base64-encoded RSA-PSS/SHA-256 signatures with digest-length salt; this is example-level evidence rather than a normative test vector. [CLM-0177]
+- The documentation does not establish credential portability between demo and production or read-only key scope. [CLM-0171] [CLM-0178]
+- It also does not establish timestamp tolerance, replay behavior, rotation, or revocation. [CLM-0173] [CLM-0175]
+- Authentication mechanics do not authorize orders or trading.
 
 ## YES Bids and NO Bids
 
@@ -194,7 +205,8 @@ tags:
 - `SRC-0019`: [CLM-0080], [CLM-0081]
 - `SRC-0020`: [CLM-0082], [CLM-0083], [CLM-0084]
 - `SRC-0021`: [CLM-0085], [CLM-0086], [CLM-0087]
-- `SRC-0022`: [CLM-0088], [CLM-0089]
+- `SRC-0040`: [CLM-0171], [CLM-0172], [CLM-0173], [CLM-0174], [CLM-0175], [CLM-0176], [CLM-0177], [CLM-0178]
+- `SRC-0041`: [CLM-0088], [CLM-0089], [CLM-0179], [CLM-0180], [CLM-0181], [CLM-0182], [CLM-0183], [CLM-0184], [CLM-0185], [CLM-0186], [CLM-0187], [CLM-0188], [CLM-0189]
 - `SRC-0023`: [CLM-0090], [CLM-0091]
 - `SRC-0024`: [CLM-0092], [CLM-0093]
 - `SRC-0025`: [CLM-0094], [CLM-0095], [CLM-0096], [CLM-0097]

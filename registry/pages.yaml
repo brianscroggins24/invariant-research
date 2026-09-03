@@ -112,7 +112,7 @@ pages:
     path: wiki/source-summaries/SRC-0022-get-market-orderbook.md
     title: Get Market Orderbook
     page_type: source-summary
-    status: reviewed
+    status: superseded
 
   - page_id: SOURCE-SUMMARY-0022
     path: wiki/source-summaries/SRC-0023-orderbook-responses.md
@@ -275,3 +275,39 @@ pages:
     title: "From Iran to Taylor Swift: Informed Trading in Prediction Markets"
     page_type: source-summary
     status: reviewed
+
+  - page_id: SOURCE-SUMMARY-0039
+    path: wiki/source-summaries/SRC-0040-kalshi-api-keys-authentication.md
+    title: API Keys
+    page_type: source-summary
+    status: reviewed
+
+  - page_id: SOURCE-SUMMARY-0040
+    path: wiki/source-summaries/SRC-0041-get-market-orderbook-v2.md
+    title: Get Market Orderbook
+    page_type: source-summary
+    status: reviewed
+
+  - page_id: SOURCE-SUMMARY-0041
+    path: wiki/source-summaries/SRC-0042-api-environments-and-endpoints.md
+    title: API Environments and Endpoints
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0042
+    path: wiki/source-summaries/SRC-0043-generate-api-key.md
+    title: Generate API Key
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0043
+    path: wiki/source-summaries/SRC-0044-get-api-keys.md
+    title: Get API Keys
+    page_type: source-summary
+    status: review-required
+
+  - page_id: SOURCE-SUMMARY-0044
+    path: wiki/source-summaries/SRC-0045-quick-start-market-data.md
+    title: "Quick Start: Market Data"
+    page_type: source-summary
+    status: review-required

@@ -257,7 +257,7 @@ sources:
     status: active
     supersedes:
     superseded_by:
-    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+    notes: Exact raw Markdown capture from the official Polymarket docs; captured on 2026-06-27 and reacquired on 2026-08-31 with an identical 5,690-byte artifact and SHA-256. No page-level last-updated date was present.
   - source_id: SRC-0015
     title: WebSocket Overview
     source_type: official-documentation
@@ -401,9 +401,9 @@ sources:
     version: 1
     language: en
     authority: primary-platform
-    status: active
+    status: superseded
     supersedes:
-    superseded_by:
+    superseded_by: SRC-0041
     notes: Exact raw Markdown capture from the official Kalshi docs; captured on 2026-06-27. No page-level last-updated date was present in the markdown capture.
 
   - source_id: SRC-0023
@@ -738,3 +738,117 @@ sources:
     supersedes:
     superseded_by:
     notes: "Exact raw PDF capture from the user-provided local artifact. The title page says March 16, 2026 and 'FIRST DRAFT – COMMENTS WELCOME'. The artifact shows no explicit external version marker."
+
+  - source_id: SRC-0040
+    title: API Keys
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-08-31
+    original_location: https://docs.kalshi.com/getting_started/api_keys
+    local_path: raw/sources/SRC-0040-kalshi-api-keys-authentication.md
+    content_hash: 96bb49b6c45f946489a0a207cc93e3987e1e6aa5ca2da5111db17982274fc5a4
+    version: 1
+    language: en
+    authority: primary-platform
+    status: active
+    supersedes:
+    superseded_by:
+    notes: Exact Markdown capture from official Kalshi documentation. No explicit publication or page-update date was present. Authentication behavior is capture-date scoped and does not authorize credential use or trading.
+
+  - source_id: SRC-0041
+    title: Get Market Orderbook
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-08-31
+    original_location: https://docs.kalshi.com/api-reference/market/get-market-orderbook
+    local_path: raw/sources/SRC-0041-get-market-orderbook-v2.md
+    content_hash: f8d82f48e12694c124d284dade755663799efc27121b45da790118694905eba4
+    version: 2
+    language: en
+    authority: primary-platform
+    status: active
+    supersedes: SRC-0022
+    superseded_by:
+    notes: Exact Markdown refresh of the official Kalshi order-book endpoint. Compared with SRC-0022, embedded OpenAPI marker 3.29.0 replaces 3.22.0 and the optional error service field is no longer documented; all other captured endpoint semantics are unchanged.
+
+  - source_id: SRC-0042
+    title: API Environments and Endpoints
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-09-02
+    original_location: https://docs.kalshi.com/getting_started/api_environments
+    local_path: raw/sources/SRC-0042-api-environments-and-endpoints.md
+    content_hash: 73509a19902422f651f5b2d540d3e033e7c0633c082486cf364d5429bf631e48
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact official Markdown capture. No explicit publication or page-update date was present. Environment, origin, compatibility, and signing behavior is capture-date scoped.
+
+  - source_id: SRC-0043
+    title: Generate API Key
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-09-02
+    original_location: https://docs.kalshi.com/api-reference/api-keys/generate-api-key
+    local_path: raw/sources/SRC-0043-generate-api-key.md
+    content_hash: 254c5d2edead92a631d858a27f6e1ae84748a3d83282931b52c9cdb382efdad5
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact official Markdown capture of OpenAPI-derived documentation. No explicit publication or page-update date was present. Scope names, defaults, and key-generation behavior are capture-date scoped and do not authorize invocation.
+
+  - source_id: SRC-0044
+    title: Get API Keys
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-09-02
+    original_location: https://docs.kalshi.com/api-reference/api-keys/get-api-keys
+    local_path: raw/sources/SRC-0044-get-api-keys.md
+    content_hash: ed7016715ea3978bcf6cf7dc94b0542c88b37d16e1c52bfc652a6a875b5fe82e
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact official Markdown capture of OpenAPI-derived documentation. Canonical HTML JSON-LD reported dateModified 2026-09-02T22:09:39.980Z; that value is capture metadata, not present in the raw Markdown. Returned scope visibility is capture-date scoped.
+
+  - source_id: SRC-0045
+    title: "Quick Start: Market Data"
+    source_type: official-documentation
+    authors:
+      - Kalshi
+    organization: Kalshi
+    publication_date:
+    retrieved_at: 2026-09-02
+    original_location: https://docs.kalshi.com/getting_started/quick_start_market_data
+    local_path: raw/sources/SRC-0045-quick-start-market-data.md
+    content_hash: 31dec99d496b8343d2fa0613e9f7f1f7a67c4e82b1b55b7a1041e480079ae5f0
+    version: 1
+    language: en
+    authority: primary-platform
+    status: pending-ingestion
+    supersedes:
+    superseded_by:
+    notes: Exact official Markdown capture of a tutorial-style guide. No explicit publication or page-update date was present. Its public unauthenticated order-book guidance conflicts with active SRC-0041 operation-level security and must remain unresolved.

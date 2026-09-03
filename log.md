@@ -51,7 +51,6 @@
 - Ran baseline and post-write deterministic validation successfully.
 - No synthesis, concept, platform, or strategy pages were created.
 - No promotion, commit, or push was performed.
-
 ## 2026-06-25
 
 - Captured the authenticated Obsidian Web Clipper Markdown article `The Math Needed for Trading on Polymarket (Complete Roadmap)` as `SRC-0004`.
@@ -159,3 +158,47 @@
 ## 2026-07-17
 
 - Promoted `CONCEPT-0004` / `Market Accuracy and Price Discovery`, `CONCEPT-0005` / `Informed Trading and Surveillance`, and `STRATEGY-0002` / `Liquidity Provision and Execution Quality` to `reviewed` after synthesis review and validation.
+
+## 2026-08-31
+
+- Captured the official Kalshi `API Keys` documentation as `SRC-0040` using the `official-documentation` playbook.
+- Copied the exact 6,159-byte Markdown artifact into immutable raw storage and registered SHA-256 `96bb49b6c45f946489a0a207cc93e3987e1e6aa5ca2da5111db17982274fc5a4`.
+- Created `SOURCE-SUMMARY-0039` and candidate claims `CLM-0171` through `CLM-0178` at `review-required`.
+- Registered `SRC-0040` as `pending-ingestion`. The material informs a bounded authenticated read-only Kalshi `GET` boundary and does not authorize credential use or trading.
+- No promotion, commit, or push was performed.
+- Captured the refreshed official Kalshi `Get Market Orderbook` page as `SRC-0041`, version 2, superseding candidate `SRC-0022` after review.
+- Preserved the exact 6,947-byte artifact and registered SHA-256 `f8d82f48e12694c124d284dade755663799efc27121b45da790118694905eba4`.
+- Created `SOURCE-SUMMARY-0040` and candidate claims `CLM-0179` through `CLM-0189` at `review-required`.
+- The refresh makes the authenticated GET boundary explicit in the reviewed pipeline and preserves the internal negative-depth inconsistency. No credential use or trading behavior is authorized.
+- No promotion, commit, or push was performed.
+- Promoted `SRC-0040` and `SRC-0041` to active after independent ingestion review found no blocking issues.
+- Promoted `SOURCE-SUMMARY-0039`, `SOURCE-SUMMARY-0040`, and `CLM-0171` through `CLM-0189` to `reviewed`.
+- Marked `SRC-0022` and `SOURCE-SUMMARY-0021` superseded by the refreshed source layer while preserving immutable history.
+- Updated unchanged reviewed order-book claims and synthesis citations from `SRC-0022` to `SRC-0041`.
+- This establishes reviewed prediction-market evidence for authenticated Kalshi order-book `GET` access; it does not authorize credential exposure, writes, orders, execution, risk, or trading.
+- No commit or push was performed.
+- Reverified the active Polymarket `SRC-0014` endpoint capture on 2026-08-31; the current 5,690-byte artifact was byte-identical and retained SHA-256 `fd98e9bea50208a07d4ea51a8d03e2048cb6cbf4db70149fb17deda8770815f7`, so no duplicate source ID was allocated.
+- Refreshed reviewed Polymarket and Kalshi platform provenance metadata and added reciprocal Kalshi authentication synthesis for `SRC-0040` and `CLM-0171` through `CLM-0178`.
+
+## 2026-09-02
+
+- Captured the official Kalshi `API Environments and Endpoints` page as `SRC-0042` under the `official-documentation` playbook.
+- Preserved the exact 3,509-byte Markdown artifact with SHA-256 `73509a19902422f651f5b2d540d3e033e7c0633c082486cf364d5429bf631e48`.
+- Registered `SRC-0042` as `pending-ingestion` and created `SOURCE-SUMMARY-0041` plus candidate claims `CLM-0190` through `CLM-0193` at `review-required`.
+- The source directly addresses environment credential separation, recommended versus compatibility origins, and signed-path host/query exclusion. It does not authorize credentials, failover, writes, or trading.
+- No promotion, commit, or push was performed.
+- Captured the official Kalshi `Generate API Key` endpoint page as `SRC-0043` under the `official-documentation` playbook.
+- Preserved the exact 7,664-byte Markdown artifact with SHA-256 `254c5d2edead92a631d858a27f6e1ae84748a3d83282931b52c9cdb382efdad5`.
+- Registered `SRC-0043` as `pending-ingestion` and created `SOURCE-SUMMARY-0042` plus candidate claims `CLM-0194` through `CLM-0196` at `review-required`.
+- The source documents read/write and child scopes and warns through its schema that omitted scopes default to broad read/write access. No key-generation call or credential inspection occurred.
+- No promotion, commit, or push was performed.
+- Captured the official Kalshi `Get API Keys` endpoint page as `SRC-0044` under the `official-documentation` playbook.
+- Preserved the exact 6,589-byte Markdown artifact with SHA-256 `ed7016715ea3978bcf6cf7dc94b0542c88b37d16e1c52bfc652a6a875b5fe82e`.
+- Registered `SRC-0044` as `pending-ingestion` and created `SOURCE-SUMMARY-0043` plus candidate claim `CLM-0197` at `review-required`.
+- The documented response exposes granted scope labels for returned keys, but no authenticated request or credential inspection was performed and runtime enforcement remains unverified.
+- No promotion, commit, or push was performed.
+- Captured the official Kalshi `Quick Start: Market Data` guide as `SRC-0045` under the `official-documentation` playbook.
+- Preserved the exact 8,454-byte Markdown artifact with SHA-256 `31dec99d496b8343d2fa0613e9f7f1f7a67c4e82b1b55b7a1041e480079ae5f0`.
+- Registered `SRC-0045` as `pending-ingestion` and created `SOURCE-SUMMARY-0044` plus candidate claims `CLM-0198` and `CLM-0199` at `review-required`.
+- The guide explicitly presents the REST order-book request as unauthenticated, conflicting with active `SRC-0041` operation-level security. The conflict remains visible and unresolved; no live API request or credential use occurred.
+- No promotion, commit, or push was performed.

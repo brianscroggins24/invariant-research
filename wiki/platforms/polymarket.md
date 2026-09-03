@@ -4,7 +4,7 @@ title: Polymarket
 page_type: platform
 status: reviewed
 created_at: 2026-06-28
-updated_at: 2026-06-28
+updated_at: 2026-08-31
 sources:
   - SRC-0007
   - SRC-0008
@@ -34,9 +34,9 @@ tags:
 
 ## Scope and Freshness
 
-- Documentation capture date: 2026-06-27.
+- Core documentation capture date: 2026-06-27.
 - Source-ID range: `SRC-0007` through `SRC-0018`.
-- API fields, channels, fees, and limits are mutable and must be refreshed before implementation.
+- The `SRC-0014` `GET /book` artifact was reacquired on 2026-08-31 and was byte-identical to the active source. Other API fields, channels, fees, and limits remain mutable and require scope-specific refresh before implementation.
 
 ## Entity Model
 

@@ -4,7 +4,7 @@ title: Get order book
 page_type: source-summary
 status: reviewed
 created_at: 2026-06-27
-updated_at: 2026-06-27
+updated_at: 2026-08-31
 source_id: SRC-0014
 sources:
   - SRC-0014
@@ -60,4 +60,4 @@ This is the primary source for deterministic snapshot ingestion of order-book st
 
 ## Review Notes
 
-Captured from the official docs on 2026-06-27. No page-level last-updated date was present in the markdown capture.
+Captured from the official docs on 2026-06-27. Reacquisition on 2026-08-31 produced the identical 5,690-byte artifact and registered SHA-256 `fd98e9bea50208a07d4ea51a8d03e2048cb6cbf4db70149fb17deda8770815f7`, so no new source version was allocated. No page-level last-updated date was present.
