@@ -214,3 +214,9 @@
 - Updated `PLATFORM-0002` with reviewed Kalshi environment, origin, signing-path, API-key scope, and response-side scope-visibility evidence from `SRC-0042` through `SRC-0045`.
 - Replaced the categorical REST order-book authentication statement with the unresolved conflict between `SRC-0041` operation-level security and `SRC-0045` Quick Start guidance.
 - Transitioned `PLATFORM-0002` from `reviewed` to `review-required` pending independent synthesis review; no live request, credential access, commit, or push was performed.
+
+## 2026-09-03
+
+- Promoted `PLATFORM-0002` from `review-required` to `reviewed` after independent synthesis review and validation.
+- Synchronized the platform page frontmatter, page registry, and index status while preserving the unresolved `SRC-0041`/`SRC-0045` authentication conflict.
+- No synthesis body, raw source, claim, source summary, live request, credential access, commit, or push was involved in this status-only promotion.
