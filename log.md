@@ -208,3 +208,9 @@
 - Promoted `SRC-0042` through `SRC-0045` from `pending-ingestion` to `active` after completed validation and independent review.
 - Promoted `SOURCE-SUMMARY-0041` through `SOURCE-SUMMARY-0044` and `CLM-0190` through `CLM-0199` from `review-required` to `reviewed`.
 - Preserved the unresolved authentication conflict between `SRC-0041` and `SRC-0045`; no live request, credential access, synthesis update, commit, or push was performed.
+
+## 2026-09-03
+
+- Updated `PLATFORM-0002` with reviewed Kalshi environment, origin, signing-path, API-key scope, and response-side scope-visibility evidence from `SRC-0042` through `SRC-0045`.
+- Replaced the categorical REST order-book authentication statement with the unresolved conflict between `SRC-0041` operation-level security and `SRC-0045` Quick Start guidance.
+- Transitioned `PLATFORM-0002` from `reviewed` to `review-required` pending independent synthesis review; no live request, credential access, commit, or push was performed.

@@ -244,7 +244,7 @@ pages:
     path: wiki/platforms/kalshi.md
     title: Kalshi
     page_type: platform
-    status: reviewed
+    status: review-required
 
   - page_id: SOURCE-SUMMARY-0034
     path: wiki/source-summaries/SRC-0035-makers-and-takers-the-economics-of-the-kalshi-prediction-market.md

@@ -119,7 +119,7 @@ Minimal landing page for the research wiki.
 ### Platforms
 
 - [Polymarket](wiki/platforms/polymarket.md) — `reviewed`
-- [Kalshi](wiki/platforms/kalshi.md) — `reviewed`
+- [Kalshi](wiki/platforms/kalshi.md) — `review-required`
 
 ## Processes
 

@@ -2,15 +2,19 @@
 page_id: PLATFORM-0002
 title: Kalshi
 page_type: platform
-status: reviewed
+status: review-required
 created_at: 2026-06-28
-updated_at: 2026-08-31
+updated_at: 2026-09-03
 sources:
   - SRC-0019
   - SRC-0020
   - SRC-0021
   - SRC-0040
   - SRC-0041
+  - SRC-0042
+  - SRC-0043
+  - SRC-0044
+  - SRC-0045
   - SRC-0023
   - SRC-0024
   - SRC-0025
@@ -42,6 +46,7 @@ tags:
 
 - Core documentation capture date: 2026-06-27 for `SRC-0019` through `SRC-0034`.
 - Authentication and REST order-book refresh date: 2026-08-31 for active `SRC-0040` and `SRC-0041`; `SRC-0041` supersedes `SRC-0022`.
+- Environment, endpoint, API-key scope, and market-data tutorial capture date: 2026-09-02 for active `SRC-0042` through `SRC-0045`.
 - Schemas, authentication, migration timelines, fees, historical cutoffs, lifecycle fields, and limits remain mutable and require scope-specific refresh before implementation.
 
 ## Series, Events, and Markets
@@ -83,14 +88,30 @@ tags:
 - `Get Market Orderbook` returns a snapshot for a specific market and uses an optional depth parameter. [CLM-0088]
 - The response is `orderbook_fp` with `yes_dollars` and `no_dollars` arrays of `[price_dollars, contract_count_fp]` values. [CLM-0089]
 
-## REST Request Authentication
+## API Environments and Origins
 
-- The refreshed order-book operation requires the access-key, RSA-PSS signature, and millisecond-timestamp headers. [CLM-0175] [CLM-0180]
-- The documented signing input concatenates timestamp, HTTP method, and the path without query parameters. [CLM-0176]
+- Production and demo credentials are explicitly not shared. Demo keys work only with demo endpoints, and production keys work only with production endpoints. [CLM-0190]
+- For REST, the recommended production and demo bases are `https://external-api.kalshi.com/trade-api/v2` and `https://external-api.demo.kalshi.co/trade-api/v2`. The shared `https://api.elections.kalshi.com/trade-api/v2` and `https://demo-api.kalshi.co/trade-api/v2` bases are documented as compatibility alternatives. [CLM-0191]
+- For WebSocket, the recommended production and demo origins are `wss://external-api-ws.kalshi.com/trade-api/ws/v2` and `wss://external-api-ws.demo.kalshi.co/trade-api/ws/v2`. The shared `wss://api.elections.kalshi.com/trade-api/ws/v2` and `wss://demo-api.kalshi.co/trade-api/ws/v2` origins are also supported. [CLM-0193]
+- Recommendation and compatibility support do not establish automatic failover safety, data equivalence between hosts, or credential portability between hosts within one environment. [CLM-0190] [CLM-0191] [CLM-0193]
+
+## REST Request Authentication and Signing
+
+- `SRC-0041` declares the access-key, RSA-PSS signature, and millisecond-timestamp schemes on the market-orderbook operation and documents a `401` authentication-required response. [CLM-0175] [CLM-0180] [CLM-0188]
+- `SRC-0045` expressly characterizes the market-data endpoints covered by its Quick Start as unauthenticated and demonstrates the same order-book GET without authentication headers. [CLM-0198] [CLM-0199]
+- Neither source supplies a reliable publication or update date that establishes precedence. The tutorial is weaker contract evidence than operation-level OpenAPI, but its explicit contradictory statement remains evidence. The current authentication requirement is therefore unresolved: do not describe the order-book endpoint as universally authenticated, universally public, or optionally authenticated.
+- The demonstrated signing input concatenates timestamp and HTTP method with the full `/trade-api/v2` request path. The hostname and query string are excluded. [CLM-0176] [CLM-0192]
 - Captured examples use Base64-encoded RSA-PSS/SHA-256 signatures with digest-length salt; this is example-level evidence rather than a normative test vector. [CLM-0177]
-- The documentation does not establish credential portability between demo and production or read-only key scope. [CLM-0171] [CLM-0178]
-- It also does not establish timestamp tolerance, replay behavior, rotation, or revocation. [CLM-0173] [CLM-0175]
-- Authentication mechanics do not authorize orders or trading.
+- Path encoding and normalization, HTTP-method normalization, timestamp tolerance, replay behavior, and normative signing vectors remain open. [CLM-0173] [CLM-0175] [CLM-0192]
+- Authentication mechanics do not authorize credential access, orders, or trading.
+
+## API-Key Scopes and Visibility
+
+- Kalshi documents broad `read` and `write` scopes plus narrower child scopes. Broad `write` requires broad `read`, while child scopes may be granted without their broad parent scope. [CLM-0194] [CLM-0195]
+- Scope selection is explicit when the `scopes` field is supplied. Omitting it is documented to default to broad `read` plus `write`, so omission must not be interpreted as least privilege. [CLM-0195]
+- The Generate API Key response documents required API-key ID and one-time PEM private-key material. This is documentation about the response, not authorization to generate a key. [CLM-0196]
+- The Get API Keys response requires a `scopes` array for each returned key, establishing documented response-side scope visibility without authorizing credential enumeration or inspection. [CLM-0197]
+- Documented scope labels do not prove the actual scopes or effective permissions of any uninspected credential, universal scope availability, or runtime enforcement. [CLM-0194] [CLM-0197]
 
 ## YES Bids and NO Bids
 
@@ -189,8 +210,13 @@ tags:
 
 ## Documented Ambiguities
 
+- The current REST market-orderbook authentication requirement is unresolved because `SRC-0041` and `SRC-0045` conflict. [CLM-0180] [CLM-0188] [CLM-0198] [CLM-0199]
+- Data equivalence between recommended and compatibility hosts, same-environment credential portability, and automatic failover safety are not established. [CLM-0190] [CLM-0191] [CLM-0193]
+- Signing-path encoding and normalization, HTTP-method normalization, timestamp tolerance, replay behavior, and normative test vectors are not established. [CLM-0176] [CLM-0177] [CLM-0192]
+- Actual operator-credential scopes, universal scope availability, and runtime enforcement remain unverified. [CLM-0194] [CLM-0195] [CLM-0197]
 - Missed-update recovery is not fully specified.
 - The approved docs do not include a dedicated trade/fill payload page, so exact fill semantics remain deferred.
+- Response freshness, atomicity, completeness, exact ordering, and stable retry behavior remain unspecified where not otherwise covered by reviewed sources.
 - Settlement should not be described as on-chain.
 
 ## Related Pages
@@ -207,6 +233,10 @@ tags:
 - `SRC-0021`: [CLM-0085], [CLM-0086], [CLM-0087]
 - `SRC-0040`: [CLM-0171], [CLM-0172], [CLM-0173], [CLM-0174], [CLM-0175], [CLM-0176], [CLM-0177], [CLM-0178]
 - `SRC-0041`: [CLM-0088], [CLM-0089], [CLM-0179], [CLM-0180], [CLM-0181], [CLM-0182], [CLM-0183], [CLM-0184], [CLM-0185], [CLM-0186], [CLM-0187], [CLM-0188], [CLM-0189]
+- `SRC-0042`: [CLM-0190], [CLM-0191], [CLM-0192], [CLM-0193]
+- `SRC-0043`: [CLM-0194], [CLM-0195], [CLM-0196]
+- `SRC-0044`: [CLM-0197]
+- `SRC-0045`: [CLM-0198], [CLM-0199]
 - `SRC-0023`: [CLM-0090], [CLM-0091]
 - `SRC-0024`: [CLM-0092], [CLM-0093]
 - `SRC-0025`: [CLM-0094], [CLM-0095], [CLM-0096], [CLM-0097]
